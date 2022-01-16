@@ -1,0 +1,9 @@
+CADENCE IHNL11140
+$model
+cad0/rc_sereies/schematic rc_sereies
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+$endparam

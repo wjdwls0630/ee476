@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='R-2020.12-SP2 linux64' PARAM_COUNT=0
+.TITLE 'rc_series'
+ rise_time        rise_delay       temper           alter#          
+  1.382e-09        6.938e-10        2.500e+01       1               

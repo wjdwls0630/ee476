@@ -1,0 +1,23 @@
+** Generated for: hspiceD
+** Generated on: Oct 11 13:16:07 2021
+** Design library name: cad0
+** Design cell name: rc_series
+** Design view name: schematic
+
+
+.TEMP 25
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+
+** Library name: cad0
+** Cell name: rc_series
+** View name: schematic
+.subckt rc_series vi vo
+r0 vi vo 1e3
+c1 vo 0 1e-12
+.ends rc_series
+** End of subcircuit definition.
+.END

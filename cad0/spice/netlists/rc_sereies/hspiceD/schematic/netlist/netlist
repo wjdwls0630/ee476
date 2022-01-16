@@ -1,0 +1,6 @@
+
+** Library name: cad0
+** Cell name: rc_sereies
+** View name: schematic
+r0 vi vo 1e3
+c1 vo 0 1e-12

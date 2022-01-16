@@ -1,0 +1,20 @@
+** Generated for: hspiceD
+** Generated on: Oct  9 22:33:47 2021
+** Design library name: cad0
+** Design cell name: rc_sereies
+** Design view name: schematic
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+
+** Library name: cad0
+** Cell name: rc_sereies
+** View name: schematic
+r0 vi vo 1e3
+c1 vo 0 1e-12
+.END

@@ -1,0 +1,37 @@
+;-----------------------------------------------------------------------------------------------
+; User-specific setting
+;-----------------------------------------------------------------------------------------------
+editor = "gvim"
+
+; Set the graph background to white
+envSetVal("viva.graphFrame" "background" 'string "white")
+
+; Set graph axis font and size
+envSetVal("viva.axis" "font" 'string "Fixed [Misc],14,-1,5,50,0,0,0,0,0")
+envSetVal("viva.axis" "majorGridsOn" 'string "false")
+envSetVal("viva.axis" "minorGridsOn" 'string "false")
+envSetVal("viva.axis" "font style" 'string "bold")
+
+; Set graph marker font and size
+envSetVal("viva.pointMarker" "font" 'string "Fixed [Misc],12,-1,5,50,0,0,0,0,0")
+
+
+; Set vertical marker font and size (14 point font below)  
+envSetVal("viva.vertMarker" "font" 'string "Fixed [Misc],14,-1,5,50,0,0,0,0,0") 
+
+
+; Set horizontal marker font and size (14 point font below)  
+envSetVal("viva.horizMarker" "font" 'string "Fixed [Misc],14,-1,5,50,0,0,0,0,0")
+
+
+; Set vertical and horizontal dx/dy markers' font and size (14 point font below)  
+envSetVal("viva.multiDeltaMarker" "font" 'string "Fixed [Misc],14,-1,5,50,0,0,0,0,0") 
+
+
+; Set line thickness to thick 
+envSetVal("viva.trace" "lineThickness" 'string "extrathick")
+
+; Set line type to solid 
+envSetVal("viva.trace" "lineStyle" 'string "solid")
+;envSetVal("viva.trace" "color" 'string "000000")
+;-----------------------------------------------------------------------------------------------

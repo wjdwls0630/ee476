@@ -1,0 +1,18 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "rc_series"
+  repList "hspiceD spice cmos_sch cmos.sch schematic"
+  stopList "hspiceD spice"
+  globalList "gnd!"
+  hierDelim "^"
+  netlistDir "/mmfs1/home/jpark25/ee476/cad0/spice/netlists/rc_series/hspiceD/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "cad0/rc_series/schematic" "rc_series" )
+ )
+( "rc_series" "ihnl/cds0/map" )
+ )
