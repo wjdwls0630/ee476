@@ -1,8 +1,0 @@
-//OK 
-//NUMBER_OF_HEADER_LINES: 6
-//VERSION: 1
-//TOKEN_DELIMITER: "
-//TOKEN_SEPARATOR: " "
-//FORMAT: "time" "calibre version" "command line"
-"Sat Oct 23 03:10:51 2021 " "v2021.3_35.19" "-xrc -pdb -c -turbo 1 /gscratch/ece/courses/476/jpark25/cad2/PEX/INVD1/_calibrexRC.rul_"
-"Sat Oct 23 03:10:56 2021 " "v2021.3_35.19" "-xrc -fmt -c /gscratch/ece/courses/476/jpark25/cad2/PEX/INVD1/_calibrexRC.rul_"
