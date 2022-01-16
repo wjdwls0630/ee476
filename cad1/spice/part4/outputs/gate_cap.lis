@@ -1,0 +1,129 @@
+ ****** PrimeSim HSPICE -- R-2020.12-SP2 linux64 (May 24 2021 7074677) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: gate_cap.ctl                                                      
+  Command line options: /gscratch/ece/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i gate_cap.ctl -o outputs/
+  Start time: Fri Oct 15 15:01:16 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.5 
+ lic: USER:   jpark25              HOSTNAME: n3000.hyak.local 
+ lic: HOSTID: "0894efb509e8"       PID:      45949 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 2(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+  **warning** multiple output options specified, using psf
+1****** PrimeSim HSPICE -- R-2020.12-SP2 linux64 (May 24 2021 7074677) ******
+ ******  
+ gate_cap
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             gate_cap           1.00 
+  **info** (gate_cap.ctl:34) DC voltage reset to initial transient source value in source 0:vvgs. new dc=0.0000D+00
+  **warning** (nmos_vtg:x1.m0 (./gate_cap.ckt:13)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=1e-06 l=6e-08.
+  **warning** (gate_cap.ctl:65) Could not find branch element vgs ;branch output ignored
+  
+  
+ ******  
+ gate_cap
+
+ ****** element node table
+
+  **warning** the following singular supplies were terminated to 1 meg resistor 
+          supply       node1            node2
+(gate_cap.ctl:22)vvdd                    0:vdd!             defined in subckt 0                     0:0                defined in subckt 0               
+                                                                                      
+ 0                vvdd             vvgs             vvss                              
+ vdd!             vvdd                                                                
+ vgs              vvgs             x1.m0:g                                            
+ vss!             vvss             x1.m0:d          x1.m0:s          x1.m0:b          
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ lic: Checkin 1 hspice token(s) 
+  
+  Opening plot unit= 15
+ file=outputs/gate_cap.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ gate_cap
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ ******
+ gate_cap
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ gate_cap= 1.4033e-15  from= 4.9000e-10     to= 5.0000e-10
+ qg_049= 2.9780e-16
+ qg_05= 1.7801e-15
+ gate_cap_cal= 1.4823e-15
+
+          ***** job concluded
+ ******  
+ gate_cap
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 800.051
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 1.87 1.61 1.23 2/1420 45957
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       8 # elements   =       5
+  # resistors   =       1 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       1 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1           3
+  transient          0.00        1001          74          35 rev=         2
+  readin             0.12
+  errchk             0.02
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        533.97 megabytes
+           total cpu time            0.16 seconds
+           total elapsed time        1.47 seconds
+           job started at     15:01:16 10/15/2021
+           job ended   at     15:01:18 10/15/2021
+           job total runtime         1.47 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.26(s)

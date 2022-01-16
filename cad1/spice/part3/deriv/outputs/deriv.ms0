@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='R-2020.12-SP2 linux64' PARAM_COUNT=0
+.TITLE 'deriv'
+ gds_25m          gds_250m         gds_25m_lx8      gds_250m_lx8    
+ rds_25m          rds_250m         rds_25m_lx8      rds_250m_lx8    
+ temper           alter#          
+  3.276e-03        1.933e-03        3.276e-03        1.933e-03      
+  3.052e+02        5.174e+02        3.052e+02        5.174e+02      
+  2.500e+01       1               

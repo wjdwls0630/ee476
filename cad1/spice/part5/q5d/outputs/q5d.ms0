@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='R-2020.12-SP2 linux64' PARAM_COUNT=0
+.TITLE 'q5d'
+ gds              ids              lambda           temper          
+ alter#          
+  6.868e-05        2.132e-04        3.222e-01        2.500e+01      
+1               
