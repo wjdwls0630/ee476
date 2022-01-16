@@ -1,0 +1,15 @@
+.GLOBAL vdd! vss!
+
+
+
+.subckt INVD1 vi vo
+m0 vo vi vss! vss! NMOS_VTG L=60e-9 W=300e-9 AD=31.5e-15 AS=31.5e-15 PD=510e-9 PS=510e-9 M=1
+m1 vo vi vdd! vdd! PMOS_VTG L=60e-9 W=400e-9 AD=42e-15 AS=42e-15 PD=610e-9 PS=610e-9 M=1
+.ends INVD1
+
+*.include INVD1.pex.netlist
+
+.subckt loaded_inverter vi vo
+xi0 vi vo INVD1
+c0 vo vss! 10e-15
+.ends loaded_inverter

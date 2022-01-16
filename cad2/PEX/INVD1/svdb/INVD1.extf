@@ -1,0 +1,10 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1634983846 1634983847
+lvs_ExtOutFile RUNDIR /gscratch/ece/courses/476/jpark25/cad2/PEX/INVD1
+lvs_ExtOutFile RULES_FILE /gscratch/ece/courses/476/jpark25/cad2/PEX/INVD1/_calibrexRC.rul_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /gscratch/ece/courses/476/jpark25/cad2/PEX/INVD1/svdb/INVD1.sp
+lvs_ExtOutFile EXTRACTION_REPORT INVD1.lvs.report.ext
+lvs_ExtOutFile LAYOUT_PDSP {  svdb/INVD1.pdsp }

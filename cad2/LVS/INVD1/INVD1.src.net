@@ -1,0 +1,32 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  cad2
+* Top Cell Name: INVD1
+* View Name:     schematic
+* Netlisted on:  Oct 23 03:08:14 2021
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
+
+*.PIN vss!
+*+    vdd!
+
+************************************************************************
+* Library Name: cad2
+* Cell Name:    INVD1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT INVD1 vi vo
+*.PININFO vi:I vo:O
+MM0 vo vi vss! vss! NMOS_VTG W=300n L=60n m=1
+MM1 vo vi vdd! vdd! PMOS_VTG W=400n L=60n m=1
+.ENDS
+

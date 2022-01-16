@@ -1,0 +1,21 @@
+* File: INVD1.pex.netlist
+* Created: Sat Oct 23 03:10:56 2021
+* Program "Calibre xRC"
+* Version "v2021.3_35.19"
+* 
+.subckt INVD1 vi vo 
+* 
+MM0 vo vi VSS! VSS! NMOS_VTG L=6e-08 W=3e-07 AD=3.15e-14 AS=3.15e-14 PD=8.1e-07
++ PS=8.1e-07
+MM1 vo vi VDD! VDD! PMOS_VTG L=6e-08 W=4e-07 AD=4.2e-14 AS=4.2e-14 PD=1.01e-06
++ PS=1.01e-06
+c_4 vi 0 0.0960491f
+c_8 vo 0 0.0362083f
+c_12 VSS! 0 0.0737134f
+c_16 VDD! 0 0.0760113f
+*
+.include "INVD1.pex.netlist.INVD1.pxi"
+*
+.ends
+*
+*

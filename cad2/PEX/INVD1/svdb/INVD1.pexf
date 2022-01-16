@@ -1,0 +1,5 @@
+# Automagically generated file: Please do not edit!
+pex_PexParam RUNDIR /gscratch/ece/courses/476/jpark25/cad2/PEX/INVD1
+pex_PexParam LAYOUT_PRIMARY INVD1
+pex_PexParam TOOL xRC
+pex_PexParam CORNER_PDBS { {INVD1 "" INVD1.pdb "" } } 
