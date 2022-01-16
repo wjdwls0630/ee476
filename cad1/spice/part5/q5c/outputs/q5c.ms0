@@ -1,6 +1,0 @@
-$DATA1 SOURCE='PrimeSim HSPICE' VERSION='R-2020.12-SP2 linux64' PARAM_COUNT=0
-.TITLE 'q5c'
- isd              ids              beta_ratio       temper          
- alter#          
-  1.601e-04        2.555e-04        1.596e+00        2.500e+01      
-1               

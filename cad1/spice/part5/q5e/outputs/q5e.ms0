@@ -1,6 +1,0 @@
-$DATA1 SOURCE='PrimeSim HSPICE' VERSION='R-2020.12-SP2 linux64' PARAM_COUNT=0
-.TITLE 'q5e'
- gsd              isd              lambda           temper          
- alter#          
- -5.001e-05        1.265e-04        3.955e-01        2.500e+01      
-1               
