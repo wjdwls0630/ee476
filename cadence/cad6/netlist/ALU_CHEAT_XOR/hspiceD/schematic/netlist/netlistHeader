@@ -1,6 +1,0 @@
-** Generated for: hspiceD
-** Generated on: Nov 28 18:27:19 2021
-** Design library name: cad6
-** Design cell name: ALU_CHEAT_XOR
-** Design view name: schematic
-.GLOBAL _gnet1 _gnet0 vss! vdd!

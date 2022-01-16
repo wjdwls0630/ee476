@@ -1,8 +1,0 @@
-HEADER
-"PSFversion" "1.00"
-"I0v" "xi0v"
-"I1v" "xi1v"
-"I0n" "ALU_LOGIC_UNIT_16B"
-"I2v" "xi2v"
-"I1n" "ALU_ARITHMETIC_UNIT_16B"
-"I2n" "OUT_MUX_BUF_16B"

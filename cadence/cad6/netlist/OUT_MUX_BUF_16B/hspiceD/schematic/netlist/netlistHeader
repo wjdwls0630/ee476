@@ -1,6 +1,0 @@
-** Generated for: hspiceD
-** Generated on: Dec  3 16:28:41 2021
-** Design library name: cad6
-** Design cell name: OUT_MUX_BUF_16B
-** Design view name: schematic
-.GLOBAL vss! vdd!

@@ -63,7 +63,7 @@ Thumbs.db
 **/.cadence/
 
 **/netlists/
-
+**/netlist/
 
 **/DRC/**/*
 !**/DRC/**/*.drc.summary

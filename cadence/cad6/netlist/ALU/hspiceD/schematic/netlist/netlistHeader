@@ -1,6 +1,0 @@
-** Generated for: hspiceD
-** Generated on: Nov 27 19:55:11 2021
-** Design library name: cad6
-** Design cell name: ALU
-** Design view name: schematic
-.GLOBAL vss! vdd!

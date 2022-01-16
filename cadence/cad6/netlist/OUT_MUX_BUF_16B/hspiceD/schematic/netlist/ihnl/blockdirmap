@@ -1,7 +1,0 @@
-CADENCE IHNL11145
-
-cad6 MUX2_X1 schematic cds0
-cad6 INV_X1 schematic cds1
-cad6 INV_X4 schematic cds2
-cad6 BUF_X1 schematic cds3
-cad6 OUT_MUX_BUF_16B schematic cds4

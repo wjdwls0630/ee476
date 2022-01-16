@@ -1,5 +1,0 @@
-
-** Library name: cad5
-** Cell name: DLH_X1
-** View name: schematic
-.subckt DLH_X1 d g q

@@ -1,6 +1,0 @@
-** Generated for: hspiceD
-** Generated on: Nov 28 17:40:42 2021
-** Design library name: cad6
-** Design cell name: ALU_NAND_CELL_XOR
-** Design view name: schematic
-.GLOBAL vss! vdd!

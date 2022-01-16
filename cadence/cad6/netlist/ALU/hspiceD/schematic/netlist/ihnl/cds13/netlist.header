@@ -1,5 +1,0 @@
-
-** Library name: cad6
-** Cell name: NOR4_X1
-** View name: schematic
-.subckt NOR4_X1 a1 a2 a3 a4 zn

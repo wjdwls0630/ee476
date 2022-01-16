@@ -1,4 +1,0 @@
-m_i_0 zn a vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
-m_i_1 zn a vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
-.ends INV_X1
-** End of subcircuit definition.

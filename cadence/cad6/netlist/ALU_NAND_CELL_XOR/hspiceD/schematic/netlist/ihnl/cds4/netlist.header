@@ -1,5 +1,0 @@
-
-** Library name: cad6
-** Cell name: NAND2_X1
-** View name: schematic
-.subckt NAND2_X1 a1 a2 zn

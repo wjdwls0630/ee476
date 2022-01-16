@@ -1,6 +1,0 @@
-xi3 a<3> b<3> ci_3 co s<3> FA_X1
-xi2 a<2> b<2> ci_2 ci_3 s<2> FA_X1
-xi1 a<1> b<1> ci_1 ci_2 s<1> FA_X1
-xi0 a<0> b<0> ci ci_1 s<0> FA_X1
-.ends cad6_4B_RCA_schematic
-** End of subcircuit definition.

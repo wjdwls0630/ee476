@@ -1,5 +1,0 @@
-
-** Library name: cad6
-** Cell name: INVMUX2_X1
-** View name: schematic
-.subckt INVMUX2_X1 a b s zn

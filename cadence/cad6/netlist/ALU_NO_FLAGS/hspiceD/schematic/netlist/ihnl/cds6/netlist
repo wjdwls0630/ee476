@@ -1,8 +1,0 @@
-xi0 op1 op0 nand_out NAND2_X1
-xi1 op1 op0 xnor_out XNOR2_X1
-xi2 op1 op0 nor_out NOR2_X1
-xi4 nor_out op0 ctrl<0> mux1 MUX2_X1
-xi3 nand_out xnor_out ctrl<0> mux0 MUX2_X1
-xi5 mux0 mux1 ctrl<1> logic_out INVMUX2_X1
-.ends ALU_LOGIC_UNIT_1B
-** End of subcircuit definition.

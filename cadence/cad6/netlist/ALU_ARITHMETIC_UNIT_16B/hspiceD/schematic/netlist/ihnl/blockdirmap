@@ -1,9 +1,0 @@
-CADENCE IHNL11147
-
-cad6 FA_X1 schematic cds0
-cad6 XOR2_X1 schematic cds1
-cad6 BUF_X1 schematic cds2
-cad6 RCA_4B schematic cds3
-cad6 MUX2_X1 schematic cds4
-cad6 CSA_4B schematic cds5
-cad6 ALU_ARITHMETIC_UNIT_16B schematic cds6

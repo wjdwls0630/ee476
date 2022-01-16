@@ -1,6 +1,0 @@
-** Generated for: hspiceD
-** Generated on: Nov 12 12:41:26 2021
-** Design library name: cad5
-** Design cell name: TDFF_X1_2
-** Design view name: schematic
-.GLOBAL vss! vdd!

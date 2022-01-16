@@ -1,6 +1,0 @@
-** Generated for: hspiceD
-** Generated on: Nov 12 21:24:22 2021
-** Design library name: cad5
-** Design cell name: T2BREG_LATCH
-** Design view name: schematic
-.GLOBAL vss! vdd!

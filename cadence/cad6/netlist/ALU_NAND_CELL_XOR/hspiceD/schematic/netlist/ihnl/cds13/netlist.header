@@ -1,5 +1,0 @@
-
-** Library name: cad6
-** Cell name: 4B_RCA
-** View name: schematic
-.subckt cad6_4B_RCA_schematic a<3> a<2> a<1> a<0> b<3> b<2> b<1> b<0> ci co s<3> s<2> s<1> s<0>

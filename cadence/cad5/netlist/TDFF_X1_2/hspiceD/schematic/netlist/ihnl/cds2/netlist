@@ -1,7 +1,0 @@
-
-** Library name: cad5
-** Cell name: TDFF_X1_2
-** View name: schematic
-xi0 ck d net2 net1 DFF_X1
-xi2 net2 en<0> z<0> TBUF_X1
-xi1 net2 en<1> z<1> TBUF_X1
