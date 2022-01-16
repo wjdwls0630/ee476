@@ -1,9 +1,0 @@
-
-** Library name: cad0
-** Cell name: rc_series
-** View name: schematic
-.subckt rc_series vi vo
-r0 vi vo 1e3
-c1 vo 0 1e-12
-.ends rc_series
-** End of subcircuit definition.

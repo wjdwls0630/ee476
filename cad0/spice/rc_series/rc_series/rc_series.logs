@@ -1,3 +1,0 @@
-Using: /gscratch/ece/vlsiapps/hspice/current/hspice/linux64/hspice  -mt 2 -i 'rc_series.ctl' -o rc_series/
-
->info:         ***** hspice job concluded

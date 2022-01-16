@@ -1,9 +1,0 @@
-CADENCE IHNL11140
-$model
-cad0/rc_series/schematic rc_series
-$endmodel
-$net
-gnd! 0
-$endnet
-$param
-$endparam
