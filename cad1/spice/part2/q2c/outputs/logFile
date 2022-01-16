@@ -1,0 +1,32 @@
+header
+"PSFversion" "1.00"
+"simulator" "HSPICE"
+"version" "R-2020.12-SP2 linux64"
+"rundate" "03:05:26 10/15/2021 "
+"runtitle" "q2c                                                               "
+"runtype" "logFile"
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING * )
+VALUE
+"timeSweep" "analysisInst" ( 
+"Transient Analysis"
+"q2c.tr0"
+"PSF"
+""
+()
+"Transient Analysis"
+)
+"summary" "analysisInst" ( 
+"Summary Information"
+"q2c.su0"
+"PSF"
+""
+()
+"Summary Information"
+)

@@ -1,0 +1,56 @@
+header
+"PSFversion" "1.00"
+"simulator" "HSPICE"
+"version" "R-2020.12-SP2 linux64"
+"rundate" "02:51:04 10/15/2021 "
+"runtitle" "q1e                                                               "
+"runtype" "logFile"
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING * )
+VALUE
+"srcSweep" "analysisInst" ( 
+"DC Analysis"
+""
+"PSF"
+""
+("0:vvsg " )
+"sweep parent"
+) PROP(
+"sweep_tree_type" "sweepNode"
+)
+"q1e.sw0@1" "analysisInst" ( 
+"DC Analysis"
+"q1e.sw0@1"
+"PSF"
+"srcSweep"
+()
+"DC Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"0:vvsg " 0.0
+)
+"q1e.sw0@2" "analysisInst" ( 
+"DC Analysis"
+"q1e.sw0@2"
+"PSF"
+"srcSweep"
+()
+"DC Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"0:vvsg " 0.6
+)
+"summary" "analysisInst" ( 
+"Summary Information"
+"q1e.su0"
+"PSF"
+""
+()
+"Summary Information"
+)

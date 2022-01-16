@@ -1,0 +1,56 @@
+header
+"PSFversion" "1.00"
+"simulator" "HSPICE"
+"version" "R-2020.12-SP2 linux64"
+"rundate" "03:02:39 10/15/2021 "
+"runtitle" "q2b                                                               "
+"runtype" "logFile"
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING * )
+VALUE
+"timeSweep" "analysisInst" ( 
+"Transient Analysis"
+""
+"PSF"
+""
+("res" )
+"sweep parent"
+) PROP(
+"sweep_tree_type" "sweepNode"
+)
+"q2b.tr0@1" "analysisInst" ( 
+"Transient Analysis"
+"q2b.tr0@1"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"res" 100000.0
+)
+"q2b.tr0@2" "analysisInst" ( 
+"Transient Analysis"
+"q2b.tr0@2"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"res" 200000.0
+)
+"summary" "analysisInst" ( 
+"Summary Information"
+"q2b.su0"
+"PSF"
+""
+()
+"Summary Information"
+)

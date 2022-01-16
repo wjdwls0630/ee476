@@ -1,0 +1,20 @@
+** Library name: cad1
+** Cell name: q2c
+** View name: schematic
+
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+
+* 1 2
+* 
+.subckt q2c vi vo L=60e-9 W=1e-6 R=1e3
+* drain gate source body 
+r0 vdd! vo R='R'
+m0 vo vi vss! vss! NMOS_VTG L='L' W='W' AD='0.105e-6*W' AS='0.105e-6*W' PD='W+210e-9' PS='W+210e-9' M=1
+.ends q2c
+** End of subcircuit definition.
+
+

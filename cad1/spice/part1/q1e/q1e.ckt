@@ -1,0 +1,17 @@
+** Library name: cad1
+** Cell name: q1e
+** View name: schematic
+
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+
+.subckt q1e vsd vsg L=60e-9 W=1e-6
+* drain gate source body 
+m0 vsd vsg vdd! vdd! PMOS_VTG L='L' W='W' AD='0.105e-6*W' AS='0.105e-6*W' PD='W+210e-9' PS='W+210e-9' M=1
+.ends q1e
+** End of subcircuit definition.
+
+
