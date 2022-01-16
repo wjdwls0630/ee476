@@ -1,0 +1,24 @@
+.GLOBAL vss! vdd!
+
+
+.OPTION
++ ARTIST=2
++ INGOLD=2
++ PARHIER=LOCAL
++ PSF=2
+
+.subckt NAND2 a b z
+mnmos1 net2 b vss! vss! NMOS_VTG L=60e-9 W=350e-9 AD=36.75e-15 AS=36.75e-15 PD=560e-9 PS=560e-9 M=1
+mnmos0 z a net2 vss! NMOS_VTG L=60e-9 W=350e-9 AD=36.75e-15 AS=36.75e-15 PD=560e-9 PS=560e-9 M=1
+mpmos1 z b vdd! vdd! PMOS_VTG L=60e-9 W=350e-9 AD=36.75e-15 AS=36.75e-15 PD=560e-9 PS=560e-9 M=1
+mpmos0 z a vdd! vdd! PMOS_VTG L=60e-9 W=350e-9 AD=36.75e-15 AS=36.75e-15 PD=560e-9 PS=560e-9 M=1
+.ends NAND2
+
+.subckt loaded_nand a b z
+xi3 vdd! z net4 NAND2
+xi2 vdd! z net3 NAND2
+xi0 vdd! z net2 NAND2
+xi1 vdd! z net1 NAND2
+xdut a b z NAND2
+.ends loaded_nand
+.END

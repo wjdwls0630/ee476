@@ -1,0 +1,30 @@
+CADENCE IHNL11140
+$model
+cad6/INVMUX4_X1/schematic INVMUX4_X1
+cad6/FA_X1/schematic FA_X1
+cad6/INVMUX2_X1/schematic INVMUX2_X1
+cad6/NOR2_X1/schematic NOR2_X1
+cad6/LOGIC_UNIT/schematic LOGIC_UNIT
+cad6/XOR2_X1/schematic XOR2_X1
+cad6/NOR4_X1/schematic NOR4_X1
+cad6/4B_RCA/schematic cad6_4B_RCA_schematic
+cad6/MUX2_X1/schematic MUX2_X1
+cad6/NAND4_X1/schematic NAND4_X1
+cad6/NAND2_X1/schematic NAND2_X1
+cad6/ALU_CHEAT_XOR/schematic ALU_CHEAT_XOR
+cad6/ARITMETIC_UNIT_CHEAT_XOR/schematic ARITMETIC_UNIT_CHEAT_XOR
+cad6/4B_CSA/schematic cad6_4B_CSA_schematic
+cad6/NAND3_X1/schematic NAND3_X1
+cad6/XNOR2_X1/schematic XNOR2_X1
+cad6/16B_CSA/schematic cad6_16B_CSA_schematic
+cad6/INV_X4/schematic INV_X4
+cad6/INV_X1/schematic INV_X1
+$endmodel
+$net
+vss! _gnet1
+VSS! vss!
+vdd! _gnet0
+VDD! vdd!
+$endnet
+$param
+$endparam

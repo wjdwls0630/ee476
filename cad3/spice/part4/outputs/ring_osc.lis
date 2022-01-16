@@ -1,0 +1,154 @@
+ ****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: ring_osc.ctl                                                      
+  Command line options: /gscratch/ece/tools/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i ring_osc.ctl -o outputs/
+  Start time: Fri Oct 29 05:42:07 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.6 
+ lic: USER:   jpark25              HOSTNAME: n3001.hyak.local 
+ lic: HOSTID: 400a0141             PID:      68878 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 3(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+  **warning** (./ring_osc.ckt:33)'.end' can not exist in include/lib files, ignored
+  **warning** multiple output options specified, using psf
+1****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+ ******  
+ ring_osc
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             ring_osc           1.00 
+        2 x1.xi0.                         nand2              1.00 
+        3 x1.xi8.                         invd1              1.00 
+        4 x1.xi7.                         invd1              1.00 
+        5 x1.xi6.                         invd1              1.00 
+        6 x1.xi5.                         invd1              1.00 
+        7 x1.xi4.                         invd1              1.00 
+        8 x1.xi3.                         invd1              1.00 
+        9 x1.xi2.                         invd1              1.00 
+       10 x1.xi1.                         invd1              1.00 
+  **info** (ring_osc.ctl:37) DC voltage reset to initial transient source value in source 0:ven. new dc=0.0000D+00
+  **warning** (nmos_vtg:x1.xi0.mnmos1 (./ring_osc.ckt:11)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=3.5e-07 l=6e-08.
+  
+  
+ ******  
+ ring_osc
+
+ ****** element node table
+                                                                                      
+ 0                ven              vvdd             vvss                              
+ osc_en           ven              2:mnmos0:g       2:mpmos0:g                        
+ osc_out          2:mnmos1:g       2:mpmos1:g       x1.xi8.m0:d      x1.xi8.m1:d      
+ vdd!             vvdd             2:mpmos1:s       2:mpmos1:b       2:mpmos0:s       
+                  2:mpmos0:b       x1.xi8.m1:s      x1.xi8.m1:b      x1.xi7.m1:s      
+                  x1.xi7.m1:b      x1.xi6.m1:s      x1.xi6.m1:b      x1.xi5.m1:s      
+                  x1.xi5.m1:b      x1.xi4.m1:s      x1.xi4.m1:b      x1.xi3.m1:s      
+                  x1.xi3.m1:b      x1.xi2.m1:s      x1.xi2.m1:b      x1.xi1.m1:s      
+                  x1.xi1.m1:b                                                         
+ vss!             vvss             2:mnmos1:s       2:mnmos1:b       2:mnmos0:b       
+                  x1.xi8.m0:s      x1.xi8.m0:b      x1.xi7.m0:s      x1.xi7.m0:b      
+                  x1.xi6.m0:s      x1.xi6.m0:b      x1.xi5.m0:s      x1.xi5.m0:b      
+                  x1.xi4.m0:s      x1.xi4.m0:b      x1.xi3.m0:s      x1.xi3.m0:b      
+                  x1.xi2.m0:s      x1.xi2.m0:b      x1.xi1.m0:s      x1.xi1.m0:b      
+ x1.net11         x1.xi5.m0:g      x1.xi5.m1:g      x1.xi4.m0:d      x1.xi4.m1:d      
+ x1.net13         x1.xi6.m0:g      x1.xi6.m1:g      x1.xi5.m0:d      x1.xi5.m1:d      
+ x1.net15         x1.xi7.m0:g      x1.xi7.m1:g      x1.xi6.m0:d      x1.xi6.m1:d      
+ x1.net17         x1.xi8.m0:g      x1.xi8.m1:g      x1.xi7.m0:d      x1.xi7.m1:d      
+ x1.net3          2:mnmos0:d       2:mpmos1:d       2:mpmos0:d       x1.xi1.m0:g      
+                  x1.xi1.m1:g                                                         
+ x1.net5          x1.xi2.m0:g      x1.xi2.m1:g      x1.xi1.m0:d      x1.xi1.m1:d      
+ x1.net7          x1.xi3.m0:g      x1.xi3.m1:g      x1.xi2.m0:d      x1.xi2.m1:d      
+ x1.net9          x1.xi4.m0:g      x1.xi4.m1:g      x1.xi3.m0:d      x1.xi3.m1:d      
+ x1.xi0.net2      2:mnmos1:d       2:mnmos0:s                                         
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ lic: Checkin 1 hspice token(s) 
+  
+  Opening plot unit= 15
+ file=outputs/ring_osc.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ ring_osc
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ ******
+ ring_osc
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 1.3793e-10  targ= 5.1435e-09   trig= 5.0056e-09
+ osc_freq= 7.2499e+09
+ avg_pow= 2.3586e-04  from= 5.0000e-09     to= 1.0000e-08
+
+          ***** job concluded
+ ******  
+ ring_osc
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 800.603
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 1.26 1.27 1.25 2/1575 68886
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      94 # elements   =      23
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      20 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1           4
+  transient          0.45       10001       11496        3905 rev=         1
+  readin             0.02
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        543.63 megabytes
+           total cpu time            0.49 seconds
+           total elapsed time        1.62 seconds
+           job started at     05:42:07 10/29/2021
+           job ended   at     05:42:09 10/29/2021
+           job total runtime         1.62 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.11(s)

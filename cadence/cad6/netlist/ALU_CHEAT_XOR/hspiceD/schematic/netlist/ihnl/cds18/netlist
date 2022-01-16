@@ -1,0 +1,70 @@
+
+** Library name: cad6
+** Cell name: ALU_CHEAT_XOR
+** View name: schematic
+xi0 op0<15> op0<14> op0<13> op0<12> op0<11> op0<10> op0<9> op0<8> op0<7> op0<6> op0<5> op0<4> op0<3> op0<2> op0<1> op0<0> op1<15> op1<14> op1<13> op1<12> op1<11> op1<10> op1<9> op1<8> op1<7> op1<6> op1<5> op1<4> op1<3> op1<2> op1<1> op1<0> logic_out<15> logic_out<14> logic_out<13> logic_out<12> logic_out<11> logic_out<10> logic_out<9> logic_out<8> logic_out<7> logic_out<6> logic_out<5> logic_out<4> logic_out<3> logic_out<2> logic_out<1> logic_out<0> ctrl<1> ctrl<0> LOGIC_UNIT
+xi3<15> logic_out<15> aritmetic_out<15> ctrl<2> alu_pre<15> MUX2_X1
+xi3<14> logic_out<14> aritmetic_out<14> ctrl<2> alu_pre<14> MUX2_X1
+xi3<13> logic_out<13> aritmetic_out<13> ctrl<2> alu_pre<13> MUX2_X1
+xi3<12> logic_out<12> aritmetic_out<12> ctrl<2> alu_pre<12> MUX2_X1
+xi3<11> logic_out<11> aritmetic_out<11> ctrl<2> alu_pre<11> MUX2_X1
+xi3<10> logic_out<10> aritmetic_out<10> ctrl<2> alu_pre<10> MUX2_X1
+xi3<9> logic_out<9> aritmetic_out<9> ctrl<2> alu_pre<9> MUX2_X1
+xi3<8> logic_out<8> aritmetic_out<8> ctrl<2> alu_pre<8> MUX2_X1
+xi3<7> logic_out<7> aritmetic_out<7> ctrl<2> alu_pre<7> MUX2_X1
+xi3<6> logic_out<6> aritmetic_out<6> ctrl<2> alu_pre<6> MUX2_X1
+xi3<5> logic_out<5> aritmetic_out<5> ctrl<2> alu_pre<5> MUX2_X1
+xi3<4> logic_out<4> aritmetic_out<4> ctrl<2> alu_pre<4> MUX2_X1
+xi3<3> logic_out<3> aritmetic_out<3> ctrl<2> alu_pre<3> MUX2_X1
+xi3<2> logic_out<2> aritmetic_out<2> ctrl<2> alu_pre<2> MUX2_X1
+xi3<1> logic_out<1> aritmetic_out<1> ctrl<2> alu_pre<1> MUX2_X1
+xi3<0> logic_out<0> aritmetic_out<0> ctrl<2> alu_pre<0> MUX2_X1
+xi7 c0n c_flag INV_X4
+xi21 zflag_inv z_flag INV_X4
+xi9 pf n_flag INV_X4
+xi4<15> alu_inv<15> alu_out<15> INV_X4
+xi4<14> alu_inv<14> alu_out<14> INV_X4
+xi4<13> alu_inv<13> alu_out<13> INV_X4
+xi4<12> alu_inv<12> alu_out<12> INV_X4
+xi4<11> alu_inv<11> alu_out<11> INV_X4
+xi4<10> alu_inv<10> alu_out<10> INV_X4
+xi4<9> alu_inv<9> alu_out<9> INV_X4
+xi4<8> alu_inv<8> alu_out<8> INV_X4
+xi4<7> alu_inv<7> alu_out<7> INV_X4
+xi4<6> alu_inv<6> alu_out<6> INV_X4
+xi4<5> alu_inv<5> alu_out<5> INV_X4
+xi4<4> alu_inv<4> alu_out<4> INV_X4
+xi4<3> alu_inv<3> alu_out<3> INV_X4
+xi4<2> alu_inv<2> alu_out<2> INV_X4
+xi4<1> alu_inv<1> alu_out<1> INV_X4
+xi4<0> alu_inv<0> alu_out<0> INV_X4
+xi6 co c0n INV_X1
+xi20 aritmetic_out<15> aritmetic_out_15_n INV_X1
+xi19 op1<15> op1_15_n INV_X1
+xi18 a_temp a_temp_n INV_X1
+xi8 alu_pre<15> pf INV_X1
+xi5<15> alu_pre<15> alu_inv<15> INV_X1
+xi5<14> alu_pre<14> alu_inv<14> INV_X1
+xi5<13> alu_pre<13> alu_inv<13> INV_X1
+xi5<12> alu_pre<12> alu_inv<12> INV_X1
+xi5<11> alu_pre<11> alu_inv<11> INV_X1
+xi5<10> alu_pre<10> alu_inv<10> INV_X1
+xi5<9> alu_pre<9> alu_inv<9> INV_X1
+xi5<8> alu_pre<8> alu_inv<8> INV_X1
+xi5<7> alu_pre<7> alu_inv<7> INV_X1
+xi5<6> alu_pre<6> alu_inv<6> INV_X1
+xi5<5> alu_pre<5> alu_inv<5> INV_X1
+xi5<4> alu_pre<4> alu_inv<4> INV_X1
+xi5<3> alu_pre<3> alu_inv<3> INV_X1
+xi5<2> alu_pre<2> alu_inv<2> INV_X1
+xi5<1> alu_pre<1> alu_inv<1> INV_X1
+xi5<0> alu_pre<0> alu_inv<0> INV_X1
+xi13 alu_pre<3> alu_pre<2> alu_pre<1> alu_pre<0> z3 NOR4_X1
+xi12 alu_pre<7> alu_pre<6> alu_pre<5> alu_pre<4> z2 NOR4_X1
+xi11 alu_pre<11> alu_pre<10> alu_pre<9> alu_pre<8> z1 NOR4_X1
+xi10 alu_pre<15> alu_pre<14> alu_pre<13> alu_pre<12> z0 NOR4_X1
+xi14 z0 z1 z2 z3 zflag_inv NAND4_X1
+xi16 a_temp_n op1_15_n aritmetic_out<15> ov1 NAND3_X1
+xi15 a_temp op1<15> aritmetic_out_15_n ov0 NAND3_X1
+xi17 ov0 ov1 v_flag NAND2_X1
+xi1 op0<15> op0<14> op0<13> op0<12> op0<11> op0<10> op0<9> op0<8> op0<7> op0<6> op0<5> op0<4> op0<3> op0<2> op0<1> op0<0> aritmetic_out<15> aritmetic_out<14> aritmetic_out<13> aritmetic_out<12> aritmetic_out<11> aritmetic_out<10> aritmetic_out<9> aritmetic_out<8> aritmetic_out<7> aritmetic_out<6> aritmetic_out<5> aritmetic_out<4> aritmetic_out<3> aritmetic_out<2> aritmetic_out<1> aritmetic_out<0> a_temp op1<15> op1<14> op1<13> op1<12> op1<11> op1<10> op1<9> op1<8> op1<7> op1<6> op1<5> op1<4> op1<3> op1<2> op1<1> op1<0> co ctrl<0> ARITMETIC_UNIT_CHEAT_XOR

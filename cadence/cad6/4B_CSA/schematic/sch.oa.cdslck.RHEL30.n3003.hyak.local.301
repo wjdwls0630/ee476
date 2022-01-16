@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      jpark25
+HostName                       n3003.hyak.local
+ProcessIdentifier              301
+ProcessCreationTime_UTC        1638080989
+ProcessCreationTime_Readable   Sat Nov 27 22:29:49 2021 PST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /gscratch/ece/courses/476/jpark25/cadence/ee476_jarenas/cad6/4B_CSA/schematic/sch.oa.cdslck.dirlck
+TimeEditLocked                 Sat Nov 27 22:34:23 2021 PST

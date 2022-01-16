@@ -1,0 +1,137 @@
+; FreePDK 45nm Initialization File (.cdsinit)
+; Customizations can be made at the end of this file
+
+; Load display.drf
+envSetVal( "graphic" "drfPath" 'string strcat( getShellEnvVar("PDK_DIR") "/ncsu_basekit/cdssetup/display.drf"))
+
+; Load Bind Keys
+;loadi( strcat( getShellEnvVar("PDK_DIR") "/ncsu_basekit/cdssetup/common_bindkeys.il"))
+printf("LOADING BINDKEYS....\n")
+let((bindKeyFileList file path saveSkillPath)
+   bindKeyFileList = '(
+    "leBindKeys.il"
+    "schBindKeys.il"
+    "leSchBindKeys.il"
+   )
+   path = strcat(
+    ". "
+    prependInstallPath("local ")
+    prependInstallPath("samples/local")
+   )
+   saveSkillPath=getSkillPath()
+   setSkillPath(path)
+   foreach(file bindKeyFileList
+    if(isFile(file) then
+       loadi(file)
+    )
+   )
+   setSkillPath(saveSkillPath)
+)
+printf("DONE LOADING BINDKEYS\n")
+
+; Setup Calibre
+if( getShellEnvVar("MGC_HOME") then
+  loadi( strcat( getShellEnvVar("MGC_HOME") "/shared/pkgs/icv/tools/queryskl/calibre.OA.skl"))
+) ;if
+
+; Load SKILL code in /ncsu_basekit/skill directory
+loadi( strcat( getShellEnvVar("PDK_DIR") "/ncsu_basekit/skill/loadSkill.il"))
+
+; Load default .cdsenv file
+(envLoadVals ?envFile  strcat( getShellEnvVar("PDK_DIR") "/ncsu_basekit/" "cdssetup/cdsenv") ?tool "layout")
+
+;-----------------------------------------------------------------------------------------------
+; User-specific setting
+;-----------------------------------------------------------------------------------------------
+editor = "gvim"
+
+; Set the graph background to white
+envSetVal("viva.graphFrame" "background" 'string "white")
+
+; Set graph axis font and size
+envSetVal("viva.axis" "font" 'string "Fixed [Misc],14,-1,5,50,0,0,0,0,0")
+envSetVal("viva.axis" "majorGridsOn" 'string "false")
+envSetVal("viva.axis" "minorGridsOn" 'string "false")
+
+; Set graph marker font and size
+envSetVal("viva.pointMarker" "font" 'string "Fixed [Misc],12,-1,5,50,0,0,0,0,0")
+
+
+; Set vertical marker font and size (14 point font below)  
+envSetVal("viva.vertMarker" "font" 'string "Fixed [Misc],14,-1,5,50,0,0,0,0,0") 
+
+
+; Set horizontal marker font and size (14 point font below)  
+envSetVal("viva.horizMarker" "font" 'string "Fixed [Misc],14,-1,5,50,0,0,0,0,0")
+
+
+; Set vertical and horizontal dx/dy markers' font and size (14 point font below)  
+envSetVal("viva.multiDeltaMarker" "font" 'string "Fixed [Misc],14,-1,5,50,0,0,0,0,0") 
+
+
+; Set line thickness to thick 
+envSetVal("viva.trace" "lineThickness" 'string "extrathick")
+
+; Set line type to solid 
+envSetVal("viva.trace" "lineStyle" 'string "solid")
+;envSetVal("viva.trace" "color" 'string "000000")
+;-----------------------------------------------------------------------------------------------
+
+printf( strcat( 
+"---------------------------------------------------------------------------\n"
+"Welcome to the FreePDK 45nm Free, Open-Source Process Design Kit\n"
+"\n"
+"This initiative is brought to you by the Semiconductor Research\n"
+"Corporation (SRC), the National Science Foundation (NSF), Silicon\n" 
+"Integration Initiative (Si2), Mentor Graphics, and Synopsys.\n"
+"\n"
+"This version of the kit was created by Rhett Davis, Paul Franzon,\n"
+"Michael Bucher, Sunil Basavarajaiah, and Harun Demircioglu\n"
+"of North Carolina State University, and James Stine and Ivan Castellanos\n"
+"of Oklahoma State University.\n"
+"\n"
+"Contributions and modifications to this kit are welcomed and encouraged.\n"
+"\n"
+"Copyright 2007 - W. Rhett Davis, Paul Franzon, Michael Bucher,\n"
+"                 and Sunil Basavarajaiah, North Carolina State University\n"
+"Copyright 2008 - W. Rhett Davis, Michael Bucher, and Sunil Basavarajaiah,\n"
+"                 North Carolina State University (ncsu_basekit subtree)\n"
+"                 James Stine, and Ivan Castellanos,\n"
+"                 and Oklahoma State University (osu_soc subtree)\n"
+"Copyright 2011 - W. Rhett Davis, and Harun Demircioglu,\n"
+"                 North Carolina State University\n"
+"\n"
+"Licensed under the Apache License, Version 2.0 (the \"License\");\n"
+"you may not use this file except in compliance with the License.\n"
+"You may obtain a copy of the License at\n"
+"\n"
+"    http://www.apache.org/licenses/LICENSE-2.0\n"
+"\n"
+"Unless required by applicable law or agreed to in writing, software\n"
+"distributed under the License is distributed on an \"AS IS\" BASIS,\n"
+"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n"
+"See the License for the specific language governing permissions and\n"
+"limitations under the License.\n"
+"---------------------------------------------------------------------------\n"
+"\n"
+"Done loading FreePDK customizations.\n"
+))
+
+; Comment the line below to disable auto opening of the Library Manager 
+ddsOpenLibManager()
+
+/**User Defined Skill Routines**/
+load("general.il")
+
+/**Automatic schematic-netlist generation with <SHIFT>+T**/
+load("netLister.il")
+
+/**Get layout bounding box area**/
+load("layoutSpecs.il")
+
+load("postProcessAbstract.il")
+
+/*Setup infix and menu preferences*/
+printf("Setting Up Infix and Menu preferences!!!\n")
+envSetVal("ui" "infix" 'boolean t)
+envSetVal("ui" "showOptionForms" 'boolean nil)

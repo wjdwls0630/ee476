@@ -1,0 +1,5 @@
+
+** Library name: cad6
+** Cell name: ALU_LOGIC_UNIT_1B
+** View name: schematic
+.subckt ALU_LOGIC_UNIT_1B ctrl<1> ctrl<0> logic_out op0 op1

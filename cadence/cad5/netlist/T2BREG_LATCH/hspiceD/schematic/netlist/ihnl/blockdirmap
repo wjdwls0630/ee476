@@ -1,0 +1,8 @@
+CADENCE IHNL11146
+
+cad5 INV_X4 schematic cds0
+cad5 INV_X1 schematic cds1
+cad5 DLL_X1 schematic cds2
+cad5 TBUF_X2 schematic cds3
+cad5 DLH_X1 schematic cds4
+cad5 T2BREG_LATCH schematic cds5

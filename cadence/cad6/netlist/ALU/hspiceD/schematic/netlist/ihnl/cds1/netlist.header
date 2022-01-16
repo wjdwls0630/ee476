@@ -1,0 +1,5 @@
+
+** Library name: cad6
+** Cell name: INV_X1
+** View name: schematic
+.subckt INV_X1 a zn

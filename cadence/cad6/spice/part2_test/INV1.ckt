@@ -1,0 +1,5 @@
+
+.subckt INV1 vi vo vdd vss M=1
+m0 vo vi vss vss NMOS_VTG L=60e-9 W=300e-9 AD=31.5e-15 AS=31.5e-15 PD=510e-9 PS=510e-9 M='M'
+m1 vo vi vdd vdd PMOS_VTG L=60e-9 W=400e-9 AD=42e-15 AS=42e-15 PD=610e-9 PS=610e-9 M='M'
+.ends INV1

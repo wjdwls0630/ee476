@@ -1,0 +1,31 @@
+xi8 op0_temp<3> op1<3> net46 co_1 s_1<3> FA_X1
+xi7 op0_temp<2> op1<2> net41 net46 s_1<2> FA_X1
+xi6 op0_temp<1> op1<1> net36 net41 s_1<1> FA_X1
+xi5 op0_temp<0> op1<0> vdd! net36 s_1<0> FA_X1
+xi3 op0_temp<3> op1<3> net26 co_0 s_0<3> FA_X1
+xi2 op0_temp<2> op1<2> net21 net26 s_0<2> FA_X1
+xi1 op0_temp<1> op1<1> net16 net21 s_0<1> FA_X1
+xi0 op0_temp<0> op1<0> vss! net16 s_0<0> FA_X1
+xi12 ctrl_buf<3> op0<3> op0_temp<3> XOR2_X1
+xi11 ctrl_buf<2> op0<2> op0_temp<2> XOR2_X1
+xi10 ctrl_buf<1> op0<1> op0_temp<1> XOR2_X1
+xi9 ctrl<0> op0<0> op0_temp<0> XOR2_X1
+xi28 ci_buf<3> ci_buf_s_co BUF_X1
+xi21 ci ci_buf<1> BUF_X1
+xi19<3> logic_out<3> logic_out_buf<3> BUF_X1
+xi19<2> logic_out<2> logic_out_buf<2> BUF_X1
+xi19<1> logic_out<1> logic_out_buf<1> BUF_X1
+xi19<0> logic_out<0> logic_out_buf<0> BUF_X1
+xi20 ci_buf<1> ci_buf<2> BUF_X1
+xi27 ci_buf<2> ci_buf<3> BUF_X1
+xi16 ctrl_buf<2> ctrl_buf<3> BUF_X1
+xi15 ctrl_buf<1> ctrl_buf<2> BUF_X1
+xi14 ctrl<0> ctrl_buf<1> BUF_X1
+xi13 ctrl_buf<3> ctrl_out<0> BUF_X1
+xi17 s_0<0> s_1<0> ci s<0> MUX2_X1
+xi24 s_0<3> s_1<3> ci_buf<3> s<3> MUX2_X1
+xi26 s_0<2> s_1<2> ci_buf<2> s<2> MUX2_X1
+xi25 s_0<1> s_1<1> ci_buf<1> s<1> MUX2_X1
+xi18 co_0 co_1 ci_buf_s_co co MUX2_X1
+.ends CSA_4B
+** End of subcircuit definition.

@@ -1,0 +1,275 @@
+ ****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: hold_fall.ctl                                                     
+  Command line options: /gscratch/ece/tools/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i hold_fall.ctl -o outputs_hold_fall/
+  Start time: Sun Nov  7 22:31:41 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.6 
+ lic: USER:   jpark25              HOSTNAME: n3001.hyak.local 
+ lic: HOSTID: 400a0141             PID:      50764 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 4(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+1****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+ ******  
+ loaded_flip_flop_hold_fall
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xdinv0.                         invd1              1.00 
+        2 xdinv1.                         invd1              1.00 
+        3 xrstinv0.                       invd1              1.00 
+        4 xrstinv1.                       invd1              1.00 
+        5 xclkinv0.                       invd1              1.00 
+        6 xclkinv1.                       invd1              1.00 
+        7 xldfsr0.                        loaded_flip_flop   1.00 
+        8 xldfsr0.xdfsr0.                 dfsr               1.00 
+  **info** (hold_fall.ctl:65) DC voltage reset to initial transient source value in source 0:vclk_ideal. new dc=0.0000D+00
+  **warning** (nmos_vtg:xdinv0.m0 (./INVD1.ckt:3)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=3e-07 l=6e-08.
+  
+  
+ ******  
+ loaded_flip_flop_hold_fall
+
+ ****** element node table
+                                                                                      
+ 0                8:c_9            8:c_21           8:c_28           8:c_42           
+                  8:c_49           8:c_57           8:c_65           8:c_74           
+                  8:c_84           8:c_94           8:c_110          8:c_126          
+                  8:c_139          8:c_143          8:c_149          8:c_156          
+                  vclk_ideal       vd_ideal         vrst_ideal       vvdd             
+                  vvss                                                                
+ clk              8:c_143          8:cc_33          8:cc_63          8:cc_67          
+                  6:m0:d           6:m1:d           8:mxi0.mm0:g     8:mxi0.mm1:g     
+ clk_ideal        vclk_ideal       5:m0:g           5:m1:g                            
+ d                8:c_149          8:cc_34          8:cc_39          8:cc_64          
+                  8:cc_68          8:cc_70          xdinv1.m0:d      xdinv1.m1:d      
+                  8:mxml0.xi0:g    8:mxml0.xi0:g                                      
+ d_ideal          vd_ideal         xdinv0.m0:g      xdinv0.m1:g                       
+ n_clk            5:m0:d           5:m1:d           6:m0:g           6:m1:g           
+ n_d              xdinv0.m0:d      xdinv0.m1:d      xdinv1.m0:g      xdinv1.m1:g      
+ n_rst            3:m0:d           3:m1:d           4:m0:g           4:m1:g           
+ q                xldfsr0.c0       8:c_156          8:cc_18          8:cc_23          
+                  8:cc_56          8:cc_60          8:cc_65          8:cc_69          
+                  8:mxsl0.xi1:d    8:mxsl0.xi1:d    ic1                               
+ rst              8:c_28           8:cc_9           8:cc_19          8:cc_20          
+                  8:cc_21          8:cc_22          8:cc_23          4:m0:d           
+                  4:m1:d           
+                  mxsl0.xnor0.mnmos0:g
+                  mxsl0.xnor0.mpmos0:g
+                  8:mxi2.mm0:g     
+                  8:mxi2.mm1:g                                                        
+ rst_ideal        vrst_ideal       3:m0:g           3:m1:g                            
+ vdd!             8:c_126          8:cc_7           8:cc_16          8:cc_22          
+                  8:cc_31          8:cc_37          8:cc_42          8:cc_45          
+                  8:cc_50          8:cc_54          8:cc_58          8:cc_61          
+                  8:cc_66          8:cc_67          8:cc_68          8:cc_69          
+                  vvdd             xdinv0.m1:s      xdinv0.m1:b      xdinv1.m1:s      
+                  xdinv1.m1:b      3:m1:s           3:m1:b           4:m1:s           
+                  4:m1:b           5:m1:s           5:m1:b           6:m1:s           
+                  6:m1:b           
+                  mxml0.xnand0.mpmos1:s
+                  mxml0.xnand0.mpmos1:b
+                  mxml0.xnand0.mpmos0:s
+                  
+                  mxml0.xnand0.mpmos0:b
+                  mxsl0.xnor0.mpmos1:s
+                  mxsl0.xnor0.mpmos1:b
+                  mxsl0.xnor0.mpmos0:b
+                  8:mxi0.mm1:s     8:mxi0.mm1:b     8:mxi1.mm1:s     8:mxi1.mm1:b     
+                  8:mxi2.mm1:s     8:mxi2.mm1:b     8:mxml0.xi0:s    8:mxml0.xi0:b    
+                  8:mxml0.xi1:s    8:mxml0.xi1:b    8:mxsl0.xi0:s    8:mxsl0.xi0:b    
+                  8:mxsl0.xi1:s    8:mxsl0.xi1:b    8:mxml0.xtg:b    8:mxml0.xtg:b    
+                  8:mxsl0.xtg:b    8:mxsl0.xtg:b                                      
+ vss!             xldfsr0.c0       8:c_110          8:cc_6           8:cc_15          
+                  8:cc_21          8:cc_30          8:cc_36          8:cc_41          
+                  8:cc_44          8:cc_49          8:cc_53          8:cc_57          
+                  8:cc_61          8:cc_62          8:cc_63          8:cc_64          
+                  8:cc_65          vvss             xdinv0.m0:s      xdinv0.m0:b      
+                  xdinv1.m0:s      xdinv1.m0:b      3:m0:s           3:m0:b           
+                  4:m0:s           4:m0:b           5:m0:s           5:m0:b           
+                  6:m0:s           6:m0:b           
+                  mxml0.xnand0.mnmos1:s
+                  mxml0.xnand0.mnmos1:b
+                  
+                  mxml0.xnand0.mnmos0:b
+                  mxsl0.xnor0.mnmos1:s
+                  mxsl0.xnor0.mnmos1:b
+                  mxsl0.xnor0.mnmos0:s
+                  
+                  mxsl0.xnor0.mnmos0:b
+                  8:mxi0.mm0:s     8:mxi0.mm0:b     8:mxi1.mm0:s     
+                  8:mxi1.mm0:b     8:mxi2.mm0:s     8:mxi2.mm0:b     8:mxml0.xi0:s    
+                  8:mxml0.xi0:b    8:mxml0.xi1:s    8:mxml0.xi1:b    8:mxsl0.xi0:s    
+                  8:mxsl0.xi0:b    8:mxsl0.xi1:s    8:mxsl0.xi1:b    8:mxml0.xtg:b    
+                  8:mxml0.xtg:b    8:mxsl0.xtg:b    8:mxsl0.xtg:b                     
+ 8:clki           8:c_139          8:cc_8           8:cc_17          8:cc_32          
+                  8:cc_38          8:cc_43          8:cc_46          8:cc_51          
+                  8:cc_55          8:cc_59          8:cc_62          8:cc_66          
+                  8:cc_70          8:mxi1.mm0:d     8:mxi1.mm1:d     8:mxml0.xtg:g    
+                  8:mxml0.xtg:g    8:mxsl0.xtg:g    8:mxsl0.xtg:g                     
+ 8:clki_bar       8:c_42           8:cc_2           8:cc_10          8:cc_24          
+                  8:cc_25          8:cc_26          8:cc_27          8:cc_28          
+                  8:cc_29          8:cc_30          8:cc_31          8:cc_32          
+                  8:cc_33          8:cc_34          8:mxi0.mm0:d     8:mxi0.mm1:d     
+                  8:mxi1.mm0:g     8:mxi1.mm1:g     8:mxml0.xtg:g    8:mxml0.xtg:g    
+                  8:mxsl0.xtg:g    8:mxsl0.xtg:g                                      
+ 8:n              8:c_9            8:cc_1           8:cc_2           8:cc_3           
+                  8:cc_4           8:cc_5           8:cc_6           8:cc_7           
+                  8:cc_8           
+                  mxml0.xnand0.mnmos1:g
+                  mxml0.xnand0.mpmos1:g
+                  8:mxml0.xi1:d    
+                  8:mxml0.xi1:d    8:mxsl0.xtg:d    8:mxsl0.xtg:d                     
+ 8:rst_bar        8:c_21           8:cc_1           8:cc_9           8:cc_10          
+                  8:cc_11          8:cc_12          8:cc_13          8:cc_14          
+                  8:cc_15          8:cc_16          8:cc_17          8:cc_18          
+                  
+                  mxml0.xnand0.mnmos0:g
+                  mxml0.xnand0.mpmos0:g
+                  8:mxi2.mm0:d     8:mxi2.mm1:d     
+ 8:xml0.n1        8:c_49           8:cc_24          8:cc_35          8:cc_36          
+                  8:cc_37          8:cc_38          8:cc_39          8:mxml0.xi0:d    
+                  8:mxml0.xi0:d    8:mxml0.xtg:d    8:mxml0.xtg:d                     
+ 8:xml0.n2        8:c_57           8:cc_3           8:cc_25          8:cc_35          
+                  8:cc_40          8:cc_41          8:cc_42          8:cc_43          
+                  8:mxml0.xi1:g    8:mxml0.xi1:g    8:mxml0.xtg:s    8:mxml0.xtg:s    
+                  8:mxml0.xtg:s    8:mxml0.xtg:s                                      
+ 8:xml0.n4        8:c_65           8:cc_4           8:cc_11          8:cc_26          
+                  8:cc_40          8:cc_44          8:cc_45          8:cc_46          
+                  
+                  mxml0.xnand0.mnmos0:d
+                  mxml0.xnand0.mpmos1:d
+                  mxml0.xnand0.mpmos0:d
+                  8:mxml0.xtg:d    
+                  8:mxml0.xtg:d                                                       
+ 8:xml0.xnand0.ne 
+                  mxml0.xnand0.mnmos1:d
+                  mxml0.xnand0.mnmos0:s
+                                                    
+ 8:xsl0.n1        8:c_74           8:cc_5           8:cc_12          8:cc_27          
+                  8:cc_47          8:cc_48          8:cc_49          8:cc_50          
+                  8:cc_51          8:mxsl0.xi0:g    8:mxsl0.xi0:g    8:mxsl0.xtg:s    
+                  8:mxsl0.xtg:s    8:mxsl0.xtg:s    8:mxsl0.xtg:s                     
+ 8:xsl0.n2        8:c_84           8:cc_13          8:cc_19          8:cc_28          
+                  8:cc_47          8:cc_52          8:cc_53          8:cc_54          
+                  8:cc_55          8:cc_56          
+                  mxsl0.xnor0.mnmos1:g
+                  mxsl0.xnor0.mpmos1:g
+                  8:mxsl0.xi0:d    8:mxsl0.xi0:d    8:mxsl0.xi1:g    8:mxsl0.xi1:g    
+ 8:xsl0.n3        8:c_94           8:cc_14          8:cc_20          8:cc_29          
+                  8:cc_48          8:cc_52          8:cc_57          8:cc_58          
+                  8:cc_59          8:cc_60          
+                  mxsl0.xnor0.mnmos1:d
+                  mxsl0.xnor0.mnmos0:d
+                  
+                  mxsl0.xnor0.mpmos0:d
+                  8:mxsl0.xtg:d    8:mxsl0.xtg:d                     
+ 8:xsl0.xnor0.net 
+                  mxsl0.xnor0.mpmos1:d
+                  mxsl0.xnor0.mpmos0:s
+                                                    
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ lic: Checkin 1 hspice token(s) 
+  
+  Opening plot unit= 15
+ file=outputs_hold_fall/hold_fall.pa0
+
+  **info** multiple results used in passfail
+ 
+          optimization completed, the condition
+           relin = 0.0001 is satisfied
+ 
+
+ 
+ **** optimized parameters optd
+
+  .param delay =   -1.009338379e-09
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ loaded_flip_flop_hold_fall
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ ******
+ loaded_flip_flop_hold_fall
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ t_cq_fall= 1.1142e-10  targ= 5.1712e-09   trig= 5.0597e-09
+ t_q_f_i= 1.5208e-09  targ= 1.5208e-09   trig= 0.0000e+00
+ v_q_max= 1.2131e+00    at= 5.1340e-09
+             from= 1.5208e-09    to= 8.0000e-09
+ t_h_fall=-3.9192e-11  targ= 5.0205e-09   trig= 5.0597e-09
+
+          ***** job concluded
+ ******  
+ loaded_flip_flop_hold_fall
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 1999.999
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 18.47 18.34 18.47 19/2089 50771
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =     193 # elements   =     134
+  # resistors   =       0 # capacitors =      87 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       5
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      42 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1          39
+  transient          1.30        8001       16715        6286 rev=       799
+  readin             0.02
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        517.54 megabytes
+           total cpu time            1.37 seconds
+           total elapsed time        2.51 seconds
+           job started at     22:31:41 11/07/2021
+           job ended   at     22:31:44 11/07/2021
+           job total runtime         2.51 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.12(s)

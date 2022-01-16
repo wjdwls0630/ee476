@@ -1,0 +1,16 @@
+CADENCE IHNL11140
+$model
+cad6/FA_X1/schematic FA_X1
+cad6/XOR2_X1/schematic XOR2_X1
+cad6/RCA_4B/schematic RCA_4B
+cad6/MUX2_X1/schematic MUX2_X1
+cad6/BUF_X1/schematic BUF_X1
+cad6/ALU_ARITHMETIC_UNIT_16B/schematic ALU_ARITHMETIC_UNIT_16B
+cad6/CSA_4B/schematic CSA_4B
+$endmodel
+$net
+VSS! vss!
+VDD! vdd!
+$endnet
+$param
+$endparam

@@ -1,0 +1,457 @@
+** Generated for: hspiceD
+** Generated on: Nov 22 02:10:36 2021
+** Design library name: cad5
+** Design cell name: RF
+** Design view name: schematic
+.GLOBAL vdd! vss!
+
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+
+** Library name: cad5
+** Cell name: INV_X1
+** View name: schematic
+.subckt INV_X1 a zn
+m_i_0 zn a vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_1 zn a vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+.ends INV_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: AND2_X1
+** View name: schematic
+.subckt AND2_X1 a1 a2 zn
+m_i_5 vdd! a2 zn_neg vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_4 zn_neg a1 vdd! vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_1 zn zn_neg vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_2 net_0 a1 zn_neg vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_3 vss! a2 net_0 vss! NMOS_VTL L=50e-9 W=210e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0 zn zn_neg vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+.ends AND2_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: NAND2_X1
+** View name: schematic
+.subckt NAND2_X1 a1 a2 zn
+m_i_3 zn a2 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_2 vdd! a1 zn vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0 zn a1 net_0 vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_1 net_0 a2 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+.ends NAND2_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: DEC_Read_4_13
+** View name: schematic
+.subckt DEC_Read_4_13 addr<3> addr<2> addr<1> addr<0> dec_addr_bar<12> dec_addr_bar<11> dec_addr_bar<10> dec_addr_bar<9> dec_addr_bar<8> dec_addr_bar<7> dec_addr_bar<6> dec_addr_bar<5> dec_addr_bar<4> dec_addr_bar<3> dec_addr_bar<2> dec_addr_bar<1> dec_addr_bar<0>
+xi3 addr<3> addr_bar<3> INV_X1
+xi2 addr<2> addr_bar<2> INV_X1
+xi1 addr<1> addr_bar<1> INV_X1
+xi0 addr<0> addr_bar<0> INV_X1
+xi11 addr<2> addr<3> net_11xx AND2_X1
+xi10 addr_bar<2> addr<3> net_10xx AND2_X1
+xi9 addr<2> addr_bar<3> net_01xx AND2_X1
+xi8 addr_bar<2> addr_bar<3> net_00xx AND2_X1
+xi7 addr<0> addr<1> net_xx11 AND2_X1
+xi6 addr_bar<0> addr<1> net_xx10 AND2_X1
+xi5 addr<0> addr_bar<1> net_xx01 AND2_X1
+xi4 addr_bar<0> addr_bar<1> net_xx00 AND2_X1
+xi24 net_xx00 net_11xx dec_addr_bar<12> NAND2_X1
+xi23 net_xx11 net_10xx dec_addr_bar<11> NAND2_X1
+xi22 net_xx10 net_10xx dec_addr_bar<10> NAND2_X1
+xi21 net_xx01 net_10xx dec_addr_bar<9> NAND2_X1
+xi20 net_xx00 net_10xx dec_addr_bar<8> NAND2_X1
+xi19 net_xx11 net_01xx dec_addr_bar<7> NAND2_X1
+xi18 net_xx10 net_01xx dec_addr_bar<6> NAND2_X1
+xi17 net_xx01 net_01xx dec_addr_bar<5> NAND2_X1
+xi16 net_xx00 net_01xx dec_addr_bar<4> NAND2_X1
+xi15 net_xx11 net_00xx dec_addr_bar<3> NAND2_X1
+xi14 net_xx10 net_00xx dec_addr_bar<2> NAND2_X1
+xi13 net_xx01 net_00xx dec_addr_bar<1> NAND2_X1
+xi12 net_xx00 net_00xx dec_addr_bar<0> NAND2_X1
+.ends DEC_Read_4_13
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: TBUF_X2
+** View name: schematic
+.subckt TBUF_X2 a en z
+m_i_24_1 dummy0 en x vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_24_0 vdd! a dummy0 vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_24_0_64 vdd! a y vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_24_3 vdd! y z vdd! PMOS_VTL L=50e-9 W=540e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_24 vdd! y z vdd! PMOS_VTL L=50e-9 W=540e-9 AD=56.7e-15 AS=56.7e-15 PD=750e-9 PS=750e-9 M=1
+m_i_24_1_48 y nen vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_42 vdd! en nen vdd! PMOS_VTL L=50e-9 W=315e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0_15_63 dummy1 a y vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0_14_47 vss! nen dummy1 vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+m_i_0_15 vss! a x vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+m_i_17 vss! en nen vss! NMOS_VTL L=50e-9 W=210e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0_14 vss! en x vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+m_i_0_6 vss! x z vss! NMOS_VTL L=50e-9 W=355e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0 vss! x z vss! NMOS_VTL L=50e-9 W=355e-9 AD=37.275e-15 AS=37.275e-15 PD=565e-9 PS=565e-9 M=1
+.ends TBUF_X2
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: RF_16_TBUFF
+** View name: schematic
+.subckt RF_16_TBUFF a<15> a<14> a<13> a<12> a<11> a<10> a<9> a<8> a<7> a<6> a<5> a<4> a<3> a<2> a<1> a<0> en z<15> z<14> z<13> z<12> z<11> z<10> z<9> z<8> z<7> z<6> z<5> z<4> z<3> z<2> z<1> z<0>
+xi3<15> a<15> en z<15> TBUF_X2
+xi3<14> a<14> en z<14> TBUF_X2
+xi3<13> a<13> en z<13> TBUF_X2
+xi3<12> a<12> en z<12> TBUF_X2
+xi3<11> a<11> en z<11> TBUF_X2
+xi3<10> a<10> en z<10> TBUF_X2
+xi3<9> a<9> en z<9> TBUF_X2
+xi3<8> a<8> en z<8> TBUF_X2
+xi3<7> a<7> en z<7> TBUF_X2
+xi3<6> a<6> en z<6> TBUF_X2
+xi3<5> a<5> en z<5> TBUF_X2
+xi3<4> a<4> en z<4> TBUF_X2
+xi3<3> a<3> en z<3> TBUF_X2
+xi3<2> a<2> en z<2> TBUF_X2
+xi3<1> a<1> en z<1> TBUF_X2
+xi3<0> a<0> en z<0> TBUF_X2
+.ends RF_16_TBUFF
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: RF_TRISTATE_BANK
+** View name: schematic
+.subckt RF_TRISTATE_BANK ri_d<12> ri_d<11> ri_d<10> ri_d<9> ri_d<8> ri_d<7> ri_d<6> ri_d<5> ri_d<4> ri_d<3> ri_d<2> ri_d<1> ri_d<0> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3>
++reg_data_11<2> reg_data_11<1> reg_data_11<0> reg_data_12<15> reg_data_12<14> reg_data_12<13> reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6> reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> reg_data_1<15> reg_data_1<14> reg_data_1<13> reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> reg_data_4<15> reg_data_4<14>
++reg_data_4<13> reg_data_4<12> reg_data_4<11> reg_data_4<10> reg_data_4<9> reg_data_4<8> reg_data_4<7> reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0> reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> reg_data_5<7> reg_data_5<6> reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7>
++reg_data_8<6> reg_data_8<5> reg_data_8<4> reg_data_8<3> reg_data_8<2> reg_data_8<1> reg_data_8<0> reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10> reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1> reg_data_9<0>
+xi3 reg_data_12<15> reg_data_12<14> reg_data_12<13> reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6> reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> ri_d<12> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi14 reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> ri_d<2> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi13 reg_data_1<15> reg_data_1<14> reg_data_1<13> reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> ri_d<1> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi12 reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> ri_d<3> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi11 reg_data_4<15> reg_data_4<14> reg_data_4<13> reg_data_4<12> reg_data_4<11> reg_data_4<10> reg_data_4<9> reg_data_4<8> reg_data_4<7> reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0> ri_d<4> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi10 reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7> reg_data_8<6> reg_data_8<5> reg_data_8<4> reg_data_8<3> reg_data_8<2> reg_data_8<1> reg_data_8<0> ri_d<8> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi9 reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> ri_d<7> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi8 reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> reg_data_5<7> reg_data_5<6> reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> ri_d<5> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi7 reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> ri_d<6> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi6 reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> ri_d<10> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi5 reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10> reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1> reg_data_9<0> ri_d<9> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi4 reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3> reg_data_11<2> reg_data_11<1> reg_data_11<0> ri_d<11> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+xi15 reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> ri_d<0> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> RF_16_TBUFF
+.ends RF_TRISTATE_BANK
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: RF_DEC_Read_TRISTATE_BANK
+** View name: schematic
+.subckt RF_DEC_Read_TRISTATE_BANK rd_addr_i<3> rd_addr_i<2> rd_addr_i<1> rd_addr_i<0> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3> reg_data_11<2> reg_data_11<1> reg_data_11<0>
++reg_data_12<15> reg_data_12<14> reg_data_12<13> reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6> reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> reg_data_1<15> reg_data_1<14> reg_data_1<13> reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> reg_data_4<15> reg_data_4<14> reg_data_4<13> reg_data_4<12> reg_data_4<11>
++reg_data_4<10> reg_data_4<9> reg_data_4<8> reg_data_4<7> reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0> reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> reg_data_5<7> reg_data_5<6> reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7> reg_data_8<6> reg_data_8<5> reg_data_8<4>
++reg_data_8<3> reg_data_8<2> reg_data_8<1> reg_data_8<0> reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10> reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1> reg_data_9<0>
+xi0 rd_addr_i<3> rd_addr_i<2> rd_addr_i<1> rd_addr_i<0> net1<0> net1<1> net1<2> net1<3> net1<4> net1<5> net1<6> net1<7> net1<8> net1<9> net1<10> net1<11> net1<12> DEC_Read_4_13
+xi1 net1<0> net1<1> net1<2> net1<3> net1<4> net1<5> net1<6> net1<7> net1<8> net1<9> net1<10> net1<11> net1<12> rd_data_i<15> rd_data_i<14> rd_data_i<13> rd_data_i<12> rd_data_i<11> rd_data_i<10> rd_data_i<9> rd_data_i<8> rd_data_i<7> rd_data_i<6> rd_data_i<5> rd_data_i<4> rd_data_i<3> rd_data_i<2> rd_data_i<1> rd_data_i<0> reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3> reg_data_11<2>
++reg_data_11<1> reg_data_11<0> reg_data_12<15> reg_data_12<14> reg_data_12<13> reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6> reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> reg_data_1<15> reg_data_1<14> reg_data_1<13> reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> reg_data_4<15> reg_data_4<14> reg_data_4<13>
++reg_data_4<12> reg_data_4<11> reg_data_4<10> reg_data_4<9> reg_data_4<8> reg_data_4<7> reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0> reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> reg_data_5<7> reg_data_5<6> reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7> reg_data_8<6>
++reg_data_8<5> reg_data_8<4> reg_data_8<3> reg_data_8<2> reg_data_8<1> reg_data_8<0> reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10> reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1> reg_data_9<0> RF_TRISTATE_BANK
+.ends RF_DEC_Read_TRISTATE_BANK
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: DLL_X1
+** View name: schematic
+.subckt DLL_X1 d gn q
+m_i_67 net_003 net_001 net_006 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_62 net_006 d vdd! vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_79 vdd! net_005 net_007 vdd! PMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_73 net_007 net_000 net_003 vdd! PMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_92 q net_003 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_48 net_000 gn vdd! vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_55 vdd! net_000 net_001 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_85 vdd! net_003 net_005 vdd! PMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_13 net_002 d vss! vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_18 net_003 net_000 net_002 vss! NMOS_VTL L=50e-9 W=210e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_24 net_004 net_001 net_003 vss! NMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_29 vss! net_005 net_004 vss! NMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_42 q net_003 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0 net_000 gn vss! vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_7 vss! net_000 net_001 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_35 vss! net_003 net_005 vss! NMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+.ends DLL_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: RF_16_M_LATCH
+** View name: schematic
+.subckt RF_16_M_LATCH d<15> d<14> d<13> d<12> d<11> d<10> d<9> d<8> d<7> d<6> d<5> d<4> d<3> d<2> d<1> d<0> g q<15> q<14> q<13> q<12> q<11> q<10> q<9> q<8> q<7> q<6> q<5> q<4> q<3> q<2> q<1> q<0>
+xi7<15> d<15> g q<15> DLL_X1
+xi7<14> d<14> g q<14> DLL_X1
+xi7<13> d<13> g q<13> DLL_X1
+xi7<12> d<12> g q<12> DLL_X1
+xi7<11> d<11> g q<11> DLL_X1
+xi7<10> d<10> g q<10> DLL_X1
+xi7<9> d<9> g q<9> DLL_X1
+xi7<8> d<8> g q<8> DLL_X1
+xi7<7> d<7> g q<7> DLL_X1
+xi7<6> d<6> g q<6> DLL_X1
+xi7<5> d<5> g q<5> DLL_X1
+xi7<4> d<4> g q<4> DLL_X1
+xi7<3> d<3> g q<3> DLL_X1
+xi7<2> d<2> g q<2> DLL_X1
+xi7<1> d<1> g q<1> DLL_X1
+xi7<0> d<0> g q<0> DLL_X1
+.ends RF_16_M_LATCH
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: DLH_X1
+** View name: schematic
+.subckt DLH_X1 d g q
+m_i_66 net_003 net_000 net_006 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_61 net_006 d vdd! vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_72 net_007 net_001 net_003 vdd! PMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_76 vdd! net_005 net_007 vdd! PMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_48 vdd! g net_000 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_89_4 q net_003 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_55 net_001 net_000 vdd! vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_82 vdd! net_003 net_005 vdd! PMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_13 net_002 d vss! vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_18 net_003 net_001 net_002 vss! NMOS_VTL L=50e-9 W=210e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_28 vss! net_005 net_004 vss! NMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_24 net_004 net_000 net_003 vss! NMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0 vss! g net_000 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_41_11 q net_003 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_7 net_001 net_000 vss! vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_34 vss! net_003 net_005 vss! NMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+.ends DLH_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: RF_16_S_LATCH
+** View name: schematic
+.subckt RF_16_S_LATCH d<15> d<14> d<13> d<12> d<11> d<10> d<9> d<8> d<7> d<6> d<5> d<4> d<3> d<2> d<1> d<0> g q<15> q<14> q<13> q<12> q<11> q<10> q<9> q<8> q<7> q<6> q<5> q<4> q<3> q<2> q<1> q<0>
+xi7<15> d<15> g q<15> DLH_X1
+xi7<14> d<14> g q<14> DLH_X1
+xi7<13> d<13> g q<13> DLH_X1
+xi7<12> d<12> g q<12> DLH_X1
+xi7<11> d<11> g q<11> DLH_X1
+xi7<10> d<10> g q<10> DLH_X1
+xi7<9> d<9> g q<9> DLH_X1
+xi7<8> d<8> g q<8> DLH_X1
+xi7<7> d<7> g q<7> DLH_X1
+xi7<6> d<6> g q<6> DLH_X1
+xi7<5> d<5> g q<5> DLH_X1
+xi7<4> d<4> g q<4> DLH_X1
+xi7<3> d<3> g q<3> DLH_X1
+xi7<2> d<2> g q<2> DLH_X1
+xi7<1> d<1> g q<1> DLH_X1
+xi7<0> d<0> g q<0> DLH_X1
+.ends RF_16_S_LATCH
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: CLKGATE_X2
+** View name: schematic
+.subckt CLKGATE_X2 ck e gck
+m_i_74 net_009 net_004 net_002 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_78 vdd! e net_009 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_68 net_002 net_005 net_008 vdd! PMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_64 net_008 net_000 vdd! vdd! PMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_84 net_004 net_005 vdd! vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_57 vdd! net_002 net_000 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_i_90 vdd! ck net_005 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_97 net_006 ck vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_103 vdd! net_000 net_006 vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_109 gck net_006 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_109_4 gck net_006 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_21 vss! e net_003 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_17 net_003 net_005 net_002 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_11 net_002 net_004 net_001 vss! NMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_7 net_001 net_000 vss! vss! NMOS_VTL L=50e-9 W=90e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_40 net_007 ck net_006 vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+m_i_45 vss! net_000 net_007 vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_27 net_004 net_005 vss! vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_0 vss! net_002 net_000 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_i_33 vss! ck net_005 vss! NMOS_VTL L=50e-9 W=210e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_51 gck net_006 vss! vss! NMOS_VTL L=50e-9 W=195e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_51_7 gck net_006 vss! vss! NMOS_VTL L=50e-9 W=195e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+.ends CLKGATE_X2
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: NOR3_X1
+** View name: schematic
+.subckt NOR3_X1 a1 a2 a3 zn
+m_i_5 net_1 a3 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_3 zn a1 net_0 vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_4 net_0 a2 net_1 vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_2 zn a3 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+m_i_0 zn a1 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_1 vss! a2 zn vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+.ends NOR3_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: NOR4_X1
+** View name: schematic
+.subckt NOR4_X1 a1 a2 a3 a4 zn
+m_i_2 vss! a3 zn vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+m_i_3 zn a4 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+m_i_0 vss! a1 zn vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_1 zn a2 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+m_i_6 net_1 a3 net_2 vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_7 net_2 a4 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_4 zn a1 net_0 vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_5 net_0 a2 net_1 vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+.ends NOR4_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: NAND4_X1
+** View name: schematic
+.subckt NAND4_X1 a1 a2 a3 a4 zn
+m_i_6 vdd! a3 zn vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_7 zn a4 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_4 vdd! a1 zn vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_5 zn a2 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_2 net_1 a3 net_2 vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+m_i_3 net_2 a4 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0 zn a1 net_0 vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+m_i_1 net_0 a2 net_1 vss! NMOS_VTL L=50e-9 W=415e-9 AD=43.575e-15 AS=43.575e-15 PD=625e-9 PS=625e-9 M=1
+.ends NAND4_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: CLKBUF_X2
+** View name: schematic
+.subckt CLKBUF_X2 a z
+m_i_3 vdd! a z_neg vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_1_0 z z_neg vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_1_1 vdd! z_neg z vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_i_2 vss! a z_neg vss! NMOS_VTL L=50e-9 W=195e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0_0 z z_neg vss! vss! NMOS_VTL L=50e-9 W=195e-9 AD=20.475e-15 AS=20.475e-15 PD=405e-9 PS=405e-9 M=1
+m_i_0_1 vss! z_neg z vss! NMOS_VTL L=50e-9 W=195e-9 AD=20.475e-15 AS=20.475e-15 PD=405e-9 PS=405e-9 M=1
+.ends CLKBUF_X2
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: RF_16_LATCH_BANK
+** View name: schematic
+.subckt RF_16_LATCH_BANK clk wraddress_en<12> wraddress_en<11> wraddress_en<10> wraddress_en<9> wraddress_en<8> wraddress_en<7> wraddress_en<6> wraddress_en<5> wraddress_en<4> wraddress_en<3> wraddress_en<2> wraddress_en<1> wraddress_en<0> reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3> reg_data_11<2> reg_data_11<1> reg_data_11<0> reg_data_12<15> reg_data_12<14> reg_data_12<13>
++reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6> reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> reg_data_1<15> reg_data_1<14> reg_data_1<13> reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> reg_data_4<15> reg_data_4<14> reg_data_4<13> reg_data_4<12> reg_data_4<11> reg_data_4<10> reg_data_4<9> reg_data_4<8> reg_data_4<7>
++reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0> reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> reg_data_5<7> reg_data_5<6> reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7> reg_data_8<6> reg_data_8<5> reg_data_8<4> reg_data_8<3> reg_data_8<2> reg_data_8<1> reg_data_8<0>
++reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10> reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1> reg_data_9<0> wr_data<15> wr_data<14> wr_data<13> wr_data<12> wr_data<11> wr_data<10> wr_data<9> wr_data<8> wr_data<7> wr_data<6> wr_data<5> wr_data<4> wr_data<3> wr_data<2> wr_data<1> wr_data<0>
+xi0 wr_data<15> wr_data<14> wr_data<13> wr_data<12> wr_data<11> wr_data<10> wr_data<9> wr_data<8> wr_data<7> wr_data<6> wr_data<5> wr_data<4> wr_data<3> wr_data<2> wr_data<1> wr_data<0> clk_n m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> RF_16_M_LATCH
+xi1<12> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<12> reg_data_12<15> reg_data_12<14> reg_data_12<13> reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6> reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> RF_16_S_LATCH
+xi1<3> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<3> reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> RF_16_S_LATCH
+xi1<2> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<2> reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> RF_16_S_LATCH
+xi1<1> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<1> reg_data_1<15> reg_data_1<14> reg_data_1<13> reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> RF_16_S_LATCH
+xi1<0> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<0> reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> RF_16_S_LATCH
+xi1<4> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<4> reg_data_4<15> reg_data_4<14> reg_data_4<13> reg_data_4<12> reg_data_4<11> reg_data_4<10> reg_data_4<9> reg_data_4<8> reg_data_4<7> reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0> RF_16_S_LATCH
+xi1<5> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<5> reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> reg_data_5<7> reg_data_5<6> reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> RF_16_S_LATCH
+xi1<6> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<6> reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> RF_16_S_LATCH
+xi1<7> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<7> reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> RF_16_S_LATCH
+xi1<8> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<8> reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7> reg_data_8<6> reg_data_8<5> reg_data_8<4> reg_data_8<3> reg_data_8<2> reg_data_8<1> reg_data_8<0> RF_16_S_LATCH
+xi1<9> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<9> reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10> reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1> reg_data_9<0> RF_16_S_LATCH
+xi1<10> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<10> reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> RF_16_S_LATCH
+xi1<11> m_data<15> m_data<14> m_data<13> m_data<12> m_data<11> m_data<10> m_data<9> m_data<8> m_data<7> m_data<6> m_data<5> m_data<4> m_data<3> m_data<2> m_data<1> m_data<0> ck_en<11> reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3> reg_data_11<2> reg_data_11<1> reg_data_11<0> RF_16_S_LATCH
+xi14<12> ck wraddress_en<12> ck_en<12> CLKGATE_X2
+xi14<11> ck wraddress_en<11> ck_en<11> CLKGATE_X2
+xi14<10> ck wraddress_en<10> ck_en<10> CLKGATE_X2
+xi14<9> ck wraddress_en<9> ck_en<9> CLKGATE_X2
+xi14<8> ck wraddress_en<8> ck_en<8> CLKGATE_X2
+xi14<7> ck wraddress_en<7> ck_en<7> CLKGATE_X2
+xi14<6> ck wraddress_en<6> ck_en<6> CLKGATE_X2
+xi14<5> ck wraddress_en<5> ck_en<5> CLKGATE_X2
+xi14<4> ck wraddress_en<4> ck_en<4> CLKGATE_X2
+xi14<3> ck wraddress_en<3> ck_en<3> CLKGATE_X2
+xi14<2> ck wraddress_en<2> ck_en<2> CLKGATE_X2
+xi14<1> ck wraddress_en<1> ck_en<1> CLKGATE_X2
+xi14<0> ck wraddress_en<0> ck_en<0> CLKGATE_X2
+xi17 ck_en<8> ck_en<9> ck_en<7> net13 NOR3_X1
+xi15 ck_en<4> ck_en<5> ck_en<6> net9 NOR3_X1
+xi16 ck_en<10> ck_en<11> ck_en<12> net5 NOR3_X1
+xi18 ck_en<3> ck_en<2> ck_en<1> ck_en<0> net18 NOR4_X1
+xi19 net9 net5 net13 net18 clk_prebuff NAND4_X1
+xi21<1> clk ck CLKBUF_X2
+xi21<0> clk ck CLKBUF_X2
+xi20 clk_prebuff clk_n CLKBUF_X2
+.ends RF_16_LATCH_BANK
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: NOR2_X1
+** View name: schematic
+.subckt NOR2_X1 a1 a2 zn
+m_i_1 zn a2 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_0 vss! a1 zn vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_2 zn a1 net_0 vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_i_3 net_0 a2 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+.ends NOR2_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: DEC_Write_4_13
+** View name: schematic
+.subckt DEC_Write_4_13 addr<3> addr<2> addr<1> addr<0> dec_addr_en<12> dec_addr_en<11> dec_addr_en<10> dec_addr_en<9> dec_addr_en<8> dec_addr_en<7> dec_addr_en<6> dec_addr_en<5> dec_addr_en<4> dec_addr_en<3> dec_addr_en<2> dec_addr_en<1> dec_addr_en<0> wr_en
+xi0 addr<3> addr<2> addr<1> addr<0> dec_addr_bar<12> dec_addr_bar<11> dec_addr_bar<10> dec_addr_bar<9> dec_addr_bar<8> dec_addr_bar<7> dec_addr_bar<6> dec_addr_bar<5> dec_addr_bar<4> dec_addr_bar<3> dec_addr_bar<2> dec_addr_bar<1> dec_addr_bar<0> DEC_Read_4_13
+xi1 wr_en wr_en_bar INV_X1
+xi2<12> dec_addr_bar<12> wr_en_bar dec_addr_en<12> NOR2_X1
+xi2<11> dec_addr_bar<11> wr_en_bar dec_addr_en<11> NOR2_X1
+xi2<10> dec_addr_bar<10> wr_en_bar dec_addr_en<10> NOR2_X1
+xi2<9> dec_addr_bar<9> wr_en_bar dec_addr_en<9> NOR2_X1
+xi2<8> dec_addr_bar<8> wr_en_bar dec_addr_en<8> NOR2_X1
+xi2<7> dec_addr_bar<7> wr_en_bar dec_addr_en<7> NOR2_X1
+xi2<6> dec_addr_bar<6> wr_en_bar dec_addr_en<6> NOR2_X1
+xi2<5> dec_addr_bar<5> wr_en_bar dec_addr_en<5> NOR2_X1
+xi2<4> dec_addr_bar<4> wr_en_bar dec_addr_en<4> NOR2_X1
+xi2<3> dec_addr_bar<3> wr_en_bar dec_addr_en<3> NOR2_X1
+xi2<2> dec_addr_bar<2> wr_en_bar dec_addr_en<2> NOR2_X1
+xi2<1> dec_addr_bar<1> wr_en_bar dec_addr_en<1> NOR2_X1
+xi2<0> dec_addr_bar<0> wr_en_bar dec_addr_en<0> NOR2_X1
+.ends DEC_Write_4_13
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: RF_16_LATCH_BANK_w_WRDEC
+** View name: schematic
+.subckt RF_16_LATCH_BANK_w_WRDEC clk reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3> reg_data_11<2> reg_data_11<1> reg_data_11<0> reg_data_12<15> reg_data_12<14> reg_data_12<13> reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6> reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> reg_data_1<15>
++reg_data_1<14> reg_data_1<13> reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> reg_data_4<15> reg_data_4<14> reg_data_4<13> reg_data_4<12> reg_data_4<11> reg_data_4<10> reg_data_4<9> reg_data_4<8> reg_data_4<7> reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0> reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> 
++reg_data_5<7> reg_data_5<6> reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7> reg_data_8<6> reg_data_8<5> reg_data_8<4> reg_data_8<3> reg_data_8<2> reg_data_8<1> reg_data_8<0> reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10> reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1>
++reg_data_9<0> wr_addr<3> wr_addr<2> wr_addr<1> wr_addr<0> wr_data<15> wr_data<14> wr_data<13> wr_data<12> wr_data<11> wr_data<10> wr_data<9> wr_data<8> wr_data<7> wr_data<6> wr_data<5> wr_data<4> wr_data<3> wr_data<2> wr_data<1> wr_data<0> wr_en
+xi0 clk wr_add<12> wr_add<11> wr_add<10> wr_add<9> wr_add<8> wr_add<7> wr_add<6> wr_add<5> wr_add<4> wr_add<3> wr_add<2> wr_add<1> wr_add<0> reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3> reg_data_11<2> reg_data_11<1> reg_data_11<0> reg_data_12<15> reg_data_12<14> reg_data_12<13> reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6>
++reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> reg_data_1<15> reg_data_1<14> reg_data_1<13> reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> reg_data_4<15> reg_data_4<14> reg_data_4<13> reg_data_4<12> reg_data_4<11> reg_data_4<10> reg_data_4<9> reg_data_4<8> reg_data_4<7> reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0>
++reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> reg_data_5<7> reg_data_5<6> reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7> reg_data_8<6> reg_data_8<5> reg_data_8<4> reg_data_8<3> reg_data_8<2> reg_data_8<1> reg_data_8<0> reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10>
++reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1> reg_data_9<0> wr_data<15> wr_data<14> wr_data<13> wr_data<12> wr_data<11> wr_data<10> wr_data<9> wr_data<8> wr_data<7> wr_data<6> wr_data<5> wr_data<4> wr_data<3> wr_data<2> wr_data<1> wr_data<0> RF_16_LATCH_BANK
+xi1 wr_addr<3> wr_addr<2> wr_addr<1> wr_addr<0> wr_add<12> wr_add<11> wr_add<10> wr_add<9> wr_add<8> wr_add<7> wr_add<6> wr_add<5> wr_add<4> wr_add<3> wr_add<2> wr_add<1> wr_add<0> wr_en DEC_Write_4_13
+.ends RF_16_LATCH_BANK_w_WRDEC
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: RF
+** View name: schematic
+.subckt RF 
++ rd_data_0<0> rd_data_0<1> rd_data_0<2> rd_data_0<3> rd_data_0<4> rd_data_0<5> rd_data_0<6> rd_data_0<7>
++ rd_data_0<8> rd_data_0<9> rd_data_0<10> rd_data_0<11> rd_data_0<12> rd_data_0<13> rd_data_0<14> rd_data_0<15>
++ rd_data_1<0> rd_data_1<1> rd_data_1<2> rd_data_1<3> rd_data_1<4> rd_data_1<5> rd_data_1<6> rd_data_1<7>
++ rd_data_1<8> rd_data_1<9> rd_data_1<10> rd_data_1<11> rd_data_1<12> rd_data_1<13> rd_data_1<14> rd_data_1<15>
++ rd_addr_0<0> rd_addr_0<1> rd_addr_0<2> rd_addr_0<3> 
++ rd_addr_1<0> rd_addr_1<1> rd_addr_1<2> rd_addr_1<3> 
++ wr_addr<0> wr_addr<1> wr_addr<2> wr_addr<3> 
++ wr_data<0> wr_data<1> wr_data<2> wr_data<3> wr_data<4> wr_data<5> wr_data<6> wr_data<7>
++ wr_data<8> wr_data<9> wr_data<10> wr_data<11> wr_data<12> wr_data<13> wr_data<14> wr_data<15>
++ wr_en clk
+xi2 rd_addr_1<3> rd_addr_1<2> rd_addr_1<1> rd_addr_1<0> rd_data_1<15> rd_data_1<14> rd_data_1<13> rd_data_1<12> rd_data_1<11> rd_data_1<10> rd_data_1<9> rd_data_1<8> rd_data_1<7> rd_data_1<6> rd_data_1<5> rd_data_1<4> rd_data_1<3> rd_data_1<2> rd_data_1<1> rd_data_1<0> reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3> reg_data_11<2> reg_data_11<1> reg_data_11<0> reg_data_12<15> reg_data_12<14> 
++reg_data_12<13> reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6> reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> reg_data_1<15> reg_data_1<14> reg_data_1<13> reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> reg_data_4<15> reg_data_4<14> reg_data_4<13> reg_data_4<12> reg_data_4<11> reg_data_4<10> reg_data_4<9> reg_data_4<8>
++reg_data_4<7> reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0> reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> reg_data_5<7> reg_data_5<6> reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7> reg_data_8<6> reg_data_8<5> reg_data_8<4> reg_data_8<3> reg_data_8<2> reg_data_8<1>
++reg_data_8<0> reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10> reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1> reg_data_9<0> RF_DEC_Read_TRISTATE_BANK
+xi0 rd_addr_0<3> rd_addr_0<2> rd_addr_0<1> rd_addr_0<0> rd_data_0<15> rd_data_0<14> rd_data_0<13> rd_data_0<12> rd_data_0<11> rd_data_0<10> rd_data_0<9> rd_data_0<8> rd_data_0<7> rd_data_0<6> rd_data_0<5> rd_data_0<4> rd_data_0<3> rd_data_0<2> rd_data_0<1> rd_data_0<0> reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3> reg_data_11<2> reg_data_11<1> reg_data_11<0> reg_data_12<15> reg_data_12<14> 
++reg_data_12<13> reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6> reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> reg_data_1<15> reg_data_1<14> reg_data_1<13> reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> reg_data_4<15> reg_data_4<14> reg_data_4<13> reg_data_4<12> reg_data_4<11> reg_data_4<10> reg_data_4<9> reg_data_4<8>
++reg_data_4<7> reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0> reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> reg_data_5<7> reg_data_5<6> reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7> reg_data_8<6> reg_data_8<5> reg_data_8<4> reg_data_8<3> reg_data_8<2> reg_data_8<1>
++reg_data_8<0> reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10> reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1> reg_data_9<0> RF_DEC_Read_TRISTATE_BANK
+xi1 clk reg_data_0<15> reg_data_0<14> reg_data_0<13> reg_data_0<12> reg_data_0<11> reg_data_0<10> reg_data_0<9> reg_data_0<8> reg_data_0<7> reg_data_0<6> reg_data_0<5> reg_data_0<4> reg_data_0<3> reg_data_0<2> reg_data_0<1> reg_data_0<0> reg_data_10<15> reg_data_10<14> reg_data_10<13> reg_data_10<12> reg_data_10<11> reg_data_10<10> reg_data_10<9> reg_data_10<8> reg_data_10<7> reg_data_10<6> reg_data_10<5> reg_data_10<4> reg_data_10<3> reg_data_10<2> reg_data_10<1> reg_data_10<0> reg_data_11<15> reg_data_11<14> reg_data_11<13> reg_data_11<12> reg_data_11<11> reg_data_11<10> reg_data_11<9> reg_data_11<8> reg_data_11<7> reg_data_11<6> reg_data_11<5> reg_data_11<4> reg_data_11<3> reg_data_11<2> reg_data_11<1> reg_data_11<0> reg_data_12<15> reg_data_12<14> reg_data_12<13> reg_data_12<12> reg_data_12<11> reg_data_12<10> reg_data_12<9> reg_data_12<8> reg_data_12<7> reg_data_12<6> reg_data_12<5> reg_data_12<4> reg_data_12<3> reg_data_12<2> reg_data_12<1> reg_data_12<0> reg_data_1<15> reg_data_1<14> reg_data_1<13>
++reg_data_1<12> reg_data_1<11> reg_data_1<10> reg_data_1<9> reg_data_1<8> reg_data_1<7> reg_data_1<6> reg_data_1<5> reg_data_1<4> reg_data_1<3> reg_data_1<2> reg_data_1<1> reg_data_1<0> reg_data_2<15> reg_data_2<14> reg_data_2<13> reg_data_2<12> reg_data_2<11> reg_data_2<10> reg_data_2<9> reg_data_2<8> reg_data_2<7> reg_data_2<6> reg_data_2<5> reg_data_2<4> reg_data_2<3> reg_data_2<2> reg_data_2<1> reg_data_2<0> reg_data_3<15> reg_data_3<14> reg_data_3<13> reg_data_3<12> reg_data_3<11> reg_data_3<10> reg_data_3<9> reg_data_3<8> reg_data_3<7> reg_data_3<6> reg_data_3<5> reg_data_3<4> reg_data_3<3> reg_data_3<2> reg_data_3<1> reg_data_3<0> reg_data_4<15> reg_data_4<14> reg_data_4<13> reg_data_4<12> reg_data_4<11> reg_data_4<10> reg_data_4<9> reg_data_4<8> reg_data_4<7> reg_data_4<6> reg_data_4<5> reg_data_4<4> reg_data_4<3> reg_data_4<2> reg_data_4<1> reg_data_4<0> reg_data_5<15> reg_data_5<14> reg_data_5<13> reg_data_5<12> reg_data_5<11> reg_data_5<10> reg_data_5<9> reg_data_5<8> reg_data_5<7> reg_data_5<6>
++reg_data_5<5> reg_data_5<4> reg_data_5<3> reg_data_5<2> reg_data_5<1> reg_data_5<0> reg_data_6<15> reg_data_6<14> reg_data_6<13> reg_data_6<12> reg_data_6<11> reg_data_6<10> reg_data_6<9> reg_data_6<8> reg_data_6<7> reg_data_6<6> reg_data_6<5> reg_data_6<4> reg_data_6<3> reg_data_6<2> reg_data_6<1> reg_data_6<0> reg_data_7<15> reg_data_7<14> reg_data_7<13> reg_data_7<12> reg_data_7<11> reg_data_7<10> reg_data_7<9> reg_data_7<8> reg_data_7<7> reg_data_7<6> reg_data_7<5> reg_data_7<4> reg_data_7<3> reg_data_7<2> reg_data_7<1> reg_data_7<0> reg_data_8<15> reg_data_8<14> reg_data_8<13> reg_data_8<12> reg_data_8<11> reg_data_8<10> reg_data_8<9> reg_data_8<8> reg_data_8<7> reg_data_8<6> reg_data_8<5> reg_data_8<4> reg_data_8<3> reg_data_8<2> reg_data_8<1> reg_data_8<0> reg_data_9<15> reg_data_9<14> reg_data_9<13> reg_data_9<12> reg_data_9<11> reg_data_9<10> reg_data_9<9> reg_data_9<8> reg_data_9<7> reg_data_9<6> reg_data_9<5> reg_data_9<4> reg_data_9<3> reg_data_9<2> reg_data_9<1> reg_data_9<0> wr_addr<3>
++wr_addr<2> wr_addr<1> wr_addr<0> wr_data<15> wr_data<14> wr_data<13> wr_data<12> wr_data<11> wr_data<10> wr_data<9> wr_data<8> wr_data<7> wr_data<6> wr_data<5> wr_data<4> wr_data<3> wr_data<2> wr_data<1> wr_data<0> wr_en RF_16_LATCH_BANK_w_WRDEC
+.ends

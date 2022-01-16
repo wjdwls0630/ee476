@@ -1,0 +1,19 @@
+xi0 a_temp<15> a_temp<14> a_temp<13> a_temp<12> a_temp<11> a_temp<10> a_temp<9> a_temp<8> a_temp<7> a_temp<6> a_temp<5> a_temp<4> a_temp<3> a_temp<2> a_temp<1> a_temp<0> b<15> b<14> b<13> b<12> b<11> b<10> b<9> b<8> b<7> b<6> b<5> b<4> b<3> b<2> b<1> b<0> s co aritmetic_out<15> aritmetic_out<14> aritmetic_out<13> aritmetic_out<12> aritmetic_out<11> aritmetic_out<10> aritmetic_out<9> aritmetic_out<8> aritmetic_out<7> aritmetic_out<6> aritmetic_out<5> aritmetic_out<4> aritmetic_out<3> aritmetic_out<2> aritmetic_out<1> aritmetic_out<0> cad6_16B_CSA_schematic
+xi3<15> a<15> s a_temp<15> XOR2_X1
+xi3<14> a<14> s a_temp<14> XOR2_X1
+xi3<13> a<13> s a_temp<13> XOR2_X1
+xi3<12> a<12> s a_temp<12> XOR2_X1
+xi3<11> a<11> s a_temp<11> XOR2_X1
+xi3<10> a<10> s a_temp<10> XOR2_X1
+xi3<9> a<9> s a_temp<9> XOR2_X1
+xi3<8> a<8> s a_temp<8> XOR2_X1
+xi3<7> a<7> s a_temp<7> XOR2_X1
+xi3<6> a<6> s a_temp<6> XOR2_X1
+xi3<5> a<5> s a_temp<5> XOR2_X1
+xi3<4> a<4> s a_temp<4> XOR2_X1
+xi3<3> a<3> s a_temp<3> XOR2_X1
+xi3<2> a<2> s a_temp<2> XOR2_X1
+xi3<1> a<1> s a_temp<1> XOR2_X1
+xi3<0> a<0> s a_temp<0> XOR2_X1
+.ends ARITMETIC_UNIT_CHEAT_XOR
+** End of subcircuit definition.

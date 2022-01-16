@@ -1,0 +1,6 @@
+** Generated for: hspiceD
+** Generated on: Dec  3 16:27:17 2021
+** Design library name: cad6
+** Design cell name: ALU_NO_FLAGS
+** Design view name: schematic
+.GLOBAL vdd! vss!

@@ -1,0 +1,23 @@
+
+* Subcircuits
+*---------------------------------------------------------------------------------------------------
+.INCLUDE 'DFSR.ckt'
+*---------------------------------------------------------------------------------------------------
+*  1   2   3   4
+*  D   Q  CLK RST
+.subckt loaded_flip_flop 1 2 3 4 
++ xclki_Wp=0.4e-6 xclki_Wn=0.3e-6
++ xi_Wp=0.4e-6 xi_Wn=0.3e-6
++ xtg_Wp=0.2e-6 xtg_Wn=0.2e-6
++ xnand_Wp=0.35e-6 xnand_Wn=0.35e-6
++ xnor_Wp=0.35e-6 xnor_Wn=0.35e-6
+
+xdfsr0 1 2 3 4 DFSR 
++ xclki_Wp='xclki_Wp' xclki_Wn='xclki_Wn'
++ xi_Wp='xi_Wp' xi_Wn='xi_Wn'
++ xtg_Wp='xtg_Wp' xtg_Wn='xtg_Wn'
++ xnand_Wp='xnand_Wp' xnand_Wn='xnand_Wn'
++ xnor_Wp='xnor_Wp' xnor_Wn='xnor_Wn'
+
+c0 2 vss! 6e-15
+.ends loaded_flip_flop

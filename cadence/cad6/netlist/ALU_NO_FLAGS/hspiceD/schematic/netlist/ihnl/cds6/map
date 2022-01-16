@@ -1,0 +1,16 @@
+( ( net
+( "NOR_OUT" "nor_out" )
+( "XNOR_OUT" "xnor_out" )
+( "ctrl<1>" "ctrl<1>" )
+( "ctrl<0>" "ctrl<0>" )
+( "NAND_OUT" "nand_out" )
+ )
+( inst
+( "I4" "xi4" )
+( "I1" "xi1" )
+( "I3" "xi3" )
+( "I0" "xi0" )
+( "I5" "xi5" )
+( "I2" "xi2" )
+ )
+ )

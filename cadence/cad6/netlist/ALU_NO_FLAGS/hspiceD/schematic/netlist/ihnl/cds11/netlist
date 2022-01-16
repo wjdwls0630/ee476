@@ -1,0 +1,19 @@
+xi3 op0_temp<3> op1<3> net26 net1 s<3> FA_X1
+xi2 op0_temp<2> op1<2> net21 net26 s<2> FA_X1
+xi1 op0_temp<1> op1<1> net16 net21 s<1> FA_X1
+xi0 op0_temp<0> op1<0> ctrl<0> net16 s<0> FA_X1
+xi12 ctrl_buf<3> op0<3> op0_temp<3> XOR2_X1
+xi11 ctrl_buf<2> op0<2> op0_temp<2> XOR2_X1
+xi10 ctrl_buf<1> op0<1> op0_temp<1> XOR2_X1
+xi9 ctrl<0> op0<0> op0_temp<0> XOR2_X1
+xi29 net1 co BUF_X1
+xi19<3> logic_out<3> logic_out_buf<3> BUF_X1
+xi19<2> logic_out<2> logic_out_buf<2> BUF_X1
+xi19<1> logic_out<1> logic_out_buf<1> BUF_X1
+xi19<0> logic_out<0> logic_out_buf<0> BUF_X1
+xi16 ctrl_buf<2> ctrl_buf<3> BUF_X1
+xi15 ctrl_buf<1> ctrl_buf<2> BUF_X1
+xi14 ctrl<0> ctrl_buf<1> BUF_X1
+xi13 ctrl_buf<3> ctrl_out<0> BUF_X1
+.ends RCA_4B
+** End of subcircuit definition.

@@ -1,0 +1,360 @@
+ ****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: setup_rise.ctl                                                    
+  Command line options: /gscratch/ece/tools/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i setup_rise.ctl -o outputs_setup_rise/
+  Start time: Mon Nov  8 17:06:31 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.6 
+ lic: USER:   jpark25              HOSTNAME: n3000.hyak.local 
+ lic: HOSTID: 400a0041             PID:      16554 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 4(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+  **warning** (./loaded_flip_flop.ckt:67)'.end' can not exist in include/lib files, ignored
+1****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+ ******  
+ loaded_flip_flop_setup_rise
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xdinv0.                         invd1              1.00 
+        2 xdinv1.                         invd1              1.00 
+        3 xrstinv0.                       invd1              1.00 
+        4 xrstinv1.                       invd1              1.00 
+        5 xclkinv0.                       invd1              1.00 
+        6 xclkinv1.                       invd1              1.00 
+        7 xldfsr0.                        loaded_flip_flop   1.00 
+        8 xldfsr0.xdfsr0.                 dfsr               1.00 
+        9 xldfsr0.xdfsr0.xi2.             clkinv1_dfsr       1.00 
+       10 xldfsr0.xdfsr0.xi1.             clkinv1_dfsr       1.00 
+       11 xldfsr0.xdfsr0.xi0.             clkinv1_dfsr       1.00 
+       12 xldfsr0.xdfsr0.xsl0.            slave_dfsr         1.00 
+       13 xldfsr0.xdfsr0.xml0.            master_dfsr        1.00 
+       14 xldfsr0.xdfsr0.xsl0.xi0.        inv1_dfsr          1.00 
+       15 xldfsr0.xdfsr0.xsl0.xi1.        inv1_dfsr          1.00 
+       16 xldfsr0.xdfsr0.xsl0.xtg1.       tg_dfsr            1.00 
+       17 xldfsr0.xdfsr0.xsl0.xtg0.       tg_dfsr            1.00 
+       18 xldfsr0.xdfsr0.xsl0.xnor0.      nor2_dfsr          1.00 
+       19 xldfsr0.xdfsr0.xml0.xi1.        inv1_dfsr          1.00 
+       20 xldfsr0.xdfsr0.xml0.xi0.        inv1_dfsr          1.00 
+       21 xldfsr0.xdfsr0.xml0.xtg1.       tg_dfsr            1.00 
+       22 xldfsr0.xdfsr0.xml0.xtg0.       tg_dfsr            1.00 
+       23 xldfsr0.xdfsr0.xml0.xnand0.     nand2_dfsr         1.00 
+  **info** (setup_rise.ctl:63) DC voltage reset to initial transient source value in source 0:vclk_ideal. new dc=0.0000D+00
+  **warning** (nmos_vtg:xdinv0.m0 (./INVD1.ckt:3)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=3e-07 l=6e-08.
+  
+  
+ ******  
+ loaded_flip_flop_setup_rise
+
+ ****** element node table
+                                                                                      
+ 0                vclk_ideal       vd_ideal         vrst_ideal       vvdd             
+                  vvss                                                                
+ clk              6:m0:d           6:m1:d           11:m0:g          11:m1:g          
+ clk_ideal        vclk_ideal       5:m0:g           5:m1:g                            
+ d                xdinv1.m0:d      xdinv1.m1:d      20:m0:g          20:m1:g          
+ d_ideal          vd_ideal         xdinv0.m0:g      xdinv0.m1:g                       
+ n_clk            5:m0:d           5:m1:d           6:m0:g           6:m1:g           
+ n_d              xdinv0.m0:d      xdinv0.m1:d      xdinv1.m0:g      xdinv1.m1:g      
+ n_rst            3:m0:d           3:m1:d           4:m0:g           4:m1:g           
+ q                xldfsr0.c0       15:m0:d          15:m1:d          ic1              
+ rst              4:m0:d           4:m1:d           9:m0:g           9:m1:g           
+                  18:mnmos0:g      18:mpmos0:g                                        
+ rst_ideal        vrst_ideal       3:m0:g           3:m1:g                            
+ vdd!             vvdd             xdinv0.m1:s      xdinv0.m1:b      xdinv1.m1:s      
+                  xdinv1.m1:b      3:m1:s           3:m1:b           4:m1:s           
+                  4:m1:b           5:m1:s           5:m1:b           6:m1:s           
+                  6:m1:b           9:m1:s           9:m1:b           10:m1:s          
+                  10:m1:b          11:m1:s          11:m1:b          14:m1:s          
+                  14:m1:b          15:m1:s          15:m1:b          16:m1:b          
+                  17:m1:b          18:mpmos1:b      18:mpmos0:s      18:mpmos0:b      
+                  19:m1:s          19:m1:b          20:m1:s          20:m1:b          
+                  21:m1:b          22:m1:b          23:mpmos1:s      23:mpmos1:b      
+                  23:mpmos0:s      23:mpmos0:b                                        
+ vss!             xldfsr0.c0       vvss             xdinv0.m0:s      xdinv0.m0:b      
+                  xdinv1.m0:s      xdinv1.m0:b      3:m0:s           3:m0:b           
+                  4:m0:s           4:m0:b           5:m0:s           5:m0:b           
+                  6:m0:s           6:m0:b           9:m0:s           9:m0:b           
+                  10:m0:s          10:m0:b          11:m0:s          11:m0:b          
+                  14:m0:s          14:m0:b          15:m0:s          15:m0:b          
+                  16:m0:b          17:m0:b          18:mnmos1:s      18:mnmos1:b      
+                  18:mnmos0:s      18:mnmos0:b      19:m0:s          19:m0:b          
+                  20:m0:s          20:m0:b          21:m0:b          22:m0:b          
+                  23:mnmos1:s      23:mnmos1:b      23:mnmos0:b                       
+ 8:clki           10:m0:d          10:m1:d          16:m0:g          17:m1:g          
+                  21:m0:g          22:m1:g                                            
+ 8:clki_bar       10:m0:g          10:m1:g          11:m0:d          11:m1:d          
+                  16:m1:g          17:m0:g          21:m1:g          22:m0:g          
+ 8:n              16:m0:d          16:m1:d          19:m0:d          19:m1:d          
+                  23:mnmos1:g      23:mpmos1:g                                        
+ 8:rst_bar        9:m0:d           9:m1:d           23:mnmos0:g      23:mpmos0:g      
+ 12:n1            14:m0:g          14:m1:g          16:m0:s          16:m1:s          
+                  17:m0:s          17:m1:s                                            
+ 12:n2            14:m0:d          14:m1:d          15:m0:g          15:m1:g          
+                  18:mnmos1:g      18:mpmos1:g                                        
+ 12:n3            17:m0:d          17:m1:d          18:mnmos1:d      18:mnmos0:d      
+                  18:mpmos1:d                                                         
+ 13:n1            20:m0:d          20:m1:d          22:m0:d          22:m1:d          
+ 13:n2            19:m0:g          19:m1:g          21:m0:s          21:m1:s          
+                  22:m0:s          22:m1:s                                            
+ 13:n4            21:m0:d          21:m1:d          23:mnmos0:d      23:mpmos1:d      
+                  23:mpmos0:d                                                         
+ 18:net1          18:mpmos1:s      18:mpmos0:d                                        
+ 23:net2          23:mnmos1:d      23:mnmos0:s                                        
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ lic: Checkin 1 hspice token(s) 
+  
+  Opening plot unit= 15
+ file=outputs_setup_rise/setup_rise.pa0
+
+ 
+          optimization completed, the condition
+           relin = 0.0001 is satisfied
+ 
+
+ 
+ **** optimized parameters optd
+
+  .param delay =    9.844970703e-10
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ loaded_flip_flop_setup_rise
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ ******
+ loaded_flip_flop_setup_rise
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ t_cq_rise= 6.2828e-11  targ= 5.0816e-09   trig= 5.0188e-09
+ t_su_rise= 1.5731e-11  targ= 5.0188e-09   trig= 5.0031e-09
+
+          ***** job concluded
+ ******  
+ loaded_flip_flop_setup_rise
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 800.410
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 0.44 0.34 0.33 1/1783 16565
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =     193 # elements   =      48
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       5
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      42 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1          39
+  transient          0.50        8001        9814        3788 rev=       482
+  readin             0.03
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        517.55 megabytes
+           total cpu time            0.55 seconds
+           total elapsed time        1.68 seconds
+           job started at     17:06:31 11/08/2021
+           job ended   at     17:06:33 11/08/2021
+ ******  
+ low_vdd
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xdinv0.                         invd1              1.00 
+        2 xdinv1.                         invd1              1.00 
+        3 xrstinv0.                       invd1              1.00 
+        4 xrstinv1.                       invd1              1.00 
+        5 xclkinv0.                       invd1              1.00 
+        6 xclkinv1.                       invd1              1.00 
+        7 xldfsr0.                        loaded_flip_flop   1.00 
+        8 xldfsr0.xdfsr0.                 dfsr               1.00 
+        9 xldfsr0.xdfsr0.xi2.             clkinv1_dfsr       1.00 
+       10 xldfsr0.xdfsr0.xi1.             clkinv1_dfsr       1.00 
+       11 xldfsr0.xdfsr0.xi0.             clkinv1_dfsr       1.00 
+       12 xldfsr0.xdfsr0.xsl0.            slave_dfsr         1.00 
+       13 xldfsr0.xdfsr0.xml0.            master_dfsr        1.00 
+       14 xldfsr0.xdfsr0.xsl0.xi0.        inv1_dfsr          1.00 
+       15 xldfsr0.xdfsr0.xsl0.xi1.        inv1_dfsr          1.00 
+       16 xldfsr0.xdfsr0.xsl0.xtg1.       tg_dfsr            1.00 
+       17 xldfsr0.xdfsr0.xsl0.xtg0.       tg_dfsr            1.00 
+       18 xldfsr0.xdfsr0.xsl0.xnor0.      nor2_dfsr          1.00 
+       19 xldfsr0.xdfsr0.xml0.xi1.        inv1_dfsr          1.00 
+       20 xldfsr0.xdfsr0.xml0.xi0.        inv1_dfsr          1.00 
+       21 xldfsr0.xdfsr0.xml0.xtg1.       tg_dfsr            1.00 
+       22 xldfsr0.xdfsr0.xml0.xtg0.       tg_dfsr            1.00 
+       23 xldfsr0.xdfsr0.xml0.xnand0.     nand2_dfsr         1.00 
+  **info** (setup_rise.ctl:63) DC voltage reset to initial transient source value in source 0:vclk_ideal. new dc=0.0000D+00
+  
+  
+ ******  
+ low_vdd
+
+ ****** element node table
+                                                                                      
+ 0                vclk_ideal       vd_ideal         vrst_ideal       vvdd             
+                  vvss                                                                
+ clk              6:m0:d           6:m1:d           11:m0:g          11:m1:g          
+ clk_ideal        vclk_ideal       5:m0:g           5:m1:g                            
+ d                xdinv1.m0:d      xdinv1.m1:d      20:m0:g          20:m1:g          
+ d_ideal          vd_ideal         xdinv0.m0:g      xdinv0.m1:g                       
+ n_clk            5:m0:d           5:m1:d           6:m0:g           6:m1:g           
+ n_d              xdinv0.m0:d      xdinv0.m1:d      xdinv1.m0:g      xdinv1.m1:g      
+ n_rst            3:m0:d           3:m1:d           4:m0:g           4:m1:g           
+ q                xldfsr0.c0       15:m0:d          15:m1:d          ic1              
+ rst              4:m0:d           4:m1:d           9:m0:g           9:m1:g           
+                  18:mnmos0:g      18:mpmos0:g                                        
+ rst_ideal        vrst_ideal       3:m0:g           3:m1:g                            
+ vdd!             vvdd             xdinv0.m1:s      xdinv0.m1:b      xdinv1.m1:s      
+                  xdinv1.m1:b      3:m1:s           3:m1:b           4:m1:s           
+                  4:m1:b           5:m1:s           5:m1:b           6:m1:s           
+                  6:m1:b           9:m1:s           9:m1:b           10:m1:s          
+                  10:m1:b          11:m1:s          11:m1:b          14:m1:s          
+                  14:m1:b          15:m1:s          15:m1:b          16:m1:b          
+                  17:m1:b          18:mpmos1:b      18:mpmos0:s      18:mpmos0:b      
+                  19:m1:s          19:m1:b          20:m1:s          20:m1:b          
+                  21:m1:b          22:m1:b          23:mpmos1:s      23:mpmos1:b      
+                  23:mpmos0:s      23:mpmos0:b                                        
+ vss!             xldfsr0.c0       vvss             xdinv0.m0:s      xdinv0.m0:b      
+                  xdinv1.m0:s      xdinv1.m0:b      3:m0:s           3:m0:b           
+                  4:m0:s           4:m0:b           5:m0:s           5:m0:b           
+                  6:m0:s           6:m0:b           9:m0:s           9:m0:b           
+                  10:m0:s          10:m0:b          11:m0:s          11:m0:b          
+                  14:m0:s          14:m0:b          15:m0:s          15:m0:b          
+                  16:m0:b          17:m0:b          18:mnmos1:s      18:mnmos1:b      
+                  18:mnmos0:s      18:mnmos0:b      19:m0:s          19:m0:b          
+                  20:m0:s          20:m0:b          21:m0:b          22:m0:b          
+                  23:mnmos1:s      23:mnmos1:b      23:mnmos0:b                       
+ 8:clki           10:m0:d          10:m1:d          16:m0:g          17:m1:g          
+                  21:m0:g          22:m1:g                                            
+ 8:clki_bar       10:m0:g          10:m1:g          11:m0:d          11:m1:d          
+                  16:m1:g          17:m0:g          21:m1:g          22:m0:g          
+ 8:n              16:m0:d          16:m1:d          19:m0:d          19:m1:d          
+                  23:mnmos1:g      23:mpmos1:g                                        
+ 8:rst_bar        9:m0:d           9:m1:d           23:mnmos0:g      23:mpmos0:g      
+ 12:n1            14:m0:g          14:m1:g          16:m0:s          16:m1:s          
+                  17:m0:s          17:m1:s                                            
+ 12:n2            14:m0:d          14:m1:d          15:m0:g          15:m1:g          
+                  18:mnmos1:g      18:mpmos1:g                                        
+ 12:n3            17:m0:d          17:m1:d          18:mnmos1:d      18:mnmos0:d      
+                  18:mpmos1:d                                                         
+ 13:n1            20:m0:d          20:m1:d          22:m0:d          22:m1:d          
+ 13:n2            19:m0:g          19:m1:g          21:m0:s          21:m1:s          
+                  22:m0:s          22:m1:s                                            
+ 13:n4            21:m0:d          21:m1:d          23:mnmos0:d      23:mpmos1:d      
+                  23:mpmos0:d                                                         
+ 18:net1          18:mpmos1:s      18:mpmos0:d                                        
+ 23:net2          23:mnmos1:d      23:mnmos0:s                                        
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+  
+  Opening plot unit= 15
+ file=outputs_setup_rise/setup_rise.pa1
+
+ 
+          optimization completed, the condition
+           relin = 0.0001 is satisfied
+ 
+
+ 
+ **** optimized parameters optd
+
+  .param delay =     9.67956543e-10
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ low_vdd
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ ******
+ low_vdd
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ t_cq_rise= 9.8350e-11  targ= 5.1242e-09   trig= 5.0258e-09
+ t_su_rise= 3.2019e-11  targ= 5.0258e-09   trig= 4.9938e-09
+
+          ***** job concluded
+ ******  
+ low_vdd
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+
+  ******  Circuit Statistics  ******
+  # nodes       =     193 # elements   =      48
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       5
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      42 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1          54
+  transient          0.56        8001       11332        4387 rev=       659
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        517.55 megabytes
+           total cpu time            0.59 seconds
+           total elapsed time        0.60 seconds
+           job started at     17:06:31 11/08/2021
+           job ended   at     17:06:33 11/08/2021
+           job total runtime         2.28 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.10(s)

@@ -1,0 +1,76 @@
+** Generated for: hspiceD
+** Generated on: Nov 12 12:41:26 2021
+** Design library name: cad5
+** Design cell name: TDFF_X1_2
+** Design view name: schematic
+.GLOBAL vss! vdd!
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+
+** Library name: cad5
+** Cell name: DFF_X1
+** View name: schematic
+.subckt DFF_X1 ck d q qn
+m_mn3 z2 d vss! vss! NMOS_VTL L=50e-9 W=275e-9
+m_mn4 z2 cni z3 vss! NMOS_VTL L=50e-9 W=275e-9
+m_mn6 vss! z4 z6 vss! NMOS_VTL L=50e-9 W=90e-9
+m_mn7 z3 ci z6 vss! NMOS_VTL L=50e-9 W=90e-9
+m_mn1 vss! ck cni vss! NMOS_VTL L=50e-9 W=210e-9
+m_mn8 z12 z3 vss! vss! NMOS_VTL L=50e-9 W=210e-9
+m_mn9 z9 ci z12 vss! NMOS_VTL L=50e-9 W=210e-9
+m_mn12 z9 cni z8 vss! NMOS_VTL L=50e-9 W=90e-9
+m_mn11 z8 z10 vss! vss! NMOS_VTL L=50e-9 W=90e-9
+m_mn14 qn z9 vss! vss! NMOS_VTL L=50e-9 W=415e-9
+m_mn13 vss! z10 q vss! NMOS_VTL L=50e-9 W=415e-9
+m_mn5 z4 z3 vss! vss! NMOS_VTL L=50e-9 W=210e-9
+m_mn2 ci cni vss! vss! NMOS_VTL L=50e-9 W=210e-9
+m_mn10 vss! z9 z10 vss! NMOS_VTL L=50e-9 W=210e-9
+m_mp4 z3 ci z5 vdd! PMOS_VTL L=50e-9 W=420e-9
+m_mp3 z5 d vdd! vdd! PMOS_VTL L=50e-9 W=420e-9
+m_mp7 z1 cni z3 vdd! PMOS_VTL L=50e-9 W=90e-9
+m_mp6 vdd! z4 z1 vdd! PMOS_VTL L=50e-9 W=90e-9
+m_mp1 vdd! ck cni vdd! PMOS_VTL L=50e-9 W=315e-9
+m_mp8 z7 z3 vdd! vdd! PMOS_VTL L=50e-9 W=315e-9
+m_mp9 z9 cni z7 vdd! PMOS_VTL L=50e-9 W=315e-9
+m_mp12 z9 ci z11 vdd! PMOS_VTL L=50e-9 W=90e-9
+m_mp11 z11 z10 vdd! vdd! PMOS_VTL L=50e-9 W=90e-9
+m_mp14 qn z9 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9
+m_mp13 vdd! z10 q vdd! PMOS_VTL L=50e-9 W=630e-9
+m_mp5 z4 z3 vdd! vdd! PMOS_VTL L=50e-9 W=315e-9
+m_mp2 ci cni vdd! vdd! PMOS_VTL L=50e-9 W=315e-9
+m_mp10 vdd! z9 z10 vdd! PMOS_VTL L=50e-9 W=315e-9
+.ends DFF_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: TBUF_X1
+** View name: schematic
+.subckt TBUF_X1 a en z
+m_i_0 vss! x z vss! NMOS_VTL L=50e-9 W=355e-9
+m_i_0_15_63 dummy1 a y vss! NMOS_VTL L=50e-9 W=210e-9
+m_i_0_14_47 vss! nen dummy1 vss! NMOS_VTL L=50e-9 W=210e-9
+m_i_0_15 vss! a x vss! NMOS_VTL L=50e-9 W=210e-9
+m_i_0_14 vss! en x vss! NMOS_VTL L=50e-9 W=210e-9
+m_i_17 vss! en nen vss! NMOS_VTL L=50e-9 W=210e-9
+m_i_24_1 dummy0 en x vdd! PMOS_VTL L=50e-9 W=315e-9
+m_i_24_0 vdd! a dummy0 vdd! PMOS_VTL L=50e-9 W=315e-9
+m_i_24 vdd! y z vdd! PMOS_VTL L=50e-9 W=540e-9
+m_i_24_0_64 vdd! a y vdd! PMOS_VTL L=50e-9 W=315e-9
+m_i_24_1_48 y nen vdd! vdd! PMOS_VTL L=50e-9 W=315e-9
+m_i_42 vdd! en nen vdd! PMOS_VTL L=50e-9 W=315e-9
+.ends TBUF_X1
+** End of subcircuit definition.
+
+** Library name: cad5
+** Cell name: TDFF_X1_2
+** View name: schematic
+xi0 ck d net2 net1 DFF_X1
+xi2 net2 en<0> z<0> TBUF_X1
+xi1 net2 en<1> z<1> TBUF_X1
+.END

@@ -1,0 +1,22 @@
+
+** Library name: cad5
+** Cell name: T2BREG_LATCH
+** View name: schematic
+xi12<1> wr_data_preinv<1> wr_data_b<1> INV_X4
+xi12<0> wr_data_preinv<0> wr_data_b<0> INV_X4
+xi11<1> wr_data_prebuff<1> wr_data_preinv<1> INV_X1
+xi11<0> wr_data_prebuff<0> wr_data_preinv<0> INV_X1
+xi6<1> wr_data<1> ck wr_data_prebuff<1> DLL_X1
+xi6<0> wr_data<0> ck wr_data_prebuff<0> DLL_X1
+xi10<1> reg_data_1<1> r1_d1 rd_data_1<1> TBUF_X2
+xi10<0> reg_data_1<0> r1_d1 rd_data_1<0> TBUF_X2
+xi9<1> reg_data_1<1> r0_d1 rd_data_0<1> TBUF_X2
+xi9<0> reg_data_1<0> r0_d1 rd_data_0<0> TBUF_X2
+xi3<1> reg_data_0<1> r1_d0 rd_data_1<1> TBUF_X2
+xi3<0> reg_data_0<0> r1_d0 rd_data_1<0> TBUF_X2
+xi4<1> reg_data_0<1> r0_d0 rd_data_0<1> TBUF_X2
+xi4<0> reg_data_0<0> r0_d0 rd_data_0<0> TBUF_X2
+xi8<1> wr_data_b<1> ck_1 reg_data_1<1> DLH_X1
+xi8<0> wr_data_b<0> ck_1 reg_data_1<0> DLH_X1
+xi7<1> wr_data_b<1> ck_0 reg_data_0<1> DLH_X1
+xi7<0> wr_data_b<0> ck_0 reg_data_0<0> DLH_X1

@@ -1,0 +1,67 @@
+.GLOBAL vdd! vss!
+
+
+.OPTION
++ ARTIST=2
++ INGOLD=2
++ PARHIER=LOCAL
++ PSF=2
+
+.subckt CLKINV1_DFSR vi vo
+m0 vo vi vss! vss! NMOS_VTG L=60e-9 W=345e-9 AD=36.225e-15 AS=36.225e-15 PD=555e-9 PS=555e-9 M=1
+m1 vo vi vdd! vdd! PMOS_VTG L=60e-9 W=435e-9 AD=45.675e-15 AS=45.675e-15 PD=645e-9 PS=645e-9 M=1
+.ends CLKINV1_DFSR
+
+.subckt INV1_DFSR vi vo
+m0 vo vi vss! vss! NMOS_VTG L=60e-9 W=325e-9 AD=34.125e-15 AS=34.125e-15 PD=535e-9 PS=535e-9 M=1
+m1 vo vi vdd! vdd! PMOS_VTG L=60e-9 W=410e-9 AD=43.05e-15 AS=43.05e-15 PD=620e-9 PS=620e-9 M=1
+.ends INV1_DFSR
+
+.subckt TG_DFSR en en_bar vi vo
+m0 vi en vo vss! NMOS_VTG L=60e-9 W=265e-9 AD=27.825e-15 AS=27.825e-15 PD=475e-9 PS=475e-9 M=1
+m1 vi en_bar vo vdd! PMOS_VTG L=60e-9 W=250e-9 AD=26.25e-15 AS=26.25e-15 PD=460e-9 PS=460e-9 M=1
+.ends TG_DFSR
+
+.subckt NOR2_DFSR a b z
+mnmos1 z b vss! vss! NMOS_VTG L=60e-9 W=95e-9 AD=9.975e-15 AS=9.975e-15 PD=305e-9 PS=305e-9 M=1
+mnmos0 z a vss! vss! NMOS_VTG L=60e-9 W=95e-9 AD=9.975e-15 AS=9.975e-15 PD=305e-9 PS=305e-9 M=1
+mpmos1 z b net1 vdd! PMOS_VTG L=60e-9 W=355e-9 AD=37.275e-15 AS=37.275e-15 PD=565e-9 PS=565e-9 M=1
+mpmos0 net1 a vdd! vdd! PMOS_VTG L=60e-9 W=355e-9 AD=37.275e-15 AS=37.275e-15 PD=565e-9 PS=565e-9 M=1
+.ends NOR2_DFSR
+
+.subckt SLAVE_DFSR clk clk_bar q rst n
+xi0 n1 n2 INV1_DFSR
+xi1 n2 q INV1_DFSR
+xtg1 clk clk_bar n n1 TG_DFSR
+xtg0 clk_bar clk n3 n1 TG_DFSR
+xnor0 rst n2 n3 NOR2_DFSR
+.ends SLAVE_DFSR
+
+.subckt NAND2_DFSR a b z
+mnmos1 net2 b vss! vss! NMOS_VTG L=60e-9 W=250e-9 AD=26.25e-15 AS=26.25e-15 PD=460e-9 PS=460e-9 M=1
+mnmos0 z a net2 vss! NMOS_VTG L=60e-9 W=250e-9 AD=26.25e-15 AS=26.25e-15 PD=460e-9 PS=460e-9 M=1
+mpmos1 z b vdd! vdd! PMOS_VTG L=60e-9 W=525e-9 AD=55.125e-15 AS=55.125e-15 PD=735e-9 PS=735e-9 M=1
+mpmos0 z a vdd! vdd! PMOS_VTG L=60e-9 W=525e-9 AD=55.125e-15 AS=55.125e-15 PD=735e-9 PS=735e-9 M=1
+.ends NAND2_DFSR
+
+.subckt MASTER_DFSR clk clk_bar d rst_bar n
+xi1 n2 n INV1_DFSR
+xi0 d n1 INV1_DFSR
+xtg1 clk clk_bar n4 n2 TG_DFSR
+xtg0 clk_bar clk n1 n2 TG_DFSR
+xnand0 rst_bar n n4 NAND2_DFSR
+.ends MASTER_DFSR
+
+.subckt DFSR clk d q rst
+xi2 rst rst_bar CLKINV1_DFSR
+xi1 clki_bar clki CLKINV1_DFSR
+xi0 clk clki_bar CLKINV1_DFSR
+xsl0 clki clki_bar q rst n SLAVE_DFSR
+xml0 clki clki_bar d rst_bar n MASTER_DFSR
+.ends DFSR
+
+.subckt loaded_flip_flop d rst q clk 
+xdfsr0 clk d q rst DFSR
+c0 q vss! 6e-15
+.ends loaded_flip_flop
+.END

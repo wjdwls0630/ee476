@@ -65,18 +65,18 @@ Thumbs.db
 **/netlists/
 
 
-**/DRC/*
-!**/DRC/*.drc.summary
-!**/DRC/*.runset
+**/DRC/**/*
+!**/DRC/**/*.drc.summary
+!**/DRC/**/*.runset
 
-**/LVS/*
-!**/LVS/*.lvs.report
-!**/LVS/*.runset
+**/LVS/**/*
+!**/LVS/**/*.lvs.report
+!**/LVS/**/*.runset
 
-**/PEX/*
-!**/PEX/*.pex.netlist
-!**/PEX/*.pex.netlist.*
-!**/PEX/*.runset
+**/PEX/**/*
+!**/PEX/**/*.pex.netlist
+!**/PEX/**/*.pex.netlist.*
+!**/PEX/**/*.runset
 
 
 # vim

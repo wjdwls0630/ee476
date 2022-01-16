@@ -1,0 +1,155 @@
+header
+"PSFversion" "1.00"
+"simulator" "HSPICE"
+"version" "S-2021.09 linux64"
+"rundate" "15:41:19 10/31/2021 "
+"runtitle" "ring_osc_plot                                                     "
+"runtype" "logFile"
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING * )
+VALUE
+"timeSweep" "analysisInst" ( 
+"Transient Analysis"
+""
+"PSF"
+""
+("vdd" )
+"sweep parent"
+) PROP(
+"sweep_tree_type" "sweepNode"
+)
+"ring_osc_plot.tr0@1" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@1"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 0.7
+)
+"ring_osc_plot.tr0@2" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@2"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 0.75
+)
+"ring_osc_plot.tr0@3" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@3"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 0.8
+)
+"ring_osc_plot.tr0@4" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@4"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 0.85
+)
+"ring_osc_plot.tr0@5" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@5"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 0.9
+)
+"ring_osc_plot.tr0@6" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@6"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 0.95
+)
+"ring_osc_plot.tr0@7" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@7"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 1.0
+)
+"ring_osc_plot.tr0@8" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@8"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 1.05
+)
+"ring_osc_plot.tr0@9" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@9"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 1.1
+)
+"ring_osc_plot.tr0@10" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@10"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 1.15
+)
+"ring_osc_plot.tr0@11" "analysisInst" ( 
+"Transient Analysis"
+"ring_osc_plot.tr0@11"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"vdd" 1.2
+)
+"summary" "analysisInst" ( 
+"Summary Information"
+"ring_osc_plot.su0"
+"PSF"
+""
+()
+"Summary Information"
+)

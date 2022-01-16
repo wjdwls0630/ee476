@@ -1,0 +1,82 @@
+{ //Path to folder that contains library for this CAD.
+  //I.E. : "path": "Visvesh_Sathe /home/projects/ee476/sathe/cadence/cad5", 
+  "path": "<Student_Name> /gscratch/ece/courses/476/jarenas/jarenas_git/cad5",
+
+  "parts": {
+
+    // Register file schematic
+    "1": {
+      "files": {
+        "cad5_turnin/part1/RF.ckt": {
+          "circuit": {
+            "name": "RF",
+            "pins": [
+               "rd_data_0<0>", "rd_data_0<1>", "rd_data_0<2>", "rd_data_0<3>",
+               "rd_data_0<4>", "rd_data_0<5>", "rd_data_0<6>", "rd_data_0<7>",
+               "rd_data_0<8>", "rd_data_0<9>", "rd_data_0<10>", "rd_data_0<11>",
+               "rd_data_0<12>", "rd_data_0<13>", "rd_data_0<14>", "rd_data_0<15>",
+               "rd_data_1<0>", "rd_data_1<1>", "rd_data_1<2>", "rd_data_1<3>",
+               "rd_data_1<4>", "rd_data_1<5>", "rd_data_1<6>", "rd_data_1<7>",
+               "rd_data_1<8>", "rd_data_1<9>", "rd_data_1<10>", "rd_data_1<11>",
+               "rd_data_1<12>", "rd_data_1<13>", "rd_data_1<14>", "rd_data_1<15>",
+               "rd_addr_0<0>", "rd_addr_0<1>", "rd_addr_0<2>", "rd_addr_0<3>",
+               "rd_addr_1<0>", "rd_addr_1<1>", "rd_addr_1<2>", "rd_addr_1<3>",
+               "wr_addr<0>", "wr_addr<1>", "wr_addr<2>", "wr_addr<3>",
+               "wr_data<0>", "wr_data<1>", "wr_data<2>", "wr_data<3>",
+               "wr_data<4>", "wr_data<5>", "wr_data<6>", "wr_data<7>",
+               "wr_data<8>", "wr_data<9>", "wr_data<10>", "wr_data<11>",
+               "wr_data<12>", "wr_data<13>", "wr_data<14>", "wr_data<15>",
+               "wr_en",
+               "clk"
+            ]
+          }
+        }
+      },
+      "measurements": {
+        "en_deliv_read": "35.41e-12",
+        "en_deliv_write": "23.1e-11"
+      }
+    },
+
+    // Register file layout
+    "2": {
+      "files": {
+        "cad5_turnin/part2/RF.ckt": {
+          "circuit": {
+            "name": "RF",
+            "pins": [
+               "rd_data_0<0>", "rd_data_0<1>", "rd_data_0<2>", "rd_data_0<3>",
+               "rd_data_0<4>", "rd_data_0<5>", "rd_data_0<6>", "rd_data_0<7>",
+               "rd_data_0<8>", "rd_data_0<9>", "rd_data_0<10>", "rd_data_0<11>",
+               "rd_data_0<12>", "rd_data_0<13>", "rd_data_0<14>", "rd_data_0<15>",
+               "rd_data_1<0>", "rd_data_1<1>", "rd_data_1<2>", "rd_data_1<3>",
+               "rd_data_1<4>", "rd_data_1<5>", "rd_data_1<6>", "rd_data_1<7>",
+               "rd_data_1<8>", "rd_data_1<9>", "rd_data_1<10>", "rd_data_1<11>",
+               "rd_data_1<12>", "rd_data_1<13>", "rd_data_1<14>", "rd_data_1<15>",
+               "rd_addr_0<0>", "rd_addr_0<1>", "rd_addr_0<2>", "rd_addr_0<3>",
+               "rd_addr_1<0>", "rd_addr_1<1>", "rd_addr_1<2>", "rd_addr_1<3>",
+               "wr_addr<0>", "wr_addr<1>", "wr_addr<2>", "wr_addr<3>",
+               "wr_data<0>", "wr_data<1>", "wr_data<2>", "wr_data<3>",
+               "wr_data<4>", "wr_data<5>", "wr_data<6>", "wr_data<7>",
+               "wr_data<8>", "wr_data<9>", "wr_data<10>", "wr_data<11>",
+               "wr_data<12>", "wr_data<13>", "wr_data<14>", "wr_data<15>",
+               "wr_en",
+               "clk"
+            ]
+          }
+        },
+        "cad5_turnin/part2/RF.lvs.report" : "none",
+        "cad5_turnin/part2/RF.drc.summary" : "none",
+        "cad5_turnin/part2/RF.pex.netlist" : "none",
+        "cad5_turnin/part2/RF.pex.netlist.RF.pxi" : "none"
+      },
+      "measurements": {
+        "en_deliv_read": "",
+        "en_deliv_write": ""
+      }
+    }
+  },
+
+  // No report
+  "report": "none"
+}

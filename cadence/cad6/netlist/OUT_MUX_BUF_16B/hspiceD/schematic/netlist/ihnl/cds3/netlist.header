@@ -1,0 +1,5 @@
+
+** Library name: cad6
+** Cell name: BUF_X1
+** View name: schematic
+.subckt BUF_X1 a z

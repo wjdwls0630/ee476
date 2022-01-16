@@ -1,0 +1,118 @@
+* Part 2
+
+.INC "loaded_nand.pex.netlist"
+.lib "freepdk45.l" tt_lib
+
+x1 a b z loaded_nand
+
+* ---- Static Voltages ---- 
+.PARAM null = 0
+.PARAM vdd = 1.2
+.GLOBAL vdd! vss!
+Vvdd vdd! 0 vdd
+Vvss vss! 0 0 
+
+
+* ---- Transient ----
+.TRAN 1p 100n 
+
+
+* ---- Variable Voltages ----
+* at 10n: (a,b,z) is (1, 1, 0) -> (0, 1, 1)
+* at 14n: (a,b,z) is (0, 1, 1) -> (1, 1, 0)
+* at 18n: (a,b,z) is (1, 1, 0) -> (1, 0, 1)
+* at 22n: (a,b,z) is (1, 0, 1) -> (1, 1, 0)
+Va a 0 PWL(0 vdd  2n vdd  '2n+1f' 0  6n 0  '6n+1f' vdd       10n vdd  '10n+1f' 0    14n 0    '14n+1f' vdd       18n vdd  '18n+1f' vdd  22n vdd   '22n+1f' vdd         26n vdd  '26n+1f' vdd)
+Vb b 0 PWL(0 vdd  2n vdd  '2n+1f' 0  6n 0  '6n+1f' vdd       10n vdd  '10n+1f' vdd  14n vdd  '14n+10f' vdd       18n vdd  '18n+10f' 0    22n 0     '22n+10f' vdd         26n vdd  '26n+1f' vdd)  
+
+
+* ---- Measurements ----
+*.OPTION POST
+.OPTION
++ NODE
++ NOMOD
++ POST
++ PROBE
+
+* Case C
+*
+* When b goes low, while a is high - rise occurs at 18n, fall occurs at 22n
+*
+*
+.MEAS TRAN rise_delay
+    + TRIG V(b) VAL='0.5*vdd' TD=0 FALL=2  
+    + TARG V(z) VAL='0.5*vdd' TD=0 RISE=3 
+.MEAS TRAN fall_delay
+    + TRIG V(b) VAL='0.5*vdd' TD=0 RISE=2
+    + TARG V(z) VAL='0.5*vdd' TD=0 FALL=3 
+.MEAS TRAN rise_time  
+    + TRIG V(z) VAL='0.2*vdd' TD=0 RISE=3
+    + TARG V(z) VAL='0.8*vdd' TD=0 RISE=3
+.MEAS TRAN fall_time 
+    + TRIG V(z) VAL='0.8*vdd' TD=0 FALL=3
+    + TARG V(z) VAL='0.2*vdd' TD=0 FALL=3
+
+.MEAS TRAN rise_start_t
+   + TRIG AT=0n
+   + TARG V(z) VAL='0.01*vdd' TD=0 RISE=3
+
+.MEAS TRAN rise_end_t
+   + TRIG AT=0n
+   + TARG V(z) VAL='0.99*vdd' TD=rise_start_t RISE=1
+
+.MEAS TRAN fall_start_t 
+   + TRIG AT=0n
+   + TARG V(z) VAL='0.99*vdd' TD=0 FALL=3
+
+.MEAS TRAN fall_end_t
+   + TRIG AT=0n
+   + TARG V(z) VAL='0.01*vdd' TD=fall_start_t FALL=1
+
+
+* I*V integration to get energy dissipated in each fet (for the NMOS, we assume I(mnmos0) = I(mnmos1))
+.MEAS TRAN rise_en_nmos INTEGRAL PAR('I(x1.mxdut.mnmos1) * V(z)') FROM=rise_start_t TO=rise_end_t
+.MEAS TRAN rise_en_pmos0 INTEGRAL PAR('-I(x1.mxdut.mpmos0) * (vdd - V(z))') FROM=rise_start_t TO=rise_end_t
+.MEAS TRAN rise_en_pmos1 INTEGRAL PAR('-I(x1.mxdut.mpmos1) * (vdd - V(z))') FROM=rise_start_t TO=rise_end_t
+.MEAS TRAN rise_en_deliv INTEGRAL PAR('I(Vvdd) * vdd') from=rise_start_t TO=rise_end_t
+.MEAS TRAN rise_en_dissip PARAM = 'rise_en_nmos + rise_en_pmos0 + rise_en_pmos1'
+
+.MEAS TRAN fall_en_nmos INTEGRAL PAR('I(x1.mxdut.mnmos1) * V(z)') FROM=fall_start_t TO=fall_end_t
+.MEAS TRAN fall_en_pmos0 INTEGRAL PAR('-I(x1.mxdut.mpmos0) * (vdd - V(z))') FROM=fall_start_t TO=fall_end_t
+.MEAS TRAN fall_en_pmos1 INTEGRAL PAR('-I(x1.mxdut.mpmos1) * (vdd - V(z))') FROM=fall_start_t TO=fall_end_t
+.MEAS TRAN fall_en_deliv INTEGRAL PAR('I(Vvdd) * vdd') from=fall_start_t TO=fall_end_t
+.MEAS TRAN fall_en_dissip PARAM = 'fall_en_nmos + fall_en_pmos0 + fall_en_pmos1'
+
+.MEAS TRAN Q_rise_PMOS0 INTEGRAL I(x1.mxdut.mpmos0) FROM=rise_start_t TO=rise_end_t
+.MEAS TRAN Q_rise_PMOS1 INTEGRAL I(x1.mxdut.mpmos1) FROM=rise_start_t TO=rise_end_t
+.MEAS TRAN Q_rise_NMOS0 INTEGRAL I(x1.mxdut.mnmos0) FROM=rise_start_t TO=rise_end_t
+
+.MEAS TRAN Q_fall_NMOS0 INTEGRAL I(x1.mxdut.mnmos0) FROM=fall_start_t TO=fall_end_t
+.MEAS TRAN Q_fall_PMOS0 INTEGRAL I(x1.mxdut.mpmos0) FROM=fall_start_t TO=fall_end_t
+.MEAS TRAN Q_fall_PMOS1 INTEGRAL I(x1.mxdut.mpmos1) FROM=fall_start_t TO=fall_end_t
+
+* Apply Q=CV
+.MEAS TRAN output_cap_rise PARAM = '-(Q_rise_PMOS0 + Q_rise_PMOS1) / vdd'
+.MEAS TRAN output_cap_fall PARAM = '(Q_fall_NMOS0) / vdd'
+
+* Input Cap
+.MEAS TRAN Q_gate_rise_b INTEGRAL I(Vb) FROM=18.0n TO=18.2n 
+*.MEAS TRAN Q_gate_rise_b01 INTEGRAL I(Vb) FROM=18.0n TO=18.1n 
+*.MEAS TRAN Q_gate_rise_b05 INTEGRAL I(Vb) FROM=18.0n TO=18.5n 
+*.MEAS TRAN Q_gate_rise_b10 INTEGRAL I(Vb) FROM=18.0n TO=19.0n 
+.MEAS TRAN Q_gate_fall_b INTEGRAL I(Vb) FROM=22.0n TO=22.2n 
+* Apply Q=CV
+.MEAS TRAN input_cap_rise PARAM = '(Q_gate_rise_b) / vdd'
+.MEAS TRAN input_cap_fall PARAM = '(-Q_gate_fall_b) / vdd'
+
+* ==== specifications measurements ====
+.MEAS TRAN input_cap       PARAM = '0.5*(input_cap_rise+input_cap_fall)'
+.MEAS TRAN output_cap      PARAM = '0.5*(output_cap_rise+output_cap_fall)'
+
+
+* ---- Probes ---- 
+.PROBE V(*)
+.PROBE I(*)
+.PROBE P(*)
+
+.END
+

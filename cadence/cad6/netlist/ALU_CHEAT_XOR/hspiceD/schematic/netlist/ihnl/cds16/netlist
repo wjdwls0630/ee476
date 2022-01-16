@@ -1,0 +1,6 @@
+m1 net1 b _gnet1 _gnet1 NMOS_VTL L=50e-9 W=230e-9 AD=24.15e-15 AS=24.15e-15 PD=440e-9 PS=440e-9 M=1
+m0 z a net1 _gnet1 NMOS_VTL L=50e-9 W=230e-9 AD=24.15e-15 AS=24.15e-15 PD=440e-9 PS=440e-9 M=1
+m3 z b a _gnet0 PMOS_VTL L=50e-9 W=200e-9 AD=21e-15 AS=21e-15 PD=410e-9 PS=410e-9 M=1
+m2 b a z _gnet0 PMOS_VTL L=50e-9 W=200e-9 AD=21e-15 AS=21e-15 PD=410e-9 PS=410e-9 M=1
+.ends XOR2_X1
+** End of subcircuit definition.

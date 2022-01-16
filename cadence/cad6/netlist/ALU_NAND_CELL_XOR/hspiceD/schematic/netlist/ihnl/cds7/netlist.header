@@ -1,0 +1,5 @@
+
+** Library name: cad6
+** Cell name: LOGIC_UNIT
+** View name: schematic
+.subckt LOGIC_UNIT a<15> a<14> a<13> a<12> a<11> a<10> a<9> a<8> a<7> a<6> a<5> a<4> a<3> a<2> a<1> a<0> b<15> b<14> b<13> b<12> b<11> b<10> b<9> b<8> b<7> b<6> b<5> b<4> b<3> b<2> b<1> b<0> logic_out<15> logic_out<14> logic_out<13> logic_out<12> logic_out<11> logic_out<10> logic_out<9> logic_out<8> logic_out<7> logic_out<6> logic_out<5> logic_out<4> logic_out<3> logic_out<2> logic_out<1> logic_out<0> s<1> s<0>

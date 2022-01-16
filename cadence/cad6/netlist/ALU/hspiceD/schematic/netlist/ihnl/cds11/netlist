@@ -1,0 +1,35 @@
+xi0 a_temp<15> a_temp<14> a_temp<13> a_temp<12> a_temp<11> a_temp<10> a_temp<9> a_temp<8> a_temp<7> a_temp<6> a_temp<5> a_temp<4> a_temp<3> a_temp<2> a_temp<1> a_temp<0> b<15> b<14> b<13> b<12> b<11> b<10> b<9> b<8> b<7> b<6> b<5> b<4> b<3> b<2> b<1> b<0> s co aritmetic_out<15> aritmetic_out<14> aritmetic_out<13> aritmetic_out<12> aritmetic_out<11> aritmetic_out<10> aritmetic_out<9> aritmetic_out<8> aritmetic_out<7> aritmetic_out<6> aritmetic_out<5> aritmetic_out<4> aritmetic_out<3> aritmetic_out<2> aritmetic_out<1> aritmetic_out<0> cad6_16B_CSA_schematic
+xi1<15> a<15> an<15> s a_temp<15> MUX2_X1
+xi1<14> a<14> an<14> s a_temp<14> MUX2_X1
+xi1<13> a<13> an<13> s a_temp<13> MUX2_X1
+xi1<12> a<12> an<12> s a_temp<12> MUX2_X1
+xi1<11> a<11> an<11> s a_temp<11> MUX2_X1
+xi1<10> a<10> an<10> s a_temp<10> MUX2_X1
+xi1<9> a<9> an<9> s a_temp<9> MUX2_X1
+xi1<8> a<8> an<8> s a_temp<8> MUX2_X1
+xi1<7> a<7> an<7> s a_temp<7> MUX2_X1
+xi1<6> a<6> an<6> s a_temp<6> MUX2_X1
+xi1<5> a<5> an<5> s a_temp<5> MUX2_X1
+xi1<4> a<4> an<4> s a_temp<4> MUX2_X1
+xi1<3> a<3> an<3> s a_temp<3> MUX2_X1
+xi1<2> a<2> an<2> s a_temp<2> MUX2_X1
+xi1<1> a<1> an<1> s a_temp<1> MUX2_X1
+xi1<0> a<0> an<0> s a_temp<0> MUX2_X1
+xi2<15> a<15> an<15> INV_X1
+xi2<14> a<14> an<14> INV_X1
+xi2<13> a<13> an<13> INV_X1
+xi2<12> a<12> an<12> INV_X1
+xi2<11> a<11> an<11> INV_X1
+xi2<10> a<10> an<10> INV_X1
+xi2<9> a<9> an<9> INV_X1
+xi2<8> a<8> an<8> INV_X1
+xi2<7> a<7> an<7> INV_X1
+xi2<6> a<6> an<6> INV_X1
+xi2<5> a<5> an<5> INV_X1
+xi2<4> a<4> an<4> INV_X1
+xi2<3> a<3> an<3> INV_X1
+xi2<2> a<2> an<2> INV_X1
+xi2<1> a<1> an<1> INV_X1
+xi2<0> a<0> an<0> INV_X1
+.ends ARITMETIC_UNIT
+** End of subcircuit definition.

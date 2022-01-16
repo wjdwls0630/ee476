@@ -1,0 +1,5 @@
+
+** Library name: cad6
+** Cell name: CSA_4B
+** View name: schematic
+.subckt CSA_4B ci co logic_out<3> logic_out<2> logic_out<1> logic_out<0> logic_out_buf<3> logic_out_buf<2> logic_out_buf<1> logic_out_buf<0> s<3> s<2> s<1> s<0> ctrl<0> ctrl_out<0> op0<3> op0<2> op0<1> op0<0> op0_temp<3> op1<3> op1<2> op1<1> op1<0>

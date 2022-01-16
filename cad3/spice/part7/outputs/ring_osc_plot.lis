@@ -1,0 +1,398 @@
+ ****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: ring_osc_plot.ctl                                                 
+  Command line options: /gscratch/ece/tools/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i ring_osc_plot.ctl -o outputs/
+  Start time: Sun Oct 31 15:41:19 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.6 
+ lic: USER:   jpark25              HOSTNAME: n3240.hyak.local 
+ lic: HOSTID: 400af041             PID:      81407 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 9(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+  **warning** (./ring_osc.ckt:33)'.end' can not exist in include/lib files, ignored
+  **warning** (./ring_osc_2x.ckt:33)'.end' can not exist in include/lib files, ignored
+  **warning** multiple output options specified, using psf
+1****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+ ******  
+ ring_osc_plot
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             ring_osc           1.00 
+        2 x2.                             ring_osc_pex       1.00 
+        3 x3.                             ring_osc_2x        1.00 
+        4 x1.xi0.                         nand2              1.00 
+        5 x1.xi8.                         invd1              1.00 
+        6 x1.xi7.                         invd1              1.00 
+        7 x1.xi6.                         invd1              1.00 
+        8 x1.xi5.                         invd1              1.00 
+        9 x1.xi4.                         invd1              1.00 
+       10 x1.xi3.                         invd1              1.00 
+       11 x1.xi2.                         invd1              1.00 
+       12 x1.xi1.                         invd1              1.00 
+       13 x3.xi8.                         invd2              1.00 
+       14 x3.xi7.                         invd2              1.00 
+       15 x3.xi6.                         invd2              1.00 
+       16 x3.xi5.                         invd2              1.00 
+       17 x3.xi4.                         invd2              1.00 
+       18 x3.xi3.                         invd2              1.00 
+       19 x3.xi2.                         invd2              1.00 
+       20 x3.xi1.                         invd2              1.00 
+       21 x3.xi0.                         nand2_2x           1.00 
+  **info** (ring_osc_plot.ctl:41) DC voltage reset to initial transient source value in source 0:ven. new dc=0.0000D+00
+  **warning** (nmos_vtg:x2.mxi0.mnmos0 (./ring_osc.pex.netlist:8)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=3.5e-07 l=6e-08.
+  
+  
+ ******  
+ ring_osc_plot
+
+ ****** element node table
+                                                                                      
+ 0                x2.c_7           x2.c_19          x2.c_24          x2.c_29          
+                  x2.c_41          x2.c_47          x2.c_52          x2.c_58          
+                  x2.c_63          x2.c_68          x2.c_73          x2.c_78          
+                  ven              vvdd             vvss                              
+ osc_en           x2.c_29          x2.cc_2          x2.cc_8          x2.cc_20         
+                  x2.cc_21         ven              2:mxi0.mnmo:g    2:mxi0.mpmo:g    
+                  4:mnmos0:g       4:mpmos0:g       21:mnmos0:g      21:mpmos0:g      
+ osc_out          4:mnmos1:g       4:mpmos1:g       x1.xi8.m0:d      x1.xi8.m1:d      
+ osc_out_2x       x3.xi8.m0:d      x3.xi8.m1:d      21:mnmos1:g      21:mpmos1:g      
+ osc_out_layout   x2.c_7           x2.cc_1          x2.cc_2          x2.cc_3          
+                  x2.cc_4          x2.cc_5          x2.cc_6          2:mxi0.mnmo:g    
+                  2:mxi0.mpmo:g    2:mxi8.mm0:d     2:mxi8.mm1:d                      
+ vdd!             x2.c_19          x2.cc_1          x2.cc_7          x2.cc_8          
+                  x2.cc_9          x2.cc_10         x2.cc_11         x2.cc_12         
+                  x2.cc_13         x2.cc_14         x2.cc_15         x2.cc_16         
+                  vvdd             2:mxi0.mpmo:s    2:mxi0.mpmo:b    2:mxi0.mpmo:s    
+                  2:mxi0.mpmo:b    2:mxi8.mm1:s     2:mxi8.mm1:b     2:mxi1.mm1:s     
+                  2:mxi1.mm1:b     2:mxi7.mm1:s     2:mxi7.mm1:b     2:mxi2.mm1:s     
+                  2:mxi2.mm1:b     2:mxi6.mm1:s     2:mxi6.mm1:b     2:mxi3.mm1:s     
+                  2:mxi3.mm1:b     2:mxi5.mm1:s     2:mxi5.mm1:b     2:mxi4.mm1:s     
+                  2:mxi4.mm1:b     4:mpmos1:s       4:mpmos1:b       4:mpmos0:s       
+                  4:mpmos0:b       x1.xi8.m1:s      x1.xi8.m1:b      x1.xi7.m1:s      
+                  x1.xi7.m1:b      x1.xi6.m1:s      x1.xi6.m1:b      x1.xi5.m1:s      
+                  x1.xi5.m1:b      x1.xi4.m1:s      x1.xi4.m1:b      x1.xi3.m1:s      
+                  x1.xi3.m1:b      x1.xi2.m1:s      x1.xi2.m1:b      x1.xi1.m1:s      
+                  x1.xi1.m1:b      x3.xi8.m1:s      x3.xi8.m1:b      x3.xi7.m1:s      
+                  x3.xi7.m1:b      x3.xi6.m1:s      x3.xi6.m1:b      x3.xi5.m1:s      
+                  x3.xi5.m1:b      x3.xi4.m1:s      x3.xi4.m1:b      x3.xi3.m1:s      
+                  x3.xi3.m1:b      x3.xi2.m1:s      x3.xi2.m1:b      x3.xi1.m1:s      
+                  x3.xi1.m1:b      21:mpmos1:s      21:mpmos1:b      21:mpmos0:s      
+                  21:mpmos0:b                                                         
+ vss!             x2.c_41          x2.cc_3          x2.cc_9          x2.cc_17         
+                  x2.cc_20         x2.cc_22         x2.cc_23         x2.cc_24         
+                  x2.cc_25         x2.cc_26         x2.cc_27         x2.cc_28         
+                  vvss             2:mxi0.mnmo:s    2:mxi0.mnmo:b    2:mxi0.mnmo:b    
+                  2:mxi8.mm0:s     2:mxi8.mm0:b     2:mxi1.mm0:s     2:mxi1.mm0:b     
+                  2:mxi7.mm0:s     2:mxi7.mm0:b     2:mxi2.mm0:s     2:mxi2.mm0:b     
+                  2:mxi6.mm0:s     2:mxi6.mm0:b     2:mxi3.mm0:s     2:mxi3.mm0:b     
+                  2:mxi5.mm0:s     2:mxi5.mm0:b     2:mxi4.mm0:s     2:mxi4.mm0:b     
+                  4:mnmos1:s       4:mnmos1:b       4:mnmos0:b       x1.xi8.m0:s      
+                  x1.xi8.m0:b      x1.xi7.m0:s      x1.xi7.m0:b      x1.xi6.m0:s      
+                  x1.xi6.m0:b      x1.xi5.m0:s      x1.xi5.m0:b      x1.xi4.m0:s      
+                  x1.xi4.m0:b      x1.xi3.m0:s      x1.xi3.m0:b      x1.xi2.m0:s      
+                  x1.xi2.m0:b      x1.xi1.m0:s      x1.xi1.m0:b      x3.xi8.m0:s      
+                  x3.xi8.m0:b      x3.xi7.m0:s      x3.xi7.m0:b      x3.xi6.m0:s      
+                  x3.xi6.m0:b      x3.xi5.m0:s      x3.xi5.m0:b      x3.xi4.m0:s      
+                  x3.xi4.m0:b      x3.xi3.m0:s      x3.xi3.m0:b      x3.xi2.m0:s      
+                  x3.xi2.m0:b      x3.xi1.m0:s      x3.xi1.m0:b      21:mnmos1:s      
+                  21:mnmos1:b      21:mnmos0:b                                        
+ x1.net11         x1.xi5.m0:g      x1.xi5.m1:g      x1.xi4.m0:d      x1.xi4.m1:d      
+ x1.net13         x1.xi6.m0:g      x1.xi6.m1:g      x1.xi5.m0:d      x1.xi5.m1:d      
+ x1.net15         x1.xi7.m0:g      x1.xi7.m1:g      x1.xi6.m0:d      x1.xi6.m1:d      
+ x1.net17         x1.xi8.m0:g      x1.xi8.m1:g      x1.xi7.m0:d      x1.xi7.m1:d      
+ x1.net3          4:mnmos0:d       4:mpmos1:d       4:mpmos0:d       x1.xi1.m0:g      
+                  x1.xi1.m1:g                                                         
+ x1.net5          x1.xi2.m0:g      x1.xi2.m1:g      x1.xi1.m0:d      x1.xi1.m1:d      
+ x1.net7          x1.xi3.m0:g      x1.xi3.m1:g      x1.xi2.m0:d      x1.xi2.m1:d      
+ x1.net9          x1.xi4.m0:g      x1.xi4.m1:g      x1.xi3.m0:d      x1.xi3.m1:d      
+ x2.net11         x2.c_24          x2.cc_7          x2.cc_17         x2.cc_18         
+                  x2.cc_19         2:mxi5.mm0:g     2:mxi5.mm1:g     2:mxi4.mm0:d     
+                  2:mxi4.mm1:d                                                        
+ x2.net13         x2.c_73          x2.cc_15         x2.cc_18         x2.cc_27         
+                  x2.cc_32         2:mxi6.mm0:g     2:mxi6.mm1:g     2:mxi5.mm0:d     
+                  2:mxi5.mm1:d                                                        
+ x2.net15         x2.c_63          x2.cc_13         x2.cc_25         x2.cc_30         
+                  x2.cc_32         2:mxi7.mm0:g     2:mxi7.mm1:g     2:mxi6.mm0:d     
+                  2:mxi6.mm1:d                                                        
+ x2.net17         x2.c_52          x2.cc_5          x2.cc_11         x2.cc_23         
+                  x2.cc_30         2:mxi8.mm0:g     2:mxi8.mm1:g     2:mxi7.mm0:d     
+                  2:mxi7.mm1:d                                                        
+ x2.net3          x2.c_47          x2.cc_4          x2.cc_10         x2.cc_21         
+                  x2.cc_22         x2.cc_29         2:mxi0.mnmo:d    2:mxi0.mpmo:d    
+                  2:mxi0.mpmo:d    2:mxi1.mm0:g     2:mxi1.mm1:g                      
+ x2.net5          x2.c_58          x2.cc_6          x2.cc_12         x2.cc_24         
+                  x2.cc_29         x2.cc_31         2:mxi1.mm0:d     2:mxi1.mm1:d     
+                  2:mxi2.mm0:g     2:mxi2.mm1:g                                       
+ x2.net7          x2.c_68          x2.cc_14         x2.cc_26         x2.cc_31         
+                  x2.cc_33         2:mxi2.mm0:d     2:mxi2.mm1:d     2:mxi3.mm0:g     
+                  2:mxi3.mm1:g                                                        
+ x2.net9          x2.c_78          x2.cc_16         x2.cc_19         x2.cc_28         
+                  x2.cc_33         2:mxi3.mm0:d     2:mxi3.mm1:d     2:mxi4.mm0:g     
+                  2:mxi4.mm1:g                                                        
+ x3.net11         x3.xi5.m0:g      x3.xi5.m1:g      x3.xi4.m0:d      x3.xi4.m1:d      
+ x3.net13         x3.xi6.m0:g      x3.xi6.m1:g      x3.xi5.m0:d      x3.xi5.m1:d      
+ x3.net15         x3.xi7.m0:g      x3.xi7.m1:g      x3.xi6.m0:d      x3.xi6.m1:d      
+ x3.net17         x3.xi8.m0:g      x3.xi8.m1:g      x3.xi7.m0:d      x3.xi7.m1:d      
+ x3.net3          x3.xi1.m0:g      x3.xi1.m1:g      21:mnmos0:d      21:mpmos1:d      
+                  21:mpmos0:d                                                         
+ x3.net5          x3.xi2.m0:g      x3.xi2.m1:g      x3.xi1.m0:d      x3.xi1.m1:d      
+ x3.net7          x3.xi3.m0:g      x3.xi3.m1:g      x3.xi2.m0:d      x3.xi2.m1:d      
+ x3.net9          x3.xi4.m0:g      x3.xi4.m1:g      x3.xi3.m0:d      x3.xi3.m1:d      
+ x1.xi0.net2      4:mnmos1:d       4:mnmos0:s                                         
+ x3.xi0.net2      21:mnmos1:d      21:mnmos0:s                                        
+ x2.xi0.net2      2:mxi0.mnmo:d    2:mxi0.mnmo:s                                      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ lic: Checkin 1 hspice token(s) 
+  
+  Opening plot unit= 15
+ file=outputs/ring_osc_plot.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    7.000E-01 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 2.9455e-10  targ= 5.4140e-09   trig= 5.1195e-09
+ osc_freq= 3.3950e+09
+ osc_period_layout= 4.1624e-10  targ= 5.5836e-09   trig= 5.1674e-09
+ osc_freq_layout= 2.4024e+09
+ osc_period_2x= 2.7929e-10  targ= 5.4686e-09   trig= 5.1893e-09
+ osc_freq_2x= 3.5805e+09
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    7.500E-01 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 2.5490e-10  targ= 5.3333e-09   trig= 5.0784e-09
+ osc_freq= 3.9231e+09
+ osc_period_layout= 3.5861e-10  targ= 5.6690e-09   trig= 5.3104e-09
+ osc_freq_layout= 2.7885e+09
+ osc_period_2x= 2.4212e-10  targ= 5.3597e-09   trig= 5.1176e-09
+ osc_freq_2x= 4.1302e+09
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    8.000E-01 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 2.2689e-10  targ= 5.3097e-09   trig= 5.0828e-09
+ osc_freq= 4.4073e+09
+ osc_period_layout= 3.1740e-10  targ= 5.4489e-09   trig= 5.1315e-09
+ osc_freq_layout= 3.1506e+09
+ osc_period_2x= 2.1587e-10  targ= 5.3126e-09   trig= 5.0967e-09
+ osc_freq_2x= 4.6324e+09
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    8.500E-01 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 2.0563e-10  targ= 5.3201e-09   trig= 5.1145e-09
+ osc_freq= 4.8631e+09
+ osc_period_layout= 2.8639e-10  targ= 5.3021e-09   trig= 5.0157e-09
+ osc_freq_layout= 3.4918e+09
+ osc_period_2x= 1.9595e-10  targ= 5.3063e-09   trig= 5.1104e-09
+ osc_freq_2x= 5.1034e+09
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    9.000E-01 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 1.8915e-10  targ= 5.3533e-09   trig= 5.1642e-09
+ osc_freq= 5.2868e+09
+ osc_period_layout= 2.6267e-10  targ= 5.4677e-09   trig= 5.2051e-09
+ osc_freq_layout= 3.8071e+09
+ osc_period_2x= 1.8005e-10  targ= 5.3247e-09   trig= 5.1447e-09
+ osc_freq_2x= 5.5539e+09
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    9.500E-01 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 1.7620e-10  targ= 5.2287e-09   trig= 5.0525e-09
+ osc_freq= 5.6755e+09
+ osc_period_layout= 2.4346e-10  targ= 5.3874e-09   trig= 5.1440e-09
+ osc_freq_layout= 4.1075e+09
+ osc_period_2x= 1.6788e-10  targ= 5.1992e-09   trig= 5.0313e-09
+ osc_freq_2x= 5.9565e+09
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    1.000E+00 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 1.6553e-10  targ= 5.3052e-09   trig= 5.1397e-09
+ osc_freq= 6.0411e+09
+ osc_period_layout= 2.2802e-10  targ= 5.3378e-09   trig= 5.1098e-09
+ osc_freq_layout= 4.3856e+09
+ osc_period_2x= 1.5799e-10  targ= 5.2641e-09   trig= 5.1062e-09
+ osc_freq_2x= 6.3295e+09
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    1.050E+00 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 1.5667e-10  targ= 5.2340e-09   trig= 5.0773e-09
+ osc_freq= 6.3829e+09
+ osc_period_layout= 2.1521e-10  targ= 5.3109e-09   trig= 5.0957e-09
+ osc_freq_layout= 4.6467e+09
+ osc_period_2x= 1.4977e-10  targ= 5.1914e-09   trig= 5.0416e-09
+ osc_freq_2x= 6.6768e+09
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    1.100E+00 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 1.4952e-10  targ= 5.1852e-09   trig= 5.0356e-09
+ osc_freq= 6.6879e+09
+ osc_period_layout= 2.0460e-10  targ= 5.3017e-09   trig= 5.0971e-09
+ osc_freq_layout= 4.8875e+09
+ osc_period_2x= 1.4285e-10  targ= 5.2831e-09   trig= 5.1402e-09
+ osc_freq_2x= 7.0001e+09
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    1.150E+00 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 1.4310e-10  targ= 5.1544e-09   trig= 5.0113e-09
+ osc_freq= 6.9880e+09
+ osc_period_layout= 1.9554e-10  targ= 5.3082e-09   trig= 5.1126e-09
+ osc_freq_layout= 5.1140e+09
+ osc_period_2x= 1.3669e-10  targ= 5.2427e-09   trig= 5.1060e-09
+ osc_freq_2x= 7.3158e+09
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter vdd =    1.200E+00 ***
+
+ ******
+ ring_osc_plot
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 1.3783e-10  targ= 5.2739e-09   trig= 5.1361e-09
+ osc_freq= 7.2556e+09
+ osc_period_layout= 1.8793e-10  targ= 5.3258e-09   trig= 5.1378e-09
+ osc_freq_layout= 5.3212e+09
+ osc_period_2x= 1.3188e-10  targ= 5.2180e-09   trig= 5.0861e-09
+ osc_freq_2x= 7.5828e+09
+
+          ***** job concluded
+ ******  
+ ring_osc_plot
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 801.166
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 0.37 0.27 1.20 1/1342 81435
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =     274 # elements   =     108
+  # resistors   =       0 # capacitors =      45 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      60 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.03           1         181
+  transient         10.70      110011      114775       39250 rev=       602
+  readin             0.03
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        540.52 megabytes
+           total cpu time           10.80 seconds
+           total elapsed time       14.49 seconds
+           job started at     15:41:19 10/31/2021
+           job ended   at     15:41:33 10/31/2021
+           job total runtime        14.49 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        3.68(s)

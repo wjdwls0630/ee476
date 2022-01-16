@@ -1,0 +1,5 @@
+
+** Library name: cad6
+** Cell name: ALU_LOGIC_UNIT_16B
+** View name: schematic
+.subckt ALU_LOGIC_UNIT_16B ctrl<1> ctrl<0> logic_out<15> logic_out<14> logic_out<13> logic_out<12> logic_out<11> logic_out<10> logic_out<9> logic_out<8> logic_out<7> logic_out<6> logic_out<5> logic_out<4> logic_out<3> logic_out<2> logic_out<1> logic_out<0> op0<15> op0<14> op0<13> op0<12> op0<11> op0<10> op0<9> op0<8> op0<7> op0<6> op0<5> op0<4> op0<3> op0<2> op0<1> op0<0> op1<15> op1<14> op1<13> op1<12> op1<11> op1<10> op1<9> op1<8> op1<7> op1<6> op1<5> op1<4> op1<3> op1<2> op1<1> op1<0>

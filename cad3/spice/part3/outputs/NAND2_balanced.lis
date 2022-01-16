@@ -1,0 +1,157 @@
+ ****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: NAND2_balanced.ctl                                                
+  Command line options: /gscratch/ece/tools/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i NAND2_balanced.ctl -o outputs/
+  Start time: Sat Oct 30 17:14:06 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.6 
+ lic: USER:   jpark25              HOSTNAME: n3001.hyak.local 
+ lic: HOSTID: 400a0141             PID:      3202 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 2(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+  **warning** multiple output options specified, using psf
+1****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+ ******  
+ nand2_balanced
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             nand2_balanced     1.00 
+  **info** (NAND2_balanced.ctl:47) DC voltage reset to initial transient source value in source 0:va. new dc=0.0000D+00
+  **warning** (nmos_vtg:x1.mnmos1 (./NAND2_balanced.ckt:11)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=3.5e-07 l=6e-08.
+  
+  
+ ******  
+ nand2_balanced
+
+ ****** element node table
+                                                                                      
+ 0                va               vb               vvdd             vvss             
+ a                va               x1.mnmos0:g      x1.mpmos0:g                       
+ b                vb               x1.mnmos1:g      x1.mpmos1:g                       
+ vdd!             vvdd             x1.mpmos1:s      x1.mpmos1:b      x1.mpmos0:s      
+                  x1.mpmos0:b                                                         
+ vss!             vvss             x1.mnmos1:s      x1.mnmos1:b      x1.mnmos0:b      
+ z                x1.mnmos0:d      x1.mpmos1:d      x1.mpmos0:d                       
+ x1.net2          x1.mnmos1:d      x1.mnmos0:s                                        
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ lic: Checkin 1 hspice token(s) 
+  
+  Opening plot unit= 15
+ file=outputs/NAND2_balanced.pa0
+
+ 
+     optimization  results
+
+          residual sum of squares     =  4.40521e-05
+          norm of the gradient        =  0.23815
+          marquardt scaling parameter =  0.5
+          no. of function evaluations =  11
+          no. of iterations           =  4
+ 
+     optimization completed
+
+ measured results < relout=1.000000E-03 on last iterations
+ 
+ **** optimized parameters optw
+ *                              %norm-sen        %change
+
+ .param w =  5.000e-07       $  1.000e+02        0.000e+00      
+  ****
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ nand2_balanced
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ ******
+ nand2_balanced
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ fall_delay_1= 8.5412e-12  targ= 1.0135e-09   trig= 1.0050e-09
+ fall_delay_2= 8.0788e-12  targ= 3.0331e-09   trig= 3.0250e-09
+ fall_delay= 8.5412e-12
+ rise_delay_1= 6.5548e-12  targ= 2.0216e-09   trig= 2.0150e-09
+ rise_delay_2= 3.8013e-12  targ= 4.0388e-09   trig= 4.0350e-09
+ rise_delay= 6.5548e-12
+ rise_time_1= 5.6800e-12  targ= 2.0244e-09   trig= 2.0187e-09
+ rise_time_2= 3.7282e-12  targ= 4.0405e-09   trig= 4.0368e-09
+ rise_time= 5.6800e-12
+ fall_time_1= 5.6438e-12  targ= 1.0168e-09   trig= 1.0112e-09
+ fall_time_2= 5.6867e-12  targ= 3.0363e-09   trig= 3.0306e-09
+ fall_time= 5.6867e-12
+ diff= 6.6372e-15
+
+          ***** job concluded
+ ******  
+ nand2_balanced
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 800.079
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 2.16 2.86 1.73 1/2123 3209
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      23 # elements   =       8
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       4 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1          42
+  transient          0.03        5041        3304        1299 rev=        87
+  readin             0.02
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        549.21 megabytes
+           total cpu time            0.08 seconds
+           total elapsed time        1.21 seconds
+           job started at     17:14:06 10/30/2021
+           job ended   at     17:14:07 10/30/2021
+           job total runtime         1.21 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.11(s)

@@ -1,0 +1,6 @@
+"cad6.RCA_4B.schematic.termorder" (("CO" "LOGIC_OUT<3>" "LOGIC_OUT<2>" "LOGIC_OUT<1>" "LOGIC_OUT<0>" "LOGIC_OUT_BUF<3>" "LOGIC_OUT_BUF<2>" "LOGIC_OUT_BUF<1>" "LOGIC_OUT_BUF<0>" "S<3>" "S<2>" "S<1>" "S<0>" "ctrl<0>" "ctrl_out<0>" "op0<3>" "op0<2>" "op0<1>" "op0<0>" "op1<3>" "op1<2>" "op1<1>" "op1<0>") ("CO" "LOGIC_OUT<3>" "LOGIC_OUT<2>" "LOGIC_OUT<1>" "LOGIC_OUT<0>" "LOGIC_OUT_BUF<3>" "LOGIC_OUT_BUF<2>" "LOGIC_OUT_BUF<1>" "LOGIC_OUT_BUF<0>" "S<3>" "S<2>" "S<1>" "S<0>" "ctrl<0>" "ctrl_out<0>" "op0<3>" "op0<2>" "op0<1>" "op0<0>" "op1<3>" "op1<2>" "op1<1>" "op1<0>"))
+"cad6.XOR2_X1.schematic.termorder" nil
+"cad6.CSA_4B.schematic.termorder" (("CI" "CO" "LOGIC_OUT<3>" "LOGIC_OUT<2>" "LOGIC_OUT<1>" "LOGIC_OUT<0>" "LOGIC_OUT_BUF<3>" "LOGIC_OUT_BUF<2>" "LOGIC_OUT_BUF<1>" "LOGIC_OUT_BUF<0>" "S<3>" "S<2>" "S<1>" "S<0>" "ctrl<0>" "ctrl_out<0>" "op0<3>" "op0<2>" "op0<1>" "op0<0>" "op0_temp<3>" "op1<3>" "op1<2>" "op1<1>" "op1<0>") ("CI" "CO" "LOGIC_OUT<3>" "LOGIC_OUT<2>" "LOGIC_OUT<1>" "LOGIC_OUT<0>" "LOGIC_OUT_BUF<3>" "LOGIC_OUT_BUF<2>" "LOGIC_OUT_BUF<1>" "LOGIC_OUT_BUF<0>" "S<3>" "S<2>" "S<1>" "S<0>" "ctrl<0>" "ctrl_out<0>" "op0<3>" "op0<2>" "op0<1>" "op0<0>" "op0_temp<3>" "op1<3>" "op1<2>" "op1<1>" "op1<0>"))
+"cad6.BUF_X1.schematic.termorder" nil
+"cad6.FA_X1.schematic.termorder" nil
+"cad6.MUX2_X1.schematic.termorder" nil

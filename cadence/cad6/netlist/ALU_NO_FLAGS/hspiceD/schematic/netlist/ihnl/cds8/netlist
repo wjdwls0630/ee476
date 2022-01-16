@@ -1,0 +1,48 @@
+xi18 ctrl1b<7> ctrl0b<7> logic_out<7> op0<7> op1<7> ALU_LOGIC_UNIT_1B
+xi17 ctrl1b<3> ctrl0b<3> logic_out<3> op0<3> op1<3> ALU_LOGIC_UNIT_1B
+xi16 ctrl1b<1> ctrl0b<1> logic_out<1> op0<1> op1<1> ALU_LOGIC_UNIT_1B
+xi15 ctrl<1> ctrl<0> logic_out<0> op0<0> op1<0> ALU_LOGIC_UNIT_1B
+xi14 ctrl1b<2> ctrl0b<2> logic_out<2> op0<2> op1<2> ALU_LOGIC_UNIT_1B
+xi13 ctrl1b<5> ctrl0b<5> logic_out<5> op0<5> op1<5> ALU_LOGIC_UNIT_1B
+xi0 ctrl1b<15> ctrl0b<15> logic_out<15> op0<15> op1<15> ALU_LOGIC_UNIT_1B
+xi12 ctrl1b<4> ctrl0b<4> logic_out<4> op0<4> op1<4> ALU_LOGIC_UNIT_1B
+xi11 ctrl1b<6> ctrl0b<6> logic_out<6> op0<6> op1<6> ALU_LOGIC_UNIT_1B
+xi10 ctrl1b<11> ctrl0b<11> logic_out<11> op0<11> op1<11> ALU_LOGIC_UNIT_1B
+xi9 ctrl1b<9> ctrl0b<9> logic_out<9> op0<9> op1<9> ALU_LOGIC_UNIT_1B
+xi8 ctrl1b<8> ctrl0b<8> logic_out<8> op0<8> op1<8> ALU_LOGIC_UNIT_1B
+xi7 ctrl1b<10> ctrl0b<10> logic_out<10> op0<10> op1<10> ALU_LOGIC_UNIT_1B
+xi6 ctrl1b<13> ctrl0b<13> logic_out<13> op0<13> op1<13> ALU_LOGIC_UNIT_1B
+xi5 ctrl1b<12> ctrl0b<12> logic_out<12> op0<12> op1<12> ALU_LOGIC_UNIT_1B
+xi4 ctrl1b<14> ctrl0b<14> logic_out<14> op0<14> op1<14> ALU_LOGIC_UNIT_1B
+xi33<1> ctrl1b<2> ctrl1b<3> BUF_X1
+xi33<0> ctrl0b<2> ctrl0b<3> BUF_X1
+xi32<1> ctrl1b<1> ctrl1b<2> BUF_X1
+xi32<0> ctrl0b<1> ctrl0b<2> BUF_X1
+xi31<1> ctrl<1> ctrl1b<1> BUF_X1
+xi31<0> ctrl<0> ctrl0b<1> BUF_X1
+xi30<1> ctrl1b<3> ctrl1b<4> BUF_X1
+xi30<0> ctrl0b<3> ctrl0b<4> BUF_X1
+xi24<1> ctrl1b<10> ctrl1b<11> BUF_X1
+xi24<0> ctrl0b<10> ctrl0b<11> BUF_X1
+xi23<1> ctrl1b<9> ctrl1b<10> BUF_X1
+xi23<0> ctrl0b<9> ctrl0b<10> BUF_X1
+xi22<1> ctrl1b<8> ctrl1b<9> BUF_X1
+xi22<0> ctrl0b<8> ctrl0b<9> BUF_X1
+xi29<1> ctrl1b<7> ctrl1b<8> BUF_X1
+xi29<0> ctrl0b<7> ctrl0b<8> BUF_X1
+xi28<1> ctrl1b<6> ctrl1b<7> BUF_X1
+xi28<0> ctrl0b<6> ctrl0b<7> BUF_X1
+xi27<1> ctrl1b<5> ctrl1b<6> BUF_X1
+xi27<0> ctrl0b<5> ctrl0b<6> BUF_X1
+xi26<1> ctrl1b<4> ctrl1b<5> BUF_X1
+xi26<0> ctrl0b<4> ctrl0b<5> BUF_X1
+xi25<1> ctrl1b<11> ctrl1b<12> BUF_X1
+xi25<0> ctrl0b<11> ctrl0b<12> BUF_X1
+xi19<1> ctrl1b<14> ctrl1b<15> BUF_X1
+xi19<0> ctrl0b<14> ctrl0b<15> BUF_X1
+xi21<1> ctrl1b<13> ctrl1b<14> BUF_X1
+xi21<0> ctrl0b<13> ctrl0b<14> BUF_X1
+xi20<1> ctrl1b<12> ctrl1b<13> BUF_X1
+xi20<0> ctrl0b<12> ctrl0b<13> BUF_X1
+.ends ALU_LOGIC_UNIT_16B
+** End of subcircuit definition.

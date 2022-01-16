@@ -1,0 +1,5 @@
+
+** Library name: cad6
+** Cell name: XNOR2_X1
+** View name: schematic
+.subckt XNOR2_X1 a b zn

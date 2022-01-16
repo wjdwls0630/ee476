@@ -1,0 +1,30 @@
+m_instance_284 net_010 ci net_005 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_280 net_009 b net_010 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_275 vdd! a net_009 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_251 net_007 a net_001 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_246 vdd! b net_007 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_239 co net_001 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=66.15e-15 AS=66.15e-15 PD=840e-9 PS=840e-9 M=1
+m_instance_315 s net_005 vdd! vdd! PMOS_VTL L=50e-9 W=630e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_instance_269 net_008 a vdd! vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_263 vdd! b net_008 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_257 net_001 ci net_008 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_309 net_011 b vdd! vdd! PMOS_VTL L=50e-9 W=315e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_instance_297 vdd! ci net_011 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_303 net_011 a vdd! vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_290 net_005 net_001 net_011 vdd! PMOS_VTL L=50e-9 W=315e-9 AD=33.075e-15 AS=33.075e-15 PD=525e-9 PS=525e-9 M=1
+m_instance_203 net_004 ci net_005 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_instance_199 net_003 b net_004 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_instance_194 vss! a net_003 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_instance_159 co net_001 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_instance_233 s net_005 vss! vss! NMOS_VTL L=50e-9 W=415e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_instance_166 vss! b net_000 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_instance_170 net_000 a net_001 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_instance_176 net_001 ci net_002 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_instance_209 net_005 net_001 net_006 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_instance_215 vss! ci net_006 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_instance_188 net_002 a vss! vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_instance_182 vss! b net_002 vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+m_instance_227 net_006 b vss! vss! NMOS_VTL L=50e-9 W=210e-9 AD=9.45e-15 AS=9.45e-15 PD=300e-9 PS=300e-9 M=1
+m_instance_221 net_006 a vss! vss! NMOS_VTL L=50e-9 W=210e-9 AD=22.05e-15 AS=22.05e-15 PD=420e-9 PS=420e-9 M=1
+.ends FA_X1
+** End of subcircuit definition.

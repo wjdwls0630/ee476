@@ -1,0 +1,228 @@
+ ****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: loaded_flip_flop.ctl                                              
+  Command line options: /gscratch/ece/tools/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i loaded_flip_flop.ctl -o outputs/
+  Start time: Sat Nov  6 13:52:27 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.6 
+ lic: USER:   jpark25              HOSTNAME: n3301.hyak.local 
+ lic: HOSTID: 400a2d42             PID:      20883 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 4(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+1****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+ ******  
+ loaded_flip_flop
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xdinv0.                         clkinv1_dfsr       1.00 
+        2 xdinv1.                         clkinv1_dfsr       1.00 
+        3 xrstinv0.                       clkinv1_dfsr       1.00 
+        4 xrstinv1.                       clkinv1_dfsr       1.00 
+        5 xclkinv0.                       clkinv1_dfsr       1.00 
+        6 xclkinv1.                       clkinv1_dfsr       1.00 
+        7 xldfsr0.                        loaded_flip_flop   1.00 
+        8 xldfsr0.xdfsr0.                 dfsr               1.00 
+        9 xldfsr0.xdfsr0.xclki0.          clkinv1_dfsr       1.00 
+       10 xldfsr0.xdfsr0.xclki1.          clkinv1_dfsr       1.00 
+       11 xldfsr0.xdfsr0.xrsti0.          clkinv1_dfsr       1.00 
+       12 xldfsr0.xdfsr0.xml0.            master_dfsr        1.00 
+       13 xldfsr0.xdfsr0.xsl0.            slave_dfsr         1.00 
+       14 xldfsr0.xdfsr0.xml0.xi0.        inv1_dfsr          1.00 
+       15 xldfsr0.xdfsr0.xml0.xi1.        inv1_dfsr          1.00 
+       16 xldfsr0.xdfsr0.xml0.xtg0.       tg_dfsr            1.00 
+       17 xldfsr0.xdfsr0.xml0.xtg1.       tg_dfsr            1.00 
+       18 xldfsr0.xdfsr0.xml0.xnand0.     nand2_dfsr         1.00 
+       19 xldfsr0.xdfsr0.xsl0.xi0.        inv1_dfsr          1.00 
+       20 xldfsr0.xdfsr0.xsl0.xi1.        inv1_dfsr          1.00 
+       21 xldfsr0.xdfsr0.xsl0.xtg0.       tg_dfsr            1.00 
+       22 xldfsr0.xdfsr0.xsl0.xtg1.       tg_dfsr            1.00 
+       23 xldfsr0.xdfsr0.xsl0.xnor0.      nor2_dfsr          1.00 
+  **info** (loaded_flip_flop.ctl:77) DC voltage reset to initial transient source value in source 0:vclk_ideal. new dc=0.0000D+00
+  **warning** (nmos_vtg:xdinv0.mn0 (./CLKINV1_DFSR.ckt:5)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=3e-07 l=6e-08.
+  
+  
+ ******  
+ loaded_flip_flop
+
+ ****** element node table
+                                                                                      
+ 0                vclk_ideal       vd_ideal         vrst_ideal       vvdd             
+                  vvss                                                                
+ clk              6:mn0:d          6:mp0:d          9:mn0:g          9:mp0:g          
+ clk_ideal        vclk_ideal       5:mn0:g          5:mp0:g                           
+ d                xdinv1.mn0:d     xdinv1.mp0:d     14:mn0:g         14:mp0:g         
+ d_ideal          vd_ideal         xdinv0.mn0:g     xdinv0.mp0:g                      
+ n1               xdinv0.mn0:d     xdinv0.mp0:d     xdinv1.mn0:g     xdinv1.mp0:g     
+ n2               3:mn0:d          3:mp0:d          4:mn0:g          4:mp0:g          
+ n3               5:mn0:d          5:mp0:d          6:mn0:g          6:mp0:g          
+ q                xldfsr0.c0       20:mn0:d         20:mp0:d         ic1              
+ rst              4:mn0:d          4:mp0:d          11:mn0:g         11:mp0:g         
+                  23:mn0:g         23:mp0:g                                           
+ rst_ideal        vrst_ideal       3:mn0:g          3:mp0:g                           
+ vdd!             vvdd             xdinv0.mp0:s     xdinv0.mp0:b     xdinv1.mp0:s     
+                  xdinv1.mp0:b     3:mp0:s          3:mp0:b          4:mp0:s          
+                  4:mp0:b          5:mp0:s          5:mp0:b          6:mp0:s          
+                  6:mp0:b          9:mp0:s          9:mp0:b          10:mp0:s         
+                  10:mp0:b         11:mp0:s         11:mp0:b         14:mp0:s         
+                  14:mp0:b         15:mp0:s         15:mp0:b         16:mp0:b         
+                  17:mp0:b         18:mp1:s         18:mp1:b         18:mp0:s         
+                  18:mp0:b         19:mp0:s         19:mp0:b         20:mp0:s         
+                  20:mp0:b         21:mp0:b         22:mp0:b         23:mp1:b         
+                  23:mp0:s         23:mp0:b                                           
+ vss!             xldfsr0.c0       vvss             xdinv0.mn0:s     xdinv0.mn0:b     
+                  xdinv1.mn0:s     xdinv1.mn0:b     3:mn0:s          3:mn0:b          
+                  4:mn0:s          4:mn0:b          5:mn0:s          5:mn0:b          
+                  6:mn0:s          6:mn0:b          9:mn0:s          9:mn0:b          
+                  10:mn0:s         10:mn0:b         11:mn0:s         11:mn0:b         
+                  14:mn0:s         14:mn0:b         15:mn0:s         15:mn0:b         
+                  16:mn0:b         17:mn0:b         18:mn0:s         18:mn0:b         
+                  18:mn1:b         19:mn0:s         19:mn0:b         20:mn0:s         
+                  20:mn0:b         21:mn0:b         22:mn0:b         23:mn0:s         
+                  23:mn0:b         23:mn1:s         23:mn1:b                          
+ 8:clki           10:mn0:d         10:mp0:d         16:mp0:g         17:mn0:g         
+                  21:mn0:g         22:mp0:g                                           
+ 8:clki_bar       9:mn0:d          9:mp0:d          10:mn0:g         10:mp0:g         
+                  16:mn0:g         17:mp0:g         21:mp0:g         22:mn0:g         
+ 8:n              15:mn0:d         15:mp0:d         18:mn1:g         18:mp1:g         
+                  21:mn0:d         21:mp0:d                                           
+ 8:rst_bar        11:mn0:d         11:mp0:d         18:mn0:g         18:mp0:g         
+ 12:n1            14:mn0:d         14:mp0:d         16:mn0:d         16:mp0:d         
+ 12:n2            15:mn0:g         15:mp0:g         16:mn0:s         16:mp0:s         
+                  17:mn0:s         17:mp0:s                                           
+ 12:n4            17:mn0:d         17:mp0:d         18:mn1:d         18:mp1:d         
+                  18:mp0:d                                                            
+ 13:n1            19:mn0:g         19:mp0:g         21:mn0:s         21:mp0:s         
+                  22:mn0:s         22:mp0:s                                           
+ 13:n2            19:mn0:d         19:mp0:d         20:mn0:g         20:mp0:g         
+                  23:mn1:g         23:mp1:g                                           
+ 13:n3            22:mn0:d         22:mp0:d         23:mn0:d         23:mn1:d         
+                  23:mp1:d                                                            
+ 18:net1          18:mn0:d         18:mn1:s                                           
+ 23:net1          23:mp1:s         23:mp0:d                                           
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ lic: Checkin 1 hspice token(s) 
+  
+  Opening plot unit= 15
+ file=outputs/loaded_flip_flop.pa0
+
+ 
+     optimization  results
+
+          residual sum of squares     =  2782.87
+          norm of the gradient        =  1250.69
+          marquardt scaling parameter =  1.97826e+06
+          no. of function evaluations =  39
+          no. of iterations           =  3
+ 
+     optimization completed
+
+ relin, relout, grad tolerances not met
+  optimization terminated due to problems during  function evaluation 
+  termination condition:
+ the marquardt(lm) parameter (1978262.058891) exceeded max   (600000.000000)
+ 
+ **** optimized parameters optw
+ *                              %norm-sen        %change
+
+ .param xclki_wp =  4.350e-07       $  1.282e+01        2.298e+00      
+ .param xclki_wn =  3.450e-07       $  1.483e+01        2.898e+00      
+ .param xi_wp =  4.100e-07       $  1.622e+01        0.000e+00      
+ .param xi_wn =  3.250e-07       $  1.747e+01        1.538e+00      
+ .param xtg_wp =  2.500e-07       $  2.125e+01        0.000e+00      
+ .param xtg_wn =  2.650e-07       $  1.470e+01        1.886e+00      
+ .param xnand_wp =  5.250e-07       $  5.673e-02       -4.761e+00      
+ .param xnand_wn =  2.500e-07       $  2.256e-02       -1.000e+01      
+ .param xnor_wp =  3.550e-07       $  1.734e+00        1.408e+00      
+ .param xnor_wn =  9.500e-08       $  8.679e-01       -1.157e+02      
+  ****
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ loaded_flip_flop
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ ******
+ loaded_flip_flop
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ t_cq_rise= 5.3076e-11  targ= 3.0518e-09   trig= 2.9988e-09
+ t_cq_fall= 5.2260e-11  targ= 5.0510e-09   trig= 4.9987e-09
+ diff= 8.1644e-13
+ t_cq= 5.2668e-11
+ en_deliv_steady= 9.8683e-15  from= 6.9800e-09     to= 8.9800e-09
+ en_deliv_switch= 2.8707e-14  from= 2.9800e-09     to= 4.9800e-09
+
+          ***** job concluded
+ ******  
+ loaded_flip_flop
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 800.154
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 4.39 4.16 4.04 5/1546 20904
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =     193 # elements   =      48
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       5
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      42 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.03           1         141
+  transient          3.35       10001       56061       21287 rev=      2751
+  readin             0.38
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        549.21 megabytes
+           total cpu time            3.81 seconds
+           total elapsed time        5.41 seconds
+           job started at     13:52:27 11/06/2021
+           job ended   at     13:52:32 11/06/2021
+           job total runtime         5.41 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.37(s)

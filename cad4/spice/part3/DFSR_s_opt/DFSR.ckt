@@ -1,0 +1,31 @@
+* Subcircuits
+*---------------------------------------------------------------------------------------------------
+.INCLUDE 'MASTER_DFSR.ckt'
+.INCLUDE 'SLAVE_DFSR.ckt'
+*---------------------------------------------------------------------------------------------------
+*  1   2   3   4
+*  D   Q  CLK RST
+.subckt DFSR 1 2 3 4 
++ xclki_Wp=0.4e-6 xclki_Wn=0.3e-6
++ xi_Wp=0.4e-6 xi_Wn=0.3e-6
++ xtg_Wp=0.2e-6 xtg_Wn=0.29e-6
++ xnand_Wp=0.35e-6 xnand_Wn=0.35e-6
++ xnor_Wp=0.35e-6 xnor_Wn=0.35e-6
+
+*clki clki_bar
+xclki0 3 clki_bar CLKINV1_DFSR Wp='xclki_Wp' Wn='xclki_Wn' 
+xclki1 clki_bar clki CLKINV1_DFSR Wp='xclki_Wp' Wn='xclki_Wn'
+
+* rst_bar
+xrsti0 4 rst_bar CLKINV1_DFSR Wp='xclki_Wp' Wn='xclki_Wn'
+
+xml0 1 n clki clki_bar rst_bar MASTER_DFSR
++ xi_Wp='xi_Wp' xi_Wn='xi_Wn'
++ xtg_Wp='xtg_Wp' xtg_Wn='xtg_Wn'
++ xnand_Wp='xnand_Wp' xnand_Wn='xnand_Wn'
+
+xsl0 n 2 clki clki_bar 4 SLAVE_DFSR
++ xi_Wp='xi_Wp' xi_Wn='xi_Wn'
++ xtg_Wp='xtg_Wp' xtg_Wn='xtg_Wn'
++ xnor_Wp='xnor_Wp' xnor_Wn='xnor_Wn'
+.ends DFSR

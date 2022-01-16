@@ -1,0 +1,48 @@
+header
+"PSFversion" "1.00"
+"simulator" "HSPICE"
+"version" "S-2021.09 linux64"
+"rundate" "17:06:41 11/08/2021 "
+"runtitle" "loaded_flip_flop_hold_fall                                        "
+"runtype" "logFile"
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING * )
+VALUE
+"timeSweep" "analysisInst" ( 
+"Transient Analysis"
+"hold_fall.tr0"
+"PSF"
+""
+()
+"Transient Analysis"
+)
+"summary" "analysisInst" ( 
+"Summary Information"
+"hold_fall.su0"
+"PSF"
+""
+()
+"Summary Information"
+)
+"timeSweep1" "analysisInst" ( 
+"Transient Analysis"
+"hold_fall.tr1"
+"PSF"
+""
+()
+"Transient Analysis"
+)
+"outputs_hold_fall/hold_fall.su1" "analysisInst" ( 
+"Summary Information"
+"hold_fall.su1"
+"PSF"
+""
+()
+"Summary Information"
+)

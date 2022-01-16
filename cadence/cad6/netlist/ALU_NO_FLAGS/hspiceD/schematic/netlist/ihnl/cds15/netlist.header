@@ -1,0 +1,5 @@
+
+** Library name: cad6
+** Cell name: OUT_MUX_BUF_16B
+** View name: schematic
+.subckt OUT_MUX_BUF_16B arithmetic_out<15> arithmetic_out<14> arithmetic_out<13> arithmetic_out<12> arithmetic_out<11> arithmetic_out<10> arithmetic_out<9> arithmetic_out<8> arithmetic_out<7> arithmetic_out<6> arithmetic_out<5> arithmetic_out<4> arithmetic_out<3> arithmetic_out<2> arithmetic_out<1> arithmetic_out<0> logic_out<15> logic_out<14> logic_out<13> logic_out<12> logic_out<11> logic_out<10> logic_out<9> logic_out<8> logic_out<7> logic_out<6> logic_out<5> logic_out<4> logic_out<3> logic_out<2> logic_out<1> logic_out<0> alu_out<15> alu_out<14> alu_out<13> alu_out<12> alu_out<11> alu_out<10> alu_out<9> alu_out<8> alu_out<7> alu_out<6> alu_out<5> alu_out<4> alu_out<3> alu_out<2> alu_out<1> alu_out<0> alu_pre<15> ctrl<2>

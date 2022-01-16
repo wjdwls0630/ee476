@@ -1,0 +1,23 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "TDFF_X1_2"
+  repList "hspiceD spice cmos_sch cmos.sch schematic"
+  stopList "hspiceD spice"
+  globalList "VSS! VDD!"
+  hierDelim "^"
+  netlistDir "/gscratch/ece/courses/476/jarenas/jarenas_git/cad5/netlist/TDFF_X1_2/hspiceD/schematic/netlist"
+ )
+( net
+( "VSS!" "vss!" )
+( "VDD!" "vdd!" )
+ )
+( model
+( "cad5/TDFF_X1_2/schematic" "TDFF_X1_2" )
+( "cad5/DFF_X1/schematic" "DFF_X1" )
+( "cad5/TBUF_X1/schematic" "TBUF_X1" )
+ )
+( "TBUF_X1" "ihnl/cds4/map" )
+( "DFF_X1" "ihnl/cds0/map" )
+( "TDFF_X1_2" "ihnl/cds2/map" )
+ )

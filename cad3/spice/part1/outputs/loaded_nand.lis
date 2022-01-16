@@ -1,0 +1,174 @@
+ ****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: loaded_nand.ctl                                                   
+  Command line options: /gscratch/ece/tools/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i loaded_nand.ctl -o outputs/
+  Start time: Sun Oct 31 14:54:16 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.6 
+ lic: USER:   jpark25              HOSTNAME: n3240.hyak.local 
+ lic: HOSTID: 400af041             PID:      76715 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 9(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+  **warning** (./loaded_nand.ckt:24)'.end' can not exist in include/lib files, ignored
+  **warning** multiple output options specified, using psf
+1****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+ ******  
+ loaded_nand
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             loaded_nand        1.00 
+        2 x1.xi3.                         nand2              1.00 
+        3 x1.xi2.                         nand2              1.00 
+        4 x1.xi0.                         nand2              1.00 
+        5 x1.xi1.                         nand2              1.00 
+        6 x1.xdut.                        nand2              1.00 
+  **info** (loaded_nand.ctl:37) DC voltage reset to initial transient source value in source 0:va. new dc=0.0000D+00
+  **warning** (nmos_vtg:x1.xi3.mnmos1 (./loaded_nand.ckt:11)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=3.5e-07 l=6e-08.
+  
+  
+ ******  
+ loaded_nand
+
+ ****** element node table
+                                                                                      
+ 0                va               vb               vvdd             vvss             
+ a                va               6:mnmos0:g       6:mpmos0:g                        
+ b                vb               6:mnmos1:g       6:mpmos1:g                        
+ vdd!             vvdd             2:mnmos0:g       2:mpmos1:s       2:mpmos1:b       
+                  2:mpmos0:g       2:mpmos0:s       2:mpmos0:b       3:mnmos0:g       
+                  3:mpmos1:s       3:mpmos1:b       3:mpmos0:g       3:mpmos0:s       
+                  3:mpmos0:b       4:mnmos0:g       4:mpmos1:s       4:mpmos1:b       
+                  4:mpmos0:g       4:mpmos0:s       4:mpmos0:b       5:mnmos0:g       
+                  5:mpmos1:s       5:mpmos1:b       5:mpmos0:g       5:mpmos0:s       
+                  5:mpmos0:b       6:mpmos1:s       6:mpmos1:b       6:mpmos0:s       
+                  6:mpmos0:b                                                          
+ vss!             vvss             2:mnmos1:s       2:mnmos1:b       2:mnmos0:b       
+                  3:mnmos1:s       3:mnmos1:b       3:mnmos0:b       4:mnmos1:s       
+                  4:mnmos1:b       4:mnmos0:b       5:mnmos1:s       5:mnmos1:b       
+                  5:mnmos0:b       6:mnmos1:s       6:mnmos1:b       6:mnmos0:b       
+ z                2:mnmos1:g       2:mpmos1:g       3:mnmos1:g       3:mpmos1:g       
+                  4:mnmos1:g       4:mpmos1:g       5:mnmos1:g       5:mpmos1:g       
+                  6:mnmos0:d       6:mpmos1:d       6:mpmos0:d                        
+ x1.net1          5:mnmos0:d       5:mpmos1:d       5:mpmos0:d                        
+ x1.net2          4:mnmos0:d       4:mpmos1:d       4:mpmos0:d                        
+ x1.net3          3:mnmos0:d       3:mpmos1:d       3:mpmos0:d                        
+ x1.net4          2:mnmos0:d       2:mpmos1:d       2:mpmos0:d                        
+ x1.xi3.net2      2:mnmos1:d       2:mnmos0:s                                         
+ x1.xi2.net2      3:mnmos1:d       3:mnmos0:s                                         
+ x1.xi0.net2      4:mnmos1:d       4:mnmos0:s                                         
+ x1.xi1.net2      5:mnmos1:d       5:mnmos0:s                                         
+ x1.xdut.net2     6:mnmos1:d       6:mnmos0:s                                         
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ lic: Checkin 1 hspice token(s) 
+  
+  Opening plot unit= 15
+ file=outputs/loaded_nand.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ loaded_nand
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ ******
+ loaded_nand
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ fall_delay_1= 1.9606e-11  targ= 1.0246e-09   trig= 1.0050e-09
+ fall_delay_2= 1.8482e-11  targ= 3.0435e-09   trig= 3.0250e-09
+ fall_delay= 1.9606e-11
+ rise_delay_1= 1.9342e-11  targ= 2.0343e-09   trig= 2.0150e-09
+ rise_delay_2= 9.4987e-12  targ= 4.0445e-09   trig= 4.0350e-09
+ rise_delay= 1.9342e-11
+ rise_time_1= 2.6477e-11  targ= 2.0501e-09   trig= 2.0236e-09
+ rise_time_2= 1.1155e-11  targ= 4.0513e-09   trig= 4.0402e-09
+ rise_time= 2.6477e-11
+ fall_time_1= 2.5508e-11  targ= 1.0407e-09   trig= 1.0152e-09
+ fall_time_2= 2.5483e-11  targ= 3.0596e-09   trig= 3.0341e-09
+ fall_time= 2.5508e-11
+ t_z_f_i= 1.0101e-09  targ= 1.0101e-09   trig= 0.0000e+00
+ t_z_f_e= 1.0758e-09  targ= 1.0758e-09   trig= 0.0000e+00
+ t_z_r_i= 2.0149e-09  targ= 2.0149e-09   trig= 0.0000e+00
+ t_z_r_e= 2.0752e-09  targ= 2.0752e-09   trig= 0.0000e+00
+ fall_en_dissip= 4.0905e-15  from= 1.0101e-09     to= 1.0758e-09
+ rise_en_dissip= 5.1395e-15  from= 2.0149e-09     to= 2.0752e-09
+ input_cap_r= 9.5716e-16  from= 1.0000e-09     to= 1.0100e-09
+ input_cap_f= 7.6879e-16  from= 2.0100e-09     to= 2.0200e-09
+ input_cap= 8.6297e-16
+ output_cap_f= 5.0029e-15  from= 1.0101e-09     to= 1.0758e-09
+ output_cap_r= 5.0268e-15  from= 2.0149e-09     to= 2.0752e-09
+ output_cap= 5.0148e-15
+
+          ***** job concluded
+ ******  
+ loaded_nand
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 800.206
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 0.19 5.95 21.57 2/1221 76724
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      95 # elements   =      24
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      20 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.02           1           9
+  transient          0.02        5041         327         129 rev=         4
+  readin             0.09
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        541.53 megabytes
+           total cpu time            0.14 seconds
+           total elapsed time        1.55 seconds
+           job started at     14:54:16 10/31/2021
+           job ended   at     14:54:18 10/31/2021
+           job total runtime         1.55 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.39(s)

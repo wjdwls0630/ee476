@@ -1,0 +1,8 @@
+*  1   2   3
+* in1 in2 out
+.subckt NAND2_DFSR 1 2 3 Wp=0.35e-6 Wn=0.35e-6
+mn0 net1 2 vss! vss! NMOS_VTG L=60e-9 W='Wn' AD='0.105e-6*Wn' AS='0.105e-6*Wn' PD='Wn+210e-9' PS='Wn+210e-9' M=1
+mn1 3 1 net1 vss! NMOS_VTG L=60e-9 W='Wn' AD='0.105e-6*Wn' AS='0.105e-6*Wn' PD='Wn+210e-9' PS='Wn+210e-9' M=1
+mp1 3 1 vdd! vdd! PMOS_VTG L=60e-9 W='Wp' AD='0.105e-6*Wp' AS='0.105e-6*Wp' PD='Wp+210e-9' PS='Wp+210e-9' M=1
+mp0 3 2 vdd! vdd! PMOS_VTG L=60e-9 W='Wp' AD='0.105e-6*Wp' AS='0.105e-6*Wp' PD='Wp+210e-9' PS='Wp+210e-9' M=1
+.ends NAND2_DFSR

@@ -1,0 +1,33 @@
+.GLOBAL vss! vdd!
+
+
+.OPTION
++ ARTIST=2
++ INGOLD=2
++ PARHIER=LOCAL
++ PSF=2
+
+.subckt INVD2 vi vo
+m0 vo vi vss! vss! NMOS_VTG L=60e-9 W=600e-9 AD=63e-15 AS=63e-15 PD=810e-9 PS=810e-9 M=1
+m1 vo vi vdd! vdd! PMOS_VTG L=60e-9 W=800e-9 AD=84e-15 AS=84e-15 PD=1.01e-6 PS=1.01e-6 M=1
+.ends INVD2
+
+.subckt NAND2_2x a b z
+mnmos1 net2 b vss! vss! NMOS_VTG L=60e-9 W=700e-9 AD=73.5e-15 AS=73.5e-15 PD=910e-9 PS=910e-9 M=1
+mnmos0 z a net2 vss! NMOS_VTG L=60e-9 W=700e-9 AD=73.5e-15 AS=73.5e-15 PD=910e-9 PS=910e-9 M=1
+mpmos1 z b vdd! vdd! PMOS_VTG L=60e-9 W=700e-9 AD=73.5e-15 AS=73.5e-15 PD=910e-9 PS=910e-9 M=1
+mpmos0 z a vdd! vdd! PMOS_VTG L=60e-9 W=700e-9 AD=73.5e-15 AS=73.5e-15 PD=910e-9 PS=910e-9 M=1
+.ends NAND2_2x
+
+.subckt ring_osc_2x osc_en osc_out
+xi8 net17 osc_out INVD2
+xi7 net15 net17 INVD2
+xi6 net13 net15 INVD2
+xi5 net11 net13 INVD2
+xi4 net9 net11 INVD2
+xi3 net7 net9 INVD2
+xi2 net5 net7 INVD2
+xi1 net3 net5 INVD2
+xi0 osc_en osc_out net3 NAND2_2x
+.ends ring_osc_2x
+.END

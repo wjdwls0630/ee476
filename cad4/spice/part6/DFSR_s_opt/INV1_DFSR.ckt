@@ -1,0 +1,8 @@
+
+* 1   2 
+* in out
+.subckt INV1_DFSR 1 2 Wp=0.4e-6 Wn=0.3e-6
+mn0 2 1 vss! vss! NMOS_VTG L=60e-9 W='Wn' AD='0.105e-6*Wn' AS='0.105e-6*Wn' PD='Wn+210e-9' PS='Wn+210e-9' M=1
+mp0 2 1 vdd! vdd! PMOS_VTG L=60e-9 W='Wp' AD='0.105e-6*Wp' AS='0.105e-6*Wp' PD='Wp+210e-9' PS='Wp+210e-9' M=1
+.ends INV1_DFSR
+

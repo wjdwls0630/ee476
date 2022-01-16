@@ -1,0 +1,5 @@
+xi2 net1 net2 s<1> zn INVMUX2_X1
+xi1 c d s<0> net2 MUX2_X1
+xi0 a b s<0> net1 MUX2_X1
+.ends INVMUX4_X1
+** End of subcircuit definition.

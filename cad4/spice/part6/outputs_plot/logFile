@@ -1,0 +1,100 @@
+header
+"PSFversion" "1.00"
+"simulator" "HSPICE"
+"version" "S-2021.09 linux64"
+"rundate" "23:11:52 11/07/2021 "
+"runtitle" "loaded_flip_flop_plot                                             "
+"runtype" "logFile"
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING * )
+VALUE
+"timeSweep" "analysisInst" ( 
+"Transient Analysis"
+""
+"PSF"
+""
+("delay" )
+"sweep parent"
+) PROP(
+"sweep_tree_type" "sweepNode"
+)
+"plot.tr0@1" "analysisInst" ( 
+"Transient Analysis"
+"plot.tr0@1"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"delay" 8e-10
+)
+"plot.tr0@2" "analysisInst" ( 
+"Transient Analysis"
+"plot.tr0@2"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"delay" 8.5e-10
+)
+"plot.tr0@3" "analysisInst" ( 
+"Transient Analysis"
+"plot.tr0@3"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"delay" 9e-10
+)
+"plot.tr0@4" "analysisInst" ( 
+"Transient Analysis"
+"plot.tr0@4"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"delay" 9.5e-10
+)
+"plot.tr0@5" "analysisInst" ( 
+"Transient Analysis"
+"plot.tr0@5"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"delay" 1e-09
+)
+"plot.tr0@6" "analysisInst" ( 
+"Transient Analysis"
+"plot.tr0@6"
+"PSF"
+"timeSweep"
+()
+"Transient Analysis"
+) PROP(
+"sweep_tree_type" "leafNode"
+"delay" 1.05e-09
+)
+"summary" "analysisInst" ( 
+"Summary Information"
+"plot.su0"
+"PSF"
+""
+()
+"Summary Information"
+)

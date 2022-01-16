@@ -1,0 +1,27 @@
+* Subcircuits
+*---------------------------------------------------------------------------------------------------
+.INCLUDE 'CLKINV1_DFSR.ckt'
+.INCLUDE 'INV1_DFSR.ckt'
+.INCLUDE 'TG_DFSR.ckt'
+.INCLUDE 'NAND2_DFSR.ckt'
+*---------------------------------------------------------------------------------------------------
+
+
+*  1   2   3     4       5
+*  D  n3  CLK CLK_Bar RST_Bar
+.subckt MASTER_DFSR 1 2 3 4 5 
++ xi_Wp=0.4e-6 xi_Wn=0.3e-6
++ xtg_Wp=0.2e-6 xtg_Wn=0.2e-6
++ xnand_Wp=0.35e-6 xnand_Wn=0.35e-6
+
+* latch
+xi0 1 n1 INV1_DFSR Wp='xi_Wp' Wn='xi_Wn'
+xi1 n2 2 INV1_DFSR Wp='xi_Wp' Wn='xi_Wn'
+
+xtg0 n1 n2 4 3 TG_DFSR Wp='xtg_Wp' Wn='xtg_Wn'
+xtg1 n4 n2 3 4 TG_DFSR Wp='xtg_Wp' Wn='xtg_Wn'
+
+xnand0 2 5 n4 NAND2_DFSR Wp='xnand_Wp' Wn='xnand_Wn' 
+.ends MASTER_DFSR
+
+

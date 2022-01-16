@@ -1,0 +1,178 @@
+ ****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: ring_osc.pex.ctl                                                  
+  Command line options: /gscratch/ece/tools/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i ring_osc.pex.ctl -o outputs/
+  Start time: Fri Oct 29 05:29:00 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.6 
+ lic: USER:   jpark25              HOSTNAME: n3001.hyak.local 
+ lic: HOSTID: 400a0141             PID:      63435 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 3(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+  **warning** multiple output options specified, using post
+1****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+ ******  
+ ring_osc_pex
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             ring_osc           1.00 
+  **info** (ring_osc.pex.ctl:41) DC voltage reset to initial transient source value in source 0:ven. new dc=0.0000D+00
+  **warning** (nmos_vtg:x1.mxi0.mnmos0 (./ring_osc.pex.netlist:8)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=3.5e-07 l=6e-08.
+  
+ ******  
+ ring_osc_pex
+
+ ****** element node table
+                                                                                      
+ 0                x1.c_7           x1.c_19          x1.c_24          x1.c_29          
+                  x1.c_41          x1.c_47          x1.c_52          x1.c_58          
+                  x1.c_63          x1.c_68          x1.c_73          x1.c_78          
+                  ven              vvdd             vvss                              
+ osc_en           x1.c_29          x1.cc_2          x1.cc_8          x1.cc_20         
+                  x1.cc_21         ven              1:mxi0.mnmo:g    1:mxi0.mpmo:g    
+ osc_out          x1.c_7           x1.cc_1          x1.cc_2          x1.cc_3          
+                  x1.cc_4          x1.cc_5          x1.cc_6          1:mxi0.mnmo:g    
+                  1:mxi0.mpmo:g    1:mxi8.mm0:d     1:mxi8.mm1:d                      
+ vdd!             x1.c_19          x1.cc_1          x1.cc_7          x1.cc_8          
+                  x1.cc_9          x1.cc_10         x1.cc_11         x1.cc_12         
+                  x1.cc_13         x1.cc_14         x1.cc_15         x1.cc_16         
+                  vvdd             1:mxi0.mpmo:s    1:mxi0.mpmo:b    1:mxi0.mpmo:s    
+                  1:mxi0.mpmo:b    1:mxi8.mm1:s     1:mxi8.mm1:b     1:mxi1.mm1:s     
+                  1:mxi1.mm1:b     1:mxi7.mm1:s     1:mxi7.mm1:b     1:mxi2.mm1:s     
+                  1:mxi2.mm1:b     1:mxi6.mm1:s     1:mxi6.mm1:b     1:mxi3.mm1:s     
+                  1:mxi3.mm1:b     1:mxi5.mm1:s     1:mxi5.mm1:b     1:mxi4.mm1:s     
+                  1:mxi4.mm1:b                                                        
+ vss!             x1.c_41          x1.cc_3          x1.cc_9          x1.cc_17         
+                  x1.cc_20         x1.cc_22         x1.cc_23         x1.cc_24         
+                  x1.cc_25         x1.cc_26         x1.cc_27         x1.cc_28         
+                  vvss             1:mxi0.mnmo:s    1:mxi0.mnmo:b    1:mxi0.mnmo:b    
+                  1:mxi8.mm0:s     1:mxi8.mm0:b     1:mxi1.mm0:s     1:mxi1.mm0:b     
+                  1:mxi7.mm0:s     1:mxi7.mm0:b     1:mxi2.mm0:s     1:mxi2.mm0:b     
+                  1:mxi6.mm0:s     1:mxi6.mm0:b     1:mxi3.mm0:s     1:mxi3.mm0:b     
+                  1:mxi5.mm0:s     1:mxi5.mm0:b     1:mxi4.mm0:s     1:mxi4.mm0:b     
+ x1.net11         x1.c_24          x1.cc_7          x1.cc_17         x1.cc_18         
+                  x1.cc_19         1:mxi5.mm0:g     1:mxi5.mm1:g     1:mxi4.mm0:d     
+                  1:mxi4.mm1:d                                                        
+ x1.net13         x1.c_73          x1.cc_15         x1.cc_18         x1.cc_27         
+                  x1.cc_32         1:mxi6.mm0:g     1:mxi6.mm1:g     1:mxi5.mm0:d     
+                  1:mxi5.mm1:d                                                        
+ x1.net15         x1.c_63          x1.cc_13         x1.cc_25         x1.cc_30         
+                  x1.cc_32         1:mxi7.mm0:g     1:mxi7.mm1:g     1:mxi6.mm0:d     
+                  1:mxi6.mm1:d                                                        
+ x1.net17         x1.c_52          x1.cc_5          x1.cc_11         x1.cc_23         
+                  x1.cc_30         1:mxi8.mm0:g     1:mxi8.mm1:g     1:mxi7.mm0:d     
+                  1:mxi7.mm1:d                                                        
+ x1.net3          x1.c_47          x1.cc_4          x1.cc_10         x1.cc_21         
+                  x1.cc_22         x1.cc_29         1:mxi0.mnmo:d    1:mxi0.mpmo:d    
+                  1:mxi0.mpmo:d    1:mxi1.mm0:g     1:mxi1.mm1:g                      
+ x1.net5          x1.c_58          x1.cc_6          x1.cc_12         x1.cc_24         
+                  x1.cc_29         x1.cc_31         1:mxi1.mm0:d     1:mxi1.mm1:d     
+                  1:mxi2.mm0:g     1:mxi2.mm1:g                                       
+ x1.net7          x1.c_68          x1.cc_14         x1.cc_26         x1.cc_31         
+                  x1.cc_33         1:mxi2.mm0:d     1:mxi2.mm1:d     1:mxi3.mm0:g     
+                  1:mxi3.mm1:g                                                        
+ x1.net9          x1.c_78          x1.cc_16         x1.cc_19         x1.cc_28         
+                  x1.cc_33         1:mxi3.mm0:d     1:mxi3.mm1:d     1:mxi4.mm0:g     
+                  1:mxi4.mm1:g                                                        
+ x1.xi0.net2      1:mxi0.mnmo:d    1:mxi0.mnmo:s                                      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ lic: Checkin 1 hspice token(s) 
+  Opening plot unit= 15
+ file=outputs/ring_osc.pex.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ ring_osc_pex
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is voltage   simulation time is   0.000e+00
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:osc_en  = 0.000e+00 0:osc_out = 1.200e+00 0:vdd!    = 1.200e+00
+ +0:vss!    = 0.000e+00 1:net11   = 1.200e+00 1:net13   = 1.227e-05
+ +1:net15   = 1.200e+00 1:net17   = 1.227e-05 1:net3    = 1.200e+00
+ +1:net5    = 1.227e-05 1:net7    = 1.200e+00 1:net9    = 1.227e-05
+ +1:xi0.net2= 9.653e-01
+
+ ******
+ ring_osc_pex
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ osc_period= 1.8942e-10  targ= 5.3566e-09   trig= 5.1671e-09
+ osc_freq= 5.2794e+09
+ avg_pow= 2.3976e-04  from= 5.0000e-09     to= 1.0000e-08
+
+          ***** job concluded
+ ******  
+ ring_osc_pex
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 800.254
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 1.48 1.31 1.21 2/1583 63472
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      94 # elements   =      68
+  # resistors   =       0 # capacitors =      45 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      20 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1          13
+  transient          0.33       10001        7857        2728 rev=        76
+  readin             0.02
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        540.48 megabytes
+           total cpu time            0.37 seconds
+           total elapsed time       16.39 seconds
+           job started at     05:29:00 10/29/2021
+           job ended   at     05:29:17 10/29/2021
+           job total runtime        16.39 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:       16.01(s)

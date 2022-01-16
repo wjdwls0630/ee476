@@ -1,0 +1,97 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-type"/>
+        <title>Html Report</title>
+        <script src="report.js"></script>
+        <style> body { background-color : Lavender } table{ border: 1px solid black; border-collapse: collapse; background-color : GhostWhite;} thead { background-color : lightGray } tfoot { border: 2px solid black; background-color : lightGray } td, th { padding : 10px ; border: 1px solid black } th.noTop { border-style: none solid solid solid} th.noBottom { border-style: solid solid none solid} .Red { background-color : #FF0000; } .Orange { background-color : #FFA500; } .Yellow { background-color : #FFFF00; } .LightGreen { background-color : #ADFF2F; } .Green { background-color : #00FF00; } .sort-by { display: inline-block; padding-left: 0.25rem; padding-right: 0.25rem; margin-bottom: 1px; vertical-align: middle;} .sort-by-asc, .sort-by-desc { display: block; width: 0; height: 0; margin: 0; margin-top: 1px; margin-bottom: 1px; border: solid 0.3rem transparent; background: transparent; cursor: pointer} .sort-by-asc { border-bottom: solid 0.5rem dimgray; border-top-width: 0;} .sort-by-desc { border-top: solid 0.5rem dimgray; border-bottom-width: 0;}</style>
+    </head>
+    <body class="page">
+        <h1 id="Top"></h1>
+        <hr/>
+        <h2 id="cad6 RCA_4B layout">cad6 RCA_4B layout</h2>
+        <a href="#Top">Top</a>
+        <p>
+            <pre>cad6 RCA_4B physConfig<br/>cad6 RCA_4B schematic</pre>
+        </p>
+        <h3>Summary</h3>
+        <table id="info0">
+            <thead>
+                <tr>
+                    <th/>
+                    <th>Bound</th>
+                    <th>Unbound</th>
+                    <th>Ungenerated</th>
+                    <th>Opens</th>
+                    <th>Shorts</th>
+                    <th>%Compliance</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td data-value="Total">Total</td>
+                    <td data-value="41">41</td>
+                    <td data-value="14">14</td>
+                    <td data-value="35">35</td>
+                    <td data-value="10">10</td>
+                    <td data-value="11">11</td>
+                    <td class="Orange" data-value="30">30</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td data-value="Terminals">Terminals</td>
+                    <td data-value="0">0</td>
+                    <td data-value="0">0</td>
+                    <td data-value="23">23</td>
+                    <td data-value=""/>
+                    <td data-value=""/>
+                    <td class="Red" data-value="0">0</td>
+                </tr>
+                <tr>
+                    <td data-value="Instances">Instances</td>
+                    <td data-value="13">13</td>
+                    <td data-value="14">14</td>
+                    <td data-value="4">4</td>
+                    <td data-value=""/>
+                    <td data-value=""/>
+                    <td class="Orange" data-value="41">41</td>
+                </tr>
+                <tr>
+                    <td data-value="Nets">Nets</td>
+                    <td data-value="28">28</td>
+                    <td data-value="0">0</td>
+                    <td data-value="8">8</td>
+                    <td data-value="10">10</td>
+                    <td data-value="11">11</td>
+                    <td class="Orange" data-value="49">49</td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+        <h3>INFOS:</h3>
+        <p>
+            <pre>INFO (BND-1105): Layout instances with unconnected terminals:<br/>                           connected  unconnected  terminal  examples of unconnected instances<br/>    cad6  BUF_X1   layout          3            6  Z         I3, I52, I63, I74, I83, I85<br/>    cad6  BUF_X1   layout          5            4  A         I52, I63, I74, I85<br/>    cad6  FA_X1    layout          0            4  B         I53, I65, I76, I87<br/>    cad6  FA_X1    layout          0            4  S         I53, I65, I76, I87<br/>    cad6  XOR2_X1  layout          0            4  B         I49, I60, I71, I82<br/>    Unconnected instance terminals can result in wrong bindings or unbound instances.<br/>    If these instance terminals should be connected, check that the extraction stop level<br/>    is deep enough to extract through route cells and off-pin connections.</pre>
+        </p>
+        <p>
+            <pre>INFO (BND-1107): Cell mapping<br/>                                 instances  permute  component  split   terminals<br/>                                            rule     type       params  mapped<br/>    cad6  BUF_X1      schematic          9                              A VDD! VSS! Z<br/> -&gt; cad6  BUF_X1      layout             9                              A VDD VSS Z<br/>                                                                        <br/>    cad6  FA_X1       schematic          4                              A B CI CO S VDD! VSS!<br/> -&gt; cad6  FA_X1       layout             4                              A B CI CO S VDD VSS<br/>                                                                        <br/>    cad6  XOR2_X1     schematic          4                              A B VDD! VSS! Z<br/> -&gt; cad6  XOR2_X1     layout             4                              A B VDD VSS Z<br/>                                                                        <br/>Unmapped                                                                <br/>    cad6  WELLTAP_X1  layout            10                              VDD VSS</pre>
+        </p>
+        <p>
+            <pre>INFO (LX-1027): Schematic global net 'VDD!' has no corresponding layout net.</pre>
+        </p>
+        <p>
+            <pre>INFO (LX-1027): Schematic global net 'VSS!' has no corresponding layout net.</pre>
+        </p>
+        <p>
+            <pre>INFO (LX-1503): Cells that may be missing a permute rule:<br/>                      suggested<br/>    cad6  WELLTAP_X1  (p VDD VSS)<br/>    If permute rules are missing, the binding result may display shorts on the terminals that are permutable.<br/>    If the cells are symmetric and the terminals can be permuted, a permute rule, such as '(p D S)', can be added using the<br/>    Edit CDF Simulation Information section auLvs. Alternatively, you can add the permute rule using the bindPermuteRules<br/>    environment variable as in envSetVal(&quot;layoutXL&quot; &quot;bindPermuteRules&quot; 'string &quot;(lib1 cell1 (p D S))(lib2 cell2 (p MINUS PLUS))&quot;).</pre>
+        </p>
+        <h3>WARNINGS:</h3>
+        <p>
+            <pre>WARNING (BND-2065): Cellview instances with mismatched source and layout terminals found.<br/>    cad6  BUF_X1   schematic<br/>    cad6  FA_X1    schematic<br/>    cad6  XOR2_X1  schematic<br/>    cad6  BUF_X1      layout<br/>    cad6  FA_X1       layout<br/>    cad6  WELLTAP_X1  layout<br/>    cad6  XOR2_X1     layout<br/>    To get terminals to match, use 'Configure Physical Hierarchy' and set the terminal attributes<br/>    'Ignore for generation', 'Ignore for check' or 'Name mapping'.<br/>    Layout terminals can be ignored by setting the 'ignore' property on the cellview terminal.</pre>
+        </p>
+        <p>
+            <pre>WARNING (LX-2154): Layout has missing pins, try using 'Create Pins from Labels'.</pre>
+        </p>
+    </body>
+</html>

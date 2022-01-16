@@ -1,0 +1,5 @@
+
+** Library name: cad6
+** Cell name: FA_X1
+** View name: schematic
+.subckt FA_X1 a b ci co s

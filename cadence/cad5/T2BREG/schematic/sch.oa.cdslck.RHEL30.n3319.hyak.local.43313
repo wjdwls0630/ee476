@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      jarenas
+HostName                       n3319.hyak.local
+ProcessIdentifier              43313
+ProcessCreationTime_UTC        1636759563
+ProcessCreationTime_Readable   Fri Nov 12 15:26:03 2021 PST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /gscratch/ece/courses/476/jarenas/jarenas_git/cad5/T2BREG/schematic/sch.oa.cdslck.dirlck
+TimeEditLocked                 Fri Nov 12 15:36:13 2021 PST

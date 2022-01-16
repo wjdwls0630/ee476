@@ -1,0 +1,17 @@
+DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE US_8ths   $CDSHOME/tools/dfII/etc/cdslib/sheets/US_8ths
+DEFINE basic     $CDSHOME/tools/dfII/etc/cdslib/basic
+DEFINE cdsDefTechLib $CDSHOME/tools/dfII/etc/cdsDefTechLib
+# FreePDK45
+DEFINE NCSU_TechLib_FreePDK45  $PDK_DIR/ncsu_basekit/lib/NCSU_TechLib_FreePDK45
+DEFINE NCSU_Devices_FreePDK45  $PDK_DIR/ncsu_basekit/lib/NCSU_Devices_FreePDK45
+DEFINE OSU_FreePDK45_CELLS  $PDK_DIR/osu_soc/lib/freepdk45_cells
+# NangateOpenCellLibrary PDK45
+DEFINE NangateOpenCellLibrary  $PDK_DIR/NangateOpenCellLibrary_PDKv1_3_v2010_12/Back_End/virtuoso/NangateOpenCellLibrary
+DEFINE cad0 /mmfs1/home/jpark25/ee476/cadence/cad0
+DEFINE cad1 /mmfs1/home/jpark25/ee476/cadence/cad1
+DEFINE cad2 /gscratch/ece/courses/476/jpark25/cadence/cad2
+DEFINE cad3 /gscratch/ece/courses/476/jpark25/cadence/cad3
+DEFINE cad4 /gscratch/ece/courses/476/jpark25/cadence/cad4
+DEFINE cad5 /gscratch/ece/courses/476/jpark25/cadence/cad5
+DEFINE cad6 /gscratch/ece/courses/476/jpark25/cadence/cad6

@@ -1,0 +1,19 @@
+CADENCE IHNL111417
+
+cad6 NAND2_X1 schematic cds0
+cad6 XNOR2_X1 schematic cds1
+cad6 NOR2_X1 schematic cds2
+cad6 MUX2_X1 schematic cds3
+cad6 INV_X1 schematic cds4
+cad6 INVMUX2_X1 schematic cds5
+cad6 ALU_LOGIC_UNIT_1B schematic cds6
+cad6 BUF_X1 schematic cds7
+cad6 ALU_LOGIC_UNIT_16B schematic cds8
+cad6 FA_X1 schematic cds9
+cad6 XOR2_X1 schematic cds10
+cad6 RCA_4B schematic cds11
+cad6 CSA_4B schematic cds12
+cad6 ALU_ARITHMETIC_UNIT_16B schematic cds13
+cad6 INV_X4 schematic cds14
+cad6 OUT_MUX_BUF_16B schematic cds15
+cad6 ALU_NO_FLAGS schematic cds16

@@ -1,0 +1,5 @@
+HEADER
+"PSFversion" "1.00"
+"NAND_OUTv" "nand_outv"
+"NOR_OUTv" "nor_outv"
+"XNOR_OUTv" "xnor_outv"

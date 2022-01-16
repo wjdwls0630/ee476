@@ -1,0 +1,90 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 08/17/2021 19:22 (cpgsrv12) $
+          : sub-version  IC6.1.8-64b.500.20 
+Started at: 07-Nov-2021  20:02:31
+User Name : jpark25
+Host Name : n3001.hyak.local
+Directory : /gscratch/ece/courses/476/jpark25/cadence
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+
+                       Individual Cell Statistics - Basic Objects
+---------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               Instance Array   Polygon  Rect   Path   PathSeg   Text   TextDisplay   Line   Dot   Arc   Donut   Ellipse 
+---------------------------------------------------------------------------------------------------------------------------------------
+NangateOpenCellLibrary/via1_5/via                               0        0       0        3      0      0         0      0             0      0     0     0       0       
+cad4/SLAVE_DFSR/layout          6        0       0        3      0      11        7      0             0      0     0     0       0       
+cad4/NOR2_DFSR/layout           0        0       0        31     0      0         5      0             0      0     0     0       0       
+cad4/INV1_DFSR/layout           0        0       0        22     0      0         4      0             0      0     0     0       0       
+NangateOpenCellLibrary/WELLTAP_X1/layout                        0        0       4        9      0      0         6      2             0      0     0     0       0       
+NangateOpenCellLibrary/via2_7/via                               0        0       0        3      0      0         0      0             0      0     0     0       0       
+cad4/TG_DFSR/layout             0        0       0        24     0      0         6      0             0      0     0     0       0       
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Individual Cell Statistics - Advanced Objects
+---------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               PRBdy    OtherBdy   AreaBlkg   LayerBlkg  AreaHalo   Row   Marker   CustVia   StdVia    CdsGenVia
+---------------------------------------------------------------------------------------------------------------------------------------
+NangateOpenCellLibrary/via1_5/via                               0        0          0          0          0          0     0        0         0         0        
+cad4/SLAVE_DFSR/layout          0        0          0          0          0          0     0        13        0         0        
+cad4/NOR2_DFSR/layout           0        0          0          0          0          0     0        0         0         0        
+cad4/INV1_DFSR/layout           0        0          0          0          0          0     0        0         0         0        
+NangateOpenCellLibrary/WELLTAP_X1/layout                        0        0          0          0          0          0     0        0         0         0        
+NangateOpenCellLibrary/via2_7/via                               0        0          0          0          0          0     0        0         0         0        
+cad4/TG_DFSR/layout             0        0          0          0          0          0     0        2         0         0        
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Statistics of Layers 
+---------------------------------------------------------------------------------------------------------------------------------------
+Cadence         Cadence         Stream  Stream   
+Layer           Purpose         Layer   Datatype  Polygon  Rect     Path     Text     TextDisplay   Line Dot Arc Donut Ellipse Pathseg
+---------------------------------------------------------------------------------------------------------------------------------------
+BOUND           drawing         0       0         0        1        0        0        0             0    0   0   0     0      0      
+nimplant        drawing         4       0         0        4        0        0        0             0    0   0   0     0      0      
+nwell           drawing         3       0         0        4        0        0        0             0    0   0   0     0      0      
+metal2          drawing         13      0         0        2        0        0        0             0    0   0   0     0      7      
+IP              drawing         63      0         0        0        0        4        0             0    0   0   0     0      0      
+via2            drawing         14      0         0        1        0        0        0             0    0   0   0     0      0      
+metal1          drawing         11      0         4        26       0        24       0             0    0   0   0     0      1      
+via1            drawing         12      0         0        1        0        0        0             0    0   0   0     0      0      
+poly            drawing         9       0         0        10       0        0        0             0    0   0   0     0      0      
+pwell           drawing         2       0         0        4        0        0        0             0    0   0   0     0      0      
+vtg             drawing         6       0         0        6        0        0        0             0    0   0   0     0      0      
+pimplant        drawing         5       0         0        4        0        0        0             0    0   0   0     0      0      
+metal3          drawing         15      0         0        1        0        0        0             0    0   0   0     0      3      
+text            drawing         230     0         0        0        0        0        2             0    0   0   0     0      0      
+contact         drawing         10      0         0        23       0        0        0             0    0   0   0     0      0      
+active          drawing         1       0         0        8        0        0        0             0    0   0   0     0      0      
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Summary of Objects Translated:
+	Scalar Instances:		6
+	Array Instances:		0
+	Polygons:			4
+	Paths:				0
+	Rectangles:			95
+	Lines:				0
+	Arcs:				0
+	Donuts:				0
+	Dots:				0
+	Ellipses:			0
+	Boundaries:			0
+	Area Blockages:			0
+	Layer Blockages:		0
+	Area Halos:			0
+	Markers:			0
+	Rows:				0
+	Standard Vias:			0
+	Custom Vias:			15
+	CdsGen Vias:			0
+	Pathsegs:			11
+	Text:				28
+	TextDisplay:		2
+	Cells:				7
+Design Libraries: 
+
+DEFINE NangateOpenCellLibrary	/gscratch/ece/pdks/FreePDK45_Nangate/FreePDK45/NangateOpenCellLibrary_PDKv1_3_v2010_12/Back_End/virtuoso/NangateOpenCellLibrary
+DEFINE cad4	/gscratch/ece/courses/476/jpark25/cadence/cad4

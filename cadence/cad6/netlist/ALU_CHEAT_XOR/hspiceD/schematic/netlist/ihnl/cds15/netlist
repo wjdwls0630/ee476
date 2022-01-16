@@ -1,0 +1,6 @@
+xi2 a<15> a<14> a<13> a<12> b<15> b<14> b<13> b<12> c_2 co s<15> s<14> s<13> s<12> cad6_4B_CSA_schematic
+xi1 a<11> a<10> a<9> a<8> b<11> b<10> b<9> b<8> c_1 c_2 s<11> s<10> s<9> s<8> cad6_4B_CSA_schematic
+xi0 a<7> a<6> a<5> a<4> b<7> b<6> b<5> b<4> c_0 c_1 s<7> s<6> s<5> s<4> cad6_4B_CSA_schematic
+xi3 a<3> a<2> a<1> a<0> b<3> b<2> b<1> b<0> ci c_0 s<3> s<2> s<1> s<0> cad6_4B_RCA_schematic
+.ends cad6_16B_CSA_schematic
+** End of subcircuit definition.

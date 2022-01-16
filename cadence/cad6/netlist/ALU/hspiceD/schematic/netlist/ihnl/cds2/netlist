@@ -1,0 +1,4 @@
+xi0 a b s z MUX2_X1
+xi1 z zn INV_X1
+.ends INVMUX2_X1
+** End of subcircuit definition.

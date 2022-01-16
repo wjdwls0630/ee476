@@ -1,0 +1,1042 @@
+ ****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: LFSR.ctl                                                          
+  Command line options: /gscratch/ece/tools/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i LFSR.ctl -o outputs/
+  Start time: Mon Nov  8 17:49:19 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.6 
+ lic: USER:   jpark25              HOSTNAME: n3000.hyak.local 
+ lic: HOSTID: 400a0041             PID:      39681 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 4(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+  **warning** (./LFSR.ckt:108)'.end' can not exist in include/lib files, ignored
+1****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+ ******  
+ lfsr
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xrstinv0.                       inv1               1.00 
+        2 xrstinv1.                       inv1               4.00 
+        3 xclkinv0.                       inv1               1.00 
+        4 xclkinv1.                       inv1               4.00 
+        5 xlfsr0.                         lfsr               1.00 
+        6 xlfsr0.xdfsr15.                 dfsr               1.00 
+        7 xlfsr0.xdfsr14.                 dfsr               1.00 
+        8 xlfsr0.xdfsr13.                 dfsr               1.00 
+        9 xlfsr0.xdfsr12.                 dfsr               1.00 
+       10 xlfsr0.xdfsr11.                 dfsr               1.00 
+       11 xlfsr0.xdfsr10.                 dfsr               1.00 
+       12 xlfsr0.xdfsr9.                  dfsr               1.00 
+       13 xlfsr0.xdfsr8.                  dfsr               1.00 
+       14 xlfsr0.xdfsr7.                  dfsr               1.00 
+       15 xlfsr0.xdfsr6.                  dfsr               1.00 
+       16 xlfsr0.xdfsr5.                  dfsr               1.00 
+       17 xlfsr0.xdfsr4.                  dfsr               1.00 
+       18 xlfsr0.xdfsr3.                  dfsr               1.00 
+       19 xlfsr0.xdfsr2.                  dfsr               1.00 
+       20 xlfsr0.xdfsr1.                  dfsr               1.00 
+       21 xlfsr0.xdfsr0.                  dfsr               1.00 
+       22 xlfsr0.xi16.                    xor4               1.00 
+       23 xlfsr0.xi17.                    or2                1.00 
+       24 xlfsr0.xdfsr15.xi2.             clkinv1_dfsr       1.00 
+       25 xlfsr0.xdfsr15.xi1.             clkinv1_dfsr       1.00 
+       26 xlfsr0.xdfsr15.xi0.             clkinv1_dfsr       1.00 
+       27 xlfsr0.xdfsr15.xsl0.            slave_dfsr         1.00 
+       28 xlfsr0.xdfsr15.xml0.            master_dfsr        1.00 
+       29 xlfsr0.xdfsr14.xi2.             clkinv1_dfsr       1.00 
+       30 xlfsr0.xdfsr14.xi1.             clkinv1_dfsr       1.00 
+       31 xlfsr0.xdfsr14.xi0.             clkinv1_dfsr       1.00 
+       32 xlfsr0.xdfsr14.xsl0.            slave_dfsr         1.00 
+       33 xlfsr0.xdfsr14.xml0.            master_dfsr        1.00 
+       34 xlfsr0.xdfsr13.xi2.             clkinv1_dfsr       1.00 
+       35 xlfsr0.xdfsr13.xi1.             clkinv1_dfsr       1.00 
+       36 xlfsr0.xdfsr13.xi0.             clkinv1_dfsr       1.00 
+       37 xlfsr0.xdfsr13.xsl0.            slave_dfsr         1.00 
+       38 xlfsr0.xdfsr13.xml0.            master_dfsr        1.00 
+       39 xlfsr0.xdfsr12.xi2.             clkinv1_dfsr       1.00 
+       40 xlfsr0.xdfsr12.xi1.             clkinv1_dfsr       1.00 
+       41 xlfsr0.xdfsr12.xi0.             clkinv1_dfsr       1.00 
+       42 xlfsr0.xdfsr12.xsl0.            slave_dfsr         1.00 
+       43 xlfsr0.xdfsr12.xml0.            master_dfsr        1.00 
+       44 xlfsr0.xdfsr11.xi2.             clkinv1_dfsr       1.00 
+       45 xlfsr0.xdfsr11.xi1.             clkinv1_dfsr       1.00 
+       46 xlfsr0.xdfsr11.xi0.             clkinv1_dfsr       1.00 
+       47 xlfsr0.xdfsr11.xsl0.            slave_dfsr         1.00 
+       48 xlfsr0.xdfsr11.xml0.            master_dfsr        1.00 
+       49 xlfsr0.xdfsr10.xi2.             clkinv1_dfsr       1.00 
+       50 xlfsr0.xdfsr10.xi1.             clkinv1_dfsr       1.00 
+       51 xlfsr0.xdfsr10.xi0.             clkinv1_dfsr       1.00 
+       52 xlfsr0.xdfsr10.xsl0.            slave_dfsr         1.00 
+       53 xlfsr0.xdfsr10.xml0.            master_dfsr        1.00 
+       54 xlfsr0.xdfsr9.xi2.              clkinv1_dfsr       1.00 
+       55 xlfsr0.xdfsr9.xi1.              clkinv1_dfsr       1.00 
+       56 xlfsr0.xdfsr9.xi0.              clkinv1_dfsr       1.00 
+       57 xlfsr0.xdfsr9.xsl0.             slave_dfsr         1.00 
+       58 xlfsr0.xdfsr9.xml0.             master_dfsr        1.00 
+       59 xlfsr0.xdfsr8.xi2.              clkinv1_dfsr       1.00 
+       60 xlfsr0.xdfsr8.xi1.              clkinv1_dfsr       1.00 
+       61 xlfsr0.xdfsr8.xi0.              clkinv1_dfsr       1.00 
+       62 xlfsr0.xdfsr8.xsl0.             slave_dfsr         1.00 
+       63 xlfsr0.xdfsr8.xml0.             master_dfsr        1.00 
+       64 xlfsr0.xdfsr7.xi2.              clkinv1_dfsr       1.00 
+       65 xlfsr0.xdfsr7.xi1.              clkinv1_dfsr       1.00 
+       66 xlfsr0.xdfsr7.xi0.              clkinv1_dfsr       1.00 
+       67 xlfsr0.xdfsr7.xsl0.             slave_dfsr         1.00 
+       68 xlfsr0.xdfsr7.xml0.             master_dfsr        1.00 
+       69 xlfsr0.xdfsr6.xi2.              clkinv1_dfsr       1.00 
+       70 xlfsr0.xdfsr6.xi1.              clkinv1_dfsr       1.00 
+       71 xlfsr0.xdfsr6.xi0.              clkinv1_dfsr       1.00 
+       72 xlfsr0.xdfsr6.xsl0.             slave_dfsr         1.00 
+       73 xlfsr0.xdfsr6.xml0.             master_dfsr        1.00 
+       74 xlfsr0.xdfsr5.xi2.              clkinv1_dfsr       1.00 
+       75 xlfsr0.xdfsr5.xi1.              clkinv1_dfsr       1.00 
+       76 xlfsr0.xdfsr5.xi0.              clkinv1_dfsr       1.00 
+       77 xlfsr0.xdfsr5.xsl0.             slave_dfsr         1.00 
+       78 xlfsr0.xdfsr5.xml0.             master_dfsr        1.00 
+       79 xlfsr0.xdfsr4.xi2.              clkinv1_dfsr       1.00 
+       80 xlfsr0.xdfsr4.xi1.              clkinv1_dfsr       1.00 
+       81 xlfsr0.xdfsr4.xi0.              clkinv1_dfsr       1.00 
+       82 xlfsr0.xdfsr4.xsl0.             slave_dfsr         1.00 
+       83 xlfsr0.xdfsr4.xml0.             master_dfsr        1.00 
+       84 xlfsr0.xdfsr3.xi2.              clkinv1_dfsr       1.00 
+       85 xlfsr0.xdfsr3.xi1.              clkinv1_dfsr       1.00 
+       86 xlfsr0.xdfsr3.xi0.              clkinv1_dfsr       1.00 
+       87 xlfsr0.xdfsr3.xsl0.             slave_dfsr         1.00 
+       88 xlfsr0.xdfsr3.xml0.             master_dfsr        1.00 
+       89 xlfsr0.xdfsr2.xi2.              clkinv1_dfsr       1.00 
+       90 xlfsr0.xdfsr2.xi1.              clkinv1_dfsr       1.00 
+       91 xlfsr0.xdfsr2.xi0.              clkinv1_dfsr       1.00 
+       92 xlfsr0.xdfsr2.xsl0.             slave_dfsr         1.00 
+       93 xlfsr0.xdfsr2.xml0.             master_dfsr        1.00 
+       94 xlfsr0.xdfsr1.xi2.              clkinv1_dfsr       1.00 
+       95 xlfsr0.xdfsr1.xi1.              clkinv1_dfsr       1.00 
+       96 xlfsr0.xdfsr1.xi0.              clkinv1_dfsr       1.00 
+       97 xlfsr0.xdfsr1.xsl0.             slave_dfsr         1.00 
+       98 xlfsr0.xdfsr1.xml0.             master_dfsr        1.00 
+       99 xlfsr0.xdfsr0.xi2.              clkinv1_dfsr       1.00 
+      100 xlfsr0.xdfsr0.xi1.              clkinv1_dfsr       1.00 
+      101 xlfsr0.xdfsr0.xi0.              clkinv1_dfsr       1.00 
+      102 xlfsr0.xdfsr0.xsl0.             slave_dfsr         1.00 
+      103 xlfsr0.xdfsr0.xml0.             master_dfsr        1.00 
+      104 xlfsr0.xi16.xi2.                xor2               1.00 
+      105 xlfsr0.xi16.xi1.                xor2               1.00 
+      106 xlfsr0.xi16.xi0.                xor2               1.00 
+      107 xlfsr0.xi17.xi0.                nor2_dfsr          1.00 
+      108 xlfsr0.xi17.xi1.                clkinv1_dfsr       1.00 
+      109 xlfsr0.xdfsr15.xsl0.xi0.        inv1_dfsr          1.00 
+      110 xlfsr0.xdfsr15.xsl0.xi1.        inv1_dfsr          1.00 
+      111 xlfsr0.xdfsr15.xsl0.xtg1.       tg_dfsr            1.00 
+      112 xlfsr0.xdfsr15.xsl0.xtg0.       tg_dfsr            1.00 
+      113 xlfsr0.xdfsr15.xsl0.xnor0.      nor2_dfsr          1.00 
+      114 xlfsr0.xdfsr15.xml0.xi1.        inv1_dfsr          1.00 
+      115 xlfsr0.xdfsr15.xml0.xi0.        inv1_dfsr          1.00 
+      116 xlfsr0.xdfsr15.xml0.xtg1.       tg_dfsr            1.00 
+      117 xlfsr0.xdfsr15.xml0.xtg0.       tg_dfsr            1.00 
+      118 xlfsr0.xdfsr15.xml0.xnand0.     nand2_dfsr         1.00 
+      119 xlfsr0.xdfsr14.xsl0.xi0.        inv1_dfsr          1.00 
+      120 xlfsr0.xdfsr14.xsl0.xi1.        inv1_dfsr          1.00 
+      121 xlfsr0.xdfsr14.xsl0.xtg1.       tg_dfsr            1.00 
+      122 xlfsr0.xdfsr14.xsl0.xtg0.       tg_dfsr            1.00 
+      123 xlfsr0.xdfsr14.xsl0.xnor0.      nor2_dfsr          1.00 
+      124 xlfsr0.xdfsr14.xml0.xi1.        inv1_dfsr          1.00 
+      125 xlfsr0.xdfsr14.xml0.xi0.        inv1_dfsr          1.00 
+      126 xlfsr0.xdfsr14.xml0.xtg1.       tg_dfsr            1.00 
+      127 xlfsr0.xdfsr14.xml0.xtg0.       tg_dfsr            1.00 
+      128 xlfsr0.xdfsr14.xml0.xnand0.     nand2_dfsr         1.00 
+      129 xlfsr0.xdfsr13.xsl0.xi0.        inv1_dfsr          1.00 
+      130 xlfsr0.xdfsr13.xsl0.xi1.        inv1_dfsr          1.00 
+      131 xlfsr0.xdfsr13.xsl0.xtg1.       tg_dfsr            1.00 
+      132 xlfsr0.xdfsr13.xsl0.xtg0.       tg_dfsr            1.00 
+      133 xlfsr0.xdfsr13.xsl0.xnor0.      nor2_dfsr          1.00 
+      134 xlfsr0.xdfsr13.xml0.xi1.        inv1_dfsr          1.00 
+      135 xlfsr0.xdfsr13.xml0.xi0.        inv1_dfsr          1.00 
+      136 xlfsr0.xdfsr13.xml0.xtg1.       tg_dfsr            1.00 
+      137 xlfsr0.xdfsr13.xml0.xtg0.       tg_dfsr            1.00 
+      138 xlfsr0.xdfsr13.xml0.xnand0.     nand2_dfsr         1.00 
+      139 xlfsr0.xdfsr12.xsl0.xi0.        inv1_dfsr          1.00 
+      140 xlfsr0.xdfsr12.xsl0.xi1.        inv1_dfsr          1.00 
+      141 xlfsr0.xdfsr12.xsl0.xtg1.       tg_dfsr            1.00 
+      142 xlfsr0.xdfsr12.xsl0.xtg0.       tg_dfsr            1.00 
+      143 xlfsr0.xdfsr12.xsl0.xnor0.      nor2_dfsr          1.00 
+      144 xlfsr0.xdfsr12.xml0.xi1.        inv1_dfsr          1.00 
+      145 xlfsr0.xdfsr12.xml0.xi0.        inv1_dfsr          1.00 
+      146 xlfsr0.xdfsr12.xml0.xtg1.       tg_dfsr            1.00 
+      147 xlfsr0.xdfsr12.xml0.xtg0.       tg_dfsr            1.00 
+      148 xlfsr0.xdfsr12.xml0.xnand0.     nand2_dfsr         1.00 
+      149 xlfsr0.xdfsr11.xsl0.xi0.        inv1_dfsr          1.00 
+      150 xlfsr0.xdfsr11.xsl0.xi1.        inv1_dfsr          1.00 
+      151 xlfsr0.xdfsr11.xsl0.xtg1.       tg_dfsr            1.00 
+      152 xlfsr0.xdfsr11.xsl0.xtg0.       tg_dfsr            1.00 
+      153 xlfsr0.xdfsr11.xsl0.xnor0.      nor2_dfsr          1.00 
+      154 xlfsr0.xdfsr11.xml0.xi1.        inv1_dfsr          1.00 
+      155 xlfsr0.xdfsr11.xml0.xi0.        inv1_dfsr          1.00 
+      156 xlfsr0.xdfsr11.xml0.xtg1.       tg_dfsr            1.00 
+      157 xlfsr0.xdfsr11.xml0.xtg0.       tg_dfsr            1.00 
+      158 xlfsr0.xdfsr11.xml0.xnand0.     nand2_dfsr         1.00 
+      159 xlfsr0.xdfsr10.xsl0.xi0.        inv1_dfsr          1.00 
+      160 xlfsr0.xdfsr10.xsl0.xi1.        inv1_dfsr          1.00 
+      161 xlfsr0.xdfsr10.xsl0.xtg1.       tg_dfsr            1.00 
+      162 xlfsr0.xdfsr10.xsl0.xtg0.       tg_dfsr            1.00 
+      163 xlfsr0.xdfsr10.xsl0.xnor0.      nor2_dfsr          1.00 
+      164 xlfsr0.xdfsr10.xml0.xi1.        inv1_dfsr          1.00 
+      165 xlfsr0.xdfsr10.xml0.xi0.        inv1_dfsr          1.00 
+      166 xlfsr0.xdfsr10.xml0.xtg1.       tg_dfsr            1.00 
+      167 xlfsr0.xdfsr10.xml0.xtg0.       tg_dfsr            1.00 
+      168 xlfsr0.xdfsr10.xml0.xnand0.     nand2_dfsr         1.00 
+      169 xlfsr0.xdfsr9.xsl0.xi0.         inv1_dfsr          1.00 
+      170 xlfsr0.xdfsr9.xsl0.xi1.         inv1_dfsr          1.00 
+      171 xlfsr0.xdfsr9.xsl0.xtg1.        tg_dfsr            1.00 
+      172 xlfsr0.xdfsr9.xsl0.xtg0.        tg_dfsr            1.00 
+      173 xlfsr0.xdfsr9.xsl0.xnor0.       nor2_dfsr          1.00 
+      174 xlfsr0.xdfsr9.xml0.xi1.         inv1_dfsr          1.00 
+      175 xlfsr0.xdfsr9.xml0.xi0.         inv1_dfsr          1.00 
+      176 xlfsr0.xdfsr9.xml0.xtg1.        tg_dfsr            1.00 
+      177 xlfsr0.xdfsr9.xml0.xtg0.        tg_dfsr            1.00 
+      178 xlfsr0.xdfsr9.xml0.xnand0.      nand2_dfsr         1.00 
+      179 xlfsr0.xdfsr8.xsl0.xi0.         inv1_dfsr          1.00 
+      180 xlfsr0.xdfsr8.xsl0.xi1.         inv1_dfsr          1.00 
+      181 xlfsr0.xdfsr8.xsl0.xtg1.        tg_dfsr            1.00 
+      182 xlfsr0.xdfsr8.xsl0.xtg0.        tg_dfsr            1.00 
+      183 xlfsr0.xdfsr8.xsl0.xnor0.       nor2_dfsr          1.00 
+      184 xlfsr0.xdfsr8.xml0.xi1.         inv1_dfsr          1.00 
+      185 xlfsr0.xdfsr8.xml0.xi0.         inv1_dfsr          1.00 
+      186 xlfsr0.xdfsr8.xml0.xtg1.        tg_dfsr            1.00 
+      187 xlfsr0.xdfsr8.xml0.xtg0.        tg_dfsr            1.00 
+      188 xlfsr0.xdfsr8.xml0.xnand0.      nand2_dfsr         1.00 
+      189 xlfsr0.xdfsr7.xsl0.xi0.         inv1_dfsr          1.00 
+      190 xlfsr0.xdfsr7.xsl0.xi1.         inv1_dfsr          1.00 
+      191 xlfsr0.xdfsr7.xsl0.xtg1.        tg_dfsr            1.00 
+      192 xlfsr0.xdfsr7.xsl0.xtg0.        tg_dfsr            1.00 
+      193 xlfsr0.xdfsr7.xsl0.xnor0.       nor2_dfsr          1.00 
+      194 xlfsr0.xdfsr7.xml0.xi1.         inv1_dfsr          1.00 
+      195 xlfsr0.xdfsr7.xml0.xi0.         inv1_dfsr          1.00 
+      196 xlfsr0.xdfsr7.xml0.xtg1.        tg_dfsr            1.00 
+      197 xlfsr0.xdfsr7.xml0.xtg0.        tg_dfsr            1.00 
+      198 xlfsr0.xdfsr7.xml0.xnand0.      nand2_dfsr         1.00 
+      199 xlfsr0.xdfsr6.xsl0.xi0.         inv1_dfsr          1.00 
+      200 xlfsr0.xdfsr6.xsl0.xi1.         inv1_dfsr          1.00 
+      201 xlfsr0.xdfsr6.xsl0.xtg1.        tg_dfsr            1.00 
+      202 xlfsr0.xdfsr6.xsl0.xtg0.        tg_dfsr            1.00 
+      203 xlfsr0.xdfsr6.xsl0.xnor0.       nor2_dfsr          1.00 
+      204 xlfsr0.xdfsr6.xml0.xi1.         inv1_dfsr          1.00 
+      205 xlfsr0.xdfsr6.xml0.xi0.         inv1_dfsr          1.00 
+      206 xlfsr0.xdfsr6.xml0.xtg1.        tg_dfsr            1.00 
+      207 xlfsr0.xdfsr6.xml0.xtg0.        tg_dfsr            1.00 
+      208 xlfsr0.xdfsr6.xml0.xnand0.      nand2_dfsr         1.00 
+      209 xlfsr0.xdfsr5.xsl0.xi0.         inv1_dfsr          1.00 
+      210 xlfsr0.xdfsr5.xsl0.xi1.         inv1_dfsr          1.00 
+      211 xlfsr0.xdfsr5.xsl0.xtg1.        tg_dfsr            1.00 
+      212 xlfsr0.xdfsr5.xsl0.xtg0.        tg_dfsr            1.00 
+      213 xlfsr0.xdfsr5.xsl0.xnor0.       nor2_dfsr          1.00 
+      214 xlfsr0.xdfsr5.xml0.xi1.         inv1_dfsr          1.00 
+      215 xlfsr0.xdfsr5.xml0.xi0.         inv1_dfsr          1.00 
+      216 xlfsr0.xdfsr5.xml0.xtg1.        tg_dfsr            1.00 
+      217 xlfsr0.xdfsr5.xml0.xtg0.        tg_dfsr            1.00 
+      218 xlfsr0.xdfsr5.xml0.xnand0.      nand2_dfsr         1.00 
+      219 xlfsr0.xdfsr4.xsl0.xi0.         inv1_dfsr          1.00 
+      220 xlfsr0.xdfsr4.xsl0.xi1.         inv1_dfsr          1.00 
+      221 xlfsr0.xdfsr4.xsl0.xtg1.        tg_dfsr            1.00 
+      222 xlfsr0.xdfsr4.xsl0.xtg0.        tg_dfsr            1.00 
+      223 xlfsr0.xdfsr4.xsl0.xnor0.       nor2_dfsr          1.00 
+      224 xlfsr0.xdfsr4.xml0.xi1.         inv1_dfsr          1.00 
+      225 xlfsr0.xdfsr4.xml0.xi0.         inv1_dfsr          1.00 
+      226 xlfsr0.xdfsr4.xml0.xtg1.        tg_dfsr            1.00 
+      227 xlfsr0.xdfsr4.xml0.xtg0.        tg_dfsr            1.00 
+      228 xlfsr0.xdfsr4.xml0.xnand0.      nand2_dfsr         1.00 
+      229 xlfsr0.xdfsr3.xsl0.xi0.         inv1_dfsr          1.00 
+      230 xlfsr0.xdfsr3.xsl0.xi1.         inv1_dfsr          1.00 
+      231 xlfsr0.xdfsr3.xsl0.xtg1.        tg_dfsr            1.00 
+      232 xlfsr0.xdfsr3.xsl0.xtg0.        tg_dfsr            1.00 
+      233 xlfsr0.xdfsr3.xsl0.xnor0.       nor2_dfsr          1.00 
+      234 xlfsr0.xdfsr3.xml0.xi1.         inv1_dfsr          1.00 
+      235 xlfsr0.xdfsr3.xml0.xi0.         inv1_dfsr          1.00 
+      236 xlfsr0.xdfsr3.xml0.xtg1.        tg_dfsr            1.00 
+      237 xlfsr0.xdfsr3.xml0.xtg0.        tg_dfsr            1.00 
+      238 xlfsr0.xdfsr3.xml0.xnand0.      nand2_dfsr         1.00 
+      239 xlfsr0.xdfsr2.xsl0.xi0.         inv1_dfsr          1.00 
+      240 xlfsr0.xdfsr2.xsl0.xi1.         inv1_dfsr          1.00 
+      241 xlfsr0.xdfsr2.xsl0.xtg1.        tg_dfsr            1.00 
+      242 xlfsr0.xdfsr2.xsl0.xtg0.        tg_dfsr            1.00 
+      243 xlfsr0.xdfsr2.xsl0.xnor0.       nor2_dfsr          1.00 
+      244 xlfsr0.xdfsr2.xml0.xi1.         inv1_dfsr          1.00 
+      245 xlfsr0.xdfsr2.xml0.xi0.         inv1_dfsr          1.00 
+      246 xlfsr0.xdfsr2.xml0.xtg1.        tg_dfsr            1.00 
+      247 xlfsr0.xdfsr2.xml0.xtg0.        tg_dfsr            1.00 
+      248 xlfsr0.xdfsr2.xml0.xnand0.      nand2_dfsr         1.00 
+      249 xlfsr0.xdfsr1.xsl0.xi0.         inv1_dfsr          1.00 
+      250 xlfsr0.xdfsr1.xsl0.xi1.         inv1_dfsr          1.00 
+      251 xlfsr0.xdfsr1.xsl0.xtg1.        tg_dfsr            1.00 
+      252 xlfsr0.xdfsr1.xsl0.xtg0.        tg_dfsr            1.00 
+      253 xlfsr0.xdfsr1.xsl0.xnor0.       nor2_dfsr          1.00 
+      254 xlfsr0.xdfsr1.xml0.xi1.         inv1_dfsr          1.00 
+      255 xlfsr0.xdfsr1.xml0.xi0.         inv1_dfsr          1.00 
+      256 xlfsr0.xdfsr1.xml0.xtg1.        tg_dfsr            1.00 
+      257 xlfsr0.xdfsr1.xml0.xtg0.        tg_dfsr            1.00 
+      258 xlfsr0.xdfsr1.xml0.xnand0.      nand2_dfsr         1.00 
+      259 xlfsr0.xdfsr0.xsl0.xi0.         inv1_dfsr          1.00 
+      260 xlfsr0.xdfsr0.xsl0.xi1.         inv1_dfsr          1.00 
+      261 xlfsr0.xdfsr0.xsl0.xtg1.        tg_dfsr            1.00 
+      262 xlfsr0.xdfsr0.xsl0.xtg0.        tg_dfsr            1.00 
+      263 xlfsr0.xdfsr0.xsl0.xnor0.       nor2_dfsr          1.00 
+      264 xlfsr0.xdfsr0.xml0.xi1.         inv1_dfsr          1.00 
+      265 xlfsr0.xdfsr0.xml0.xi0.         inv1_dfsr          1.00 
+      266 xlfsr0.xdfsr0.xml0.xtg1.        tg_dfsr            1.00 
+      267 xlfsr0.xdfsr0.xml0.xtg0.        tg_dfsr            1.00 
+      268 xlfsr0.xdfsr0.xml0.xnand0.      nand2_dfsr         1.00 
+      269 xlfsr0.xi16.xi2.xi2.            nand2              1.00 
+      270 xlfsr0.xi16.xi2.xi1.            nand2              1.00 
+      271 xlfsr0.xi16.xi2.xi0.            nand2              1.00 
+      272 xlfsr0.xi16.xi2.xnand0.         nand2              1.00 
+      273 xlfsr0.xi16.xi1.xi2.            nand2              1.00 
+      274 xlfsr0.xi16.xi1.xi1.            nand2              1.00 
+      275 xlfsr0.xi16.xi1.xi0.            nand2              1.00 
+      276 xlfsr0.xi16.xi1.xnand0.         nand2              1.00 
+      277 xlfsr0.xi16.xi0.xi2.            nand2              1.00 
+      278 xlfsr0.xi16.xi0.xi1.            nand2              1.00 
+      279 xlfsr0.xi16.xi0.xi0.            nand2              1.00 
+      280 xlfsr0.xi16.xi0.xnand0.         nand2              1.00 
+  **info** (LFSR.ctl:52) DC voltage reset to initial transient source value in source 0:vclk_ideal. new dc=0.0000D+00
+  **warning** (nmos_vtg:xrstinv0.m0 (./INV1.ckt:3)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=3e-07 l=6e-08.
+  
+  
+ ******  
+ lfsr
+
+ ****** element node table
+                                                                                      
+ 0                vclk_ideal       vrst_ideal       vvdd             vvdd_inv         
+                  vvss             vvss_inv                                           
+ clk              4:m0:d           4:m1:d           26:m0:g          26:m1:g          
+                  31:m0:g          31:m1:g          36:m0:g          36:m1:g          
+                  41:m0:g          41:m1:g          46:m0:g          46:m1:g          
+                  51:m0:g          51:m1:g          56:m0:g          56:m1:g          
+                  61:m0:g          61:m1:g          66:m0:g          66:m1:g          
+                  71:m0:g          71:m1:g          76:m0:g          76:m1:g          
+                  81:m0:g          81:m1:g          86:m0:g          86:m1:g          
+                  91:m0:g          91:m1:g          96:m0:g          96:m1:g          
+                  101:m0:g         101:m1:g                                           
+ clk_ideal        vclk_ideal       3:m0:g           3:m1:g                            
+ n_clk            3:m0:d           3:m1:d           4:m0:g           4:m1:g           
+ n_rst            1:m0:d           1:m1:d           2:m0:g           2:m1:g           
+ rst              2:m0:d           2:m1:d           29:m0:g          29:m1:g          
+                  34:m0:g          34:m1:g          39:m0:g          39:m1:g          
+                  44:m0:g          44:m1:g          49:m0:g          49:m1:g          
+                  54:m0:g          54:m1:g          59:m0:g          59:m1:g          
+                  64:m0:g          64:m1:g          69:m0:g          69:m1:g          
+                  74:m0:g          74:m1:g          79:m0:g          79:m1:g          
+                  84:m0:g          84:m1:g          89:m0:g          89:m1:g          
+                  94:m0:g          94:m1:g          99:m0:g          99:m1:g          
+                  107:mnmos1:g     107:mpmos1:g     123:mnmos0:g     123:mpmos0:g     
+                  133:mnmos0:g     133:mpmos0:g     143:mnmos0:g     143:mpmos0:g     
+                  153:mnmos0:g     153:mpmos0:g     163:mnmos0:g     163:mpmos0:g     
+                  173:mnmos0:g     173:mpmos0:g     183:mnmos0:g     183:mpmos0:g     
+                  193:mnmos0:g     193:mpmos0:g     203:mnmos0:g     203:mpmos0:g     
+                  213:mnmos0:g     213:mpmos0:g     223:mnmos0:g     223:mpmos0:g     
+                  233:mnmos0:g     233:mpmos0:g     243:mnmos0:g     243:mpmos0:g     
+                  253:mnmos0:g     253:mpmos0:g     263:mnmos0:g     263:mpmos0:g     
+ rst_ideal        vrst_ideal       1:m0:g           1:m1:g                            
+ state[0]         260:m0:d         260:m1:d         279:mnmos0:g     279:mpmos0:g     
+                  280:mnmos0:g     280:mpmos0:g                                       
+ state[10]        160:m0:d         160:m1:d         175:m0:g         175:m1:g         
+ state[11]        150:m0:d         150:m1:d         165:m0:g         165:m1:g         
+ state[12]        140:m0:d         140:m1:d         155:m0:g         155:m1:g         
+ state[13]        130:m0:d         130:m1:d         145:m0:g         145:m1:g         
+ state[14]        120:m0:d         120:m1:d         135:m0:g         135:m1:g         
+ state[15]        110:m0:d         110:m1:d         125:m0:g         125:m1:g         
+ state[1]         250:m0:d         250:m1:d         265:m0:g         265:m1:g         
+ state[2]         240:m0:d         240:m1:d         255:m0:g         255:m1:g         
+                  278:mnmos1:g     278:mpmos1:g     280:mnmos1:g     280:mpmos1:g     
+ state[3]         230:m0:d         230:m1:d         245:m0:g         245:m1:g         
+                  274:mnmos1:g     274:mpmos1:g     276:mnmos1:g     276:mpmos1:g     
+ state[4]         220:m0:d         220:m1:d         235:m0:g         235:m1:g         
+ state[5]         210:m0:d         210:m1:d         225:m0:g         225:m1:g         
+                  270:mnmos1:g     270:mpmos1:g     272:mnmos1:g     272:mpmos1:g     
+ state[6]         200:m0:d         200:m1:d         215:m0:g         215:m1:g         
+ state[7]         190:m0:d         190:m1:d         205:m0:g         205:m1:g         
+ state[8]         180:m0:d         180:m1:d         195:m0:g         195:m1:g         
+ state[9]         170:m0:d         170:m1:d         185:m0:g         185:m1:g         
+ vdd              vvdd_inv         1:m1:s           1:m1:b           2:m1:s           
+                  2:m1:b           3:m1:s           3:m1:b           4:m1:s           
+                  4:m1:b                                                              
+ vdd!             vvdd             24:m1:s          24:m1:b          25:m1:s          
+                  25:m1:b          26:m1:s          26:m1:b          29:m1:s          
+                  29:m1:b          30:m1:s          30:m1:b          31:m1:s          
+                  31:m1:b          34:m1:s          34:m1:b          35:m1:s          
+                  35:m1:b          36:m1:s          36:m1:b          39:m1:s          
+                  39:m1:b          40:m1:s          40:m1:b          41:m1:s          
+                  41:m1:b          44:m1:s          44:m1:b          45:m1:s          
+                  45:m1:b          46:m1:s          46:m1:b          49:m1:s          
+                  49:m1:b          50:m1:s          50:m1:b          51:m1:s          
+                  51:m1:b          54:m1:s          54:m1:b          55:m1:s          
+                  55:m1:b          56:m1:s          56:m1:b          59:m1:s          
+                  59:m1:b          60:m1:s          60:m1:b          61:m1:s          
+                  61:m1:b          64:m1:s          64:m1:b          65:m1:s          
+                  65:m1:b          66:m1:s          66:m1:b          69:m1:s          
+                  69:m1:b          70:m1:s          70:m1:b          71:m1:s          
+                  71:m1:b          74:m1:s          74:m1:b          75:m1:s          
+                  75:m1:b          76:m1:s          76:m1:b          79:m1:s          
+                  79:m1:b          80:m1:s          80:m1:b          81:m1:s          
+                  81:m1:b          84:m1:s          84:m1:b          85:m1:s          
+                  85:m1:b          86:m1:s          86:m1:b          89:m1:s          
+                  89:m1:b          90:m1:s          90:m1:b          91:m1:s          
+                  91:m1:b          94:m1:s          94:m1:b          95:m1:s          
+                  95:m1:b          96:m1:s          96:m1:b          99:m1:s          
+                  99:m1:b          100:m1:s         100:m1:b         101:m1:s         
+                  101:m1:b         107:mpmos1:b     107:mpmos0:s     107:mpmos0:b     
+                  108:m1:s         108:m1:b         109:m1:s         109:m1:b         
+                  110:m1:s         110:m1:b         111:m1:b         112:m1:b         
+                  113:mpmos1:b     113:mpmos0:s     113:mpmos0:b     114:m1:s         
+                  114:m1:b         115:m1:s         115:m1:b         116:m1:b         
+                  117:m1:b         118:mpmos1:s     118:mpmos1:b     118:mpmos0:s     
+                  118:mpmos0:b     119:m1:s         119:m1:b         120:m1:s         
+                  120:m1:b         121:m1:b         122:m1:b         123:mpmos1:b     
+                  123:mpmos0:s     123:mpmos0:b     124:m1:s         124:m1:b         
+                  125:m1:s         125:m1:b         126:m1:b         127:m1:b         
+                  128:mpmos1:s     128:mpmos1:b     128:mpmos0:s     128:mpmos0:b     
+                  129:m1:s         129:m1:b         130:m1:s         130:m1:b         
+                  131:m1:b         132:m1:b         133:mpmos1:b     133:mpmos0:s     
+                  133:mpmos0:b     134:m1:s         134:m1:b         135:m1:s         
+                  135:m1:b         136:m1:b         137:m1:b         138:mpmos1:s     
+                  138:mpmos1:b     138:mpmos0:s     138:mpmos0:b     139:m1:s         
+                  139:m1:b         140:m1:s         140:m1:b         141:m1:b         
+                  142:m1:b         143:mpmos1:b     143:mpmos0:s     143:mpmos0:b     
+                  144:m1:s         144:m1:b         145:m1:s         145:m1:b         
+                  146:m1:b         147:m1:b         148:mpmos1:s     148:mpmos1:b     
+                  148:mpmos0:s     148:mpmos0:b     149:m1:s         149:m1:b         
+                  150:m1:s         150:m1:b         151:m1:b         152:m1:b         
+                  153:mpmos1:b     153:mpmos0:s     153:mpmos0:b     154:m1:s         
+                  154:m1:b         155:m1:s         155:m1:b         156:m1:b         
+                  157:m1:b         158:mpmos1:s     158:mpmos1:b     158:mpmos0:s     
+                  158:mpmos0:b     159:m1:s         159:m1:b         160:m1:s         
+                  160:m1:b         161:m1:b         162:m1:b         163:mpmos1:b     
+                  163:mpmos0:s     163:mpmos0:b     164:m1:s         164:m1:b         
+                  165:m1:s         165:m1:b         166:m1:b         167:m1:b         
+                  168:mpmos1:s     168:mpmos1:b     168:mpmos0:s     168:mpmos0:b     
+                  169:m1:s         169:m1:b         170:m1:s         170:m1:b         
+                  171:m1:b         172:m1:b         173:mpmos1:b     173:mpmos0:s     
+                  173:mpmos0:b     174:m1:s         174:m1:b         175:m1:s         
+                  175:m1:b         176:m1:b         177:m1:b         178:mpmos1:s     
+                  178:mpmos1:b     178:mpmos0:s     178:mpmos0:b     179:m1:s         
+                  179:m1:b         180:m1:s         180:m1:b         181:m1:b         
+                  182:m1:b         183:mpmos1:b     183:mpmos0:s     183:mpmos0:b     
+                  184:m1:s         184:m1:b         185:m1:s         185:m1:b         
+                  186:m1:b         187:m1:b         188:mpmos1:s     188:mpmos1:b     
+                  188:mpmos0:s     188:mpmos0:b     189:m1:s         189:m1:b         
+                  190:m1:s         190:m1:b         191:m1:b         192:m1:b         
+                  193:mpmos1:b     193:mpmos0:s     193:mpmos0:b     194:m1:s         
+                  194:m1:b         195:m1:s         195:m1:b         196:m1:b         
+                  197:m1:b         198:mpmos1:s     198:mpmos1:b     198:mpmos0:s     
+                  198:mpmos0:b     199:m1:s         199:m1:b         200:m1:s         
+                  200:m1:b         201:m1:b         202:m1:b         203:mpmos1:b     
+                  203:mpmos0:s     203:mpmos0:b     204:m1:s         204:m1:b         
+                  205:m1:s         205:m1:b         206:m1:b         207:m1:b         
+                  208:mpmos1:s     208:mpmos1:b     208:mpmos0:s     208:mpmos0:b     
+                  209:m1:s         209:m1:b         210:m1:s         210:m1:b         
+                  211:m1:b         212:m1:b         213:mpmos1:b     213:mpmos0:s     
+                  213:mpmos0:b     214:m1:s         214:m1:b         215:m1:s         
+                  215:m1:b         216:m1:b         217:m1:b         218:mpmos1:s     
+                  218:mpmos1:b     218:mpmos0:s     218:mpmos0:b     219:m1:s         
+                  219:m1:b         220:m1:s         220:m1:b         221:m1:b         
+                  222:m1:b         223:mpmos1:b     223:mpmos0:s     223:mpmos0:b     
+                  224:m1:s         224:m1:b         225:m1:s         225:m1:b         
+                  226:m1:b         227:m1:b         228:mpmos1:s     228:mpmos1:b     
+                  228:mpmos0:s     228:mpmos0:b     229:m1:s         229:m1:b         
+                  230:m1:s         230:m1:b         231:m1:b         232:m1:b         
+                  233:mpmos1:b     233:mpmos0:s     233:mpmos0:b     234:m1:s         
+                  234:m1:b         235:m1:s         235:m1:b         236:m1:b         
+                  237:m1:b         238:mpmos1:s     238:mpmos1:b     238:mpmos0:s     
+                  238:mpmos0:b     239:m1:s         239:m1:b         240:m1:s         
+                  240:m1:b         241:m1:b         242:m1:b         243:mpmos1:b     
+                  243:mpmos0:s     243:mpmos0:b     244:m1:s         244:m1:b         
+                  245:m1:s         245:m1:b         246:m1:b         247:m1:b         
+                  248:mpmos1:s     248:mpmos1:b     248:mpmos0:s     248:mpmos0:b     
+                  249:m1:s         249:m1:b         250:m1:s         250:m1:b         
+                  251:m1:b         252:m1:b         253:mpmos1:b     253:mpmos0:s     
+                  253:mpmos0:b     254:m1:s         254:m1:b         255:m1:s         
+                  255:m1:b         256:m1:b         257:m1:b         258:mpmos1:s     
+                  258:mpmos1:b     258:mpmos0:s     258:mpmos0:b     259:m1:s         
+                  259:m1:b         260:m1:s         260:m1:b         261:m1:b         
+                  262:m1:b         263:mpmos1:b     263:mpmos0:s     263:mpmos0:b     
+                  264:m1:s         264:m1:b         265:m1:s         265:m1:b         
+                  266:m1:b         267:m1:b         268:mpmos1:s     268:mpmos1:b     
+                  268:mpmos0:s     268:mpmos0:b     269:mpmos1:s     269:mpmos1:b     
+                  269:mpmos0:s     269:mpmos0:b     270:mpmos1:s     270:mpmos1:b     
+                  270:mpmos0:s     270:mpmos0:b     271:mpmos1:s     271:mpmos1:b     
+                  271:mpmos0:s     271:mpmos0:b     272:mpmos1:s     272:mpmos1:b     
+                  272:mpmos0:s     272:mpmos0:b     273:mpmos1:s     273:mpmos1:b     
+                  273:mpmos0:s     273:mpmos0:b     274:mpmos1:s     274:mpmos1:b     
+                  274:mpmos0:s     274:mpmos0:b     275:mpmos1:s     275:mpmos1:b     
+                  275:mpmos0:s     275:mpmos0:b     276:mpmos1:s     276:mpmos1:b     
+                  276:mpmos0:s     276:mpmos0:b     277:mpmos1:s     277:mpmos1:b     
+                  277:mpmos0:s     277:mpmos0:b     278:mpmos1:s     278:mpmos1:b     
+                  278:mpmos0:s     278:mpmos0:b     279:mpmos1:s     279:mpmos1:b     
+                  279:mpmos0:s     279:mpmos0:b     280:mpmos1:s     280:mpmos1:b     
+                  280:mpmos0:s     280:mpmos0:b                                       
+ vss              vvss_inv         1:m0:s           1:m0:b           2:m0:s           
+                  2:m0:b           3:m0:s           3:m0:b           4:m0:s           
+                  4:m0:b                                                              
+ vss!             vvss             24:m0:g          24:m0:s          24:m0:b          
+                  24:m1:g          25:m0:s          25:m0:b          26:m0:s          
+                  26:m0:b          29:m0:s          29:m0:b          30:m0:s          
+                  30:m0:b          31:m0:s          31:m0:b          34:m0:s          
+                  34:m0:b          35:m0:s          35:m0:b          36:m0:s          
+                  36:m0:b          39:m0:s          39:m0:b          40:m0:s          
+                  40:m0:b          41:m0:s          41:m0:b          44:m0:s          
+                  44:m0:b          45:m0:s          45:m0:b          46:m0:s          
+                  46:m0:b          49:m0:s          49:m0:b          50:m0:s          
+                  50:m0:b          51:m0:s          51:m0:b          54:m0:s          
+                  54:m0:b          55:m0:s          55:m0:b          56:m0:s          
+                  56:m0:b          59:m0:s          59:m0:b          60:m0:s          
+                  60:m0:b          61:m0:s          61:m0:b          64:m0:s          
+                  64:m0:b          65:m0:s          65:m0:b          66:m0:s          
+                  66:m0:b          69:m0:s          69:m0:b          70:m0:s          
+                  70:m0:b          71:m0:s          71:m0:b          74:m0:s          
+                  74:m0:b          75:m0:s          75:m0:b          76:m0:s          
+                  76:m0:b          79:m0:s          79:m0:b          80:m0:s          
+                  80:m0:b          81:m0:s          81:m0:b          84:m0:s          
+                  84:m0:b          85:m0:s          85:m0:b          86:m0:s          
+                  86:m0:b          89:m0:s          89:m0:b          90:m0:s          
+                  90:m0:b          91:m0:s          91:m0:b          94:m0:s          
+                  94:m0:b          95:m0:s          95:m0:b          96:m0:s          
+                  96:m0:b          99:m0:s          99:m0:b          100:m0:s         
+                  100:m0:b         101:m0:s         101:m0:b         107:mnmos1:s     
+                  107:mnmos1:b     107:mnmos0:s     107:mnmos0:b     108:m0:s         
+                  108:m0:b         109:m0:s         109:m0:b         110:m0:s         
+                  110:m0:b         111:m0:b         112:m0:b         113:mnmos1:s     
+                  113:mnmos1:b     113:mnmos0:g     113:mnmos0:s     113:mnmos0:b     
+                  113:mpmos0:g     114:m0:s         114:m0:b         115:m0:s         
+                  115:m0:b         116:m0:b         117:m0:b         118:mnmos1:s     
+                  118:mnmos1:b     118:mnmos0:b     119:m0:s         119:m0:b         
+                  120:m0:s         120:m0:b         121:m0:b         122:m0:b         
+                  123:mnmos1:s     123:mnmos1:b     123:mnmos0:s     123:mnmos0:b     
+                  124:m0:s         124:m0:b         125:m0:s         125:m0:b         
+                  126:m0:b         127:m0:b         128:mnmos1:s     128:mnmos1:b     
+                  128:mnmos0:b     129:m0:s         129:m0:b         130:m0:s         
+                  130:m0:b         131:m0:b         132:m0:b         133:mnmos1:s     
+                  133:mnmos1:b     133:mnmos0:s     133:mnmos0:b     134:m0:s         
+                  134:m0:b         135:m0:s         135:m0:b         136:m0:b         
+                  137:m0:b         138:mnmos1:s     138:mnmos1:b     138:mnmos0:b     
+                  139:m0:s         139:m0:b         140:m0:s         140:m0:b         
+                  141:m0:b         142:m0:b         143:mnmos1:s     143:mnmos1:b     
+                  143:mnmos0:s     143:mnmos0:b     144:m0:s         144:m0:b         
+                  145:m0:s         145:m0:b         146:m0:b         147:m0:b         
+                  148:mnmos1:s     148:mnmos1:b     148:mnmos0:b     149:m0:s         
+                  149:m0:b         150:m0:s         150:m0:b         151:m0:b         
+                  152:m0:b         153:mnmos1:s     153:mnmos1:b     153:mnmos0:s     
+                  153:mnmos0:b     154:m0:s         154:m0:b         155:m0:s         
+                  155:m0:b         156:m0:b         157:m0:b         158:mnmos1:s     
+                  158:mnmos1:b     158:mnmos0:b     159:m0:s         159:m0:b         
+                  160:m0:s         160:m0:b         161:m0:b         162:m0:b         
+                  163:mnmos1:s     163:mnmos1:b     163:mnmos0:s     163:mnmos0:b     
+                  164:m0:s         164:m0:b         165:m0:s         165:m0:b         
+                  166:m0:b         167:m0:b         168:mnmos1:s     168:mnmos1:b     
+                  168:mnmos0:b     169:m0:s         169:m0:b         170:m0:s         
+                  170:m0:b         171:m0:b         172:m0:b         173:mnmos1:s     
+                  173:mnmos1:b     173:mnmos0:s     173:mnmos0:b     174:m0:s         
+                  174:m0:b         175:m0:s         175:m0:b         176:m0:b         
+                  177:m0:b         178:mnmos1:s     178:mnmos1:b     178:mnmos0:b     
+                  179:m0:s         179:m0:b         180:m0:s         180:m0:b         
+                  181:m0:b         182:m0:b         183:mnmos1:s     183:mnmos1:b     
+                  183:mnmos0:s     183:mnmos0:b     184:m0:s         184:m0:b         
+                  185:m0:s         185:m0:b         186:m0:b         187:m0:b         
+                  188:mnmos1:s     188:mnmos1:b     188:mnmos0:b     189:m0:s         
+                  189:m0:b         190:m0:s         190:m0:b         191:m0:b         
+                  192:m0:b         193:mnmos1:s     193:mnmos1:b     193:mnmos0:s     
+                  193:mnmos0:b     194:m0:s         194:m0:b         195:m0:s         
+                  195:m0:b         196:m0:b         197:m0:b         198:mnmos1:s     
+                  198:mnmos1:b     198:mnmos0:b     199:m0:s         199:m0:b         
+                  200:m0:s         200:m0:b         201:m0:b         202:m0:b         
+                  203:mnmos1:s     203:mnmos1:b     203:mnmos0:s     203:mnmos0:b     
+                  204:m0:s         204:m0:b         205:m0:s         205:m0:b         
+                  206:m0:b         207:m0:b         208:mnmos1:s     208:mnmos1:b     
+                  208:mnmos0:b     209:m0:s         209:m0:b         210:m0:s         
+                  210:m0:b         211:m0:b         212:m0:b         213:mnmos1:s     
+                  213:mnmos1:b     213:mnmos0:s     213:mnmos0:b     214:m0:s         
+                  214:m0:b         215:m0:s         215:m0:b         216:m0:b         
+                  217:m0:b         218:mnmos1:s     218:mnmos1:b     218:mnmos0:b     
+                  219:m0:s         219:m0:b         220:m0:s         220:m0:b         
+                  221:m0:b         222:m0:b         223:mnmos1:s     223:mnmos1:b     
+                  223:mnmos0:s     223:mnmos0:b     224:m0:s         224:m0:b         
+                  225:m0:s         225:m0:b         226:m0:b         227:m0:b         
+                  228:mnmos1:s     228:mnmos1:b     228:mnmos0:b     229:m0:s         
+                  229:m0:b         230:m0:s         230:m0:b         231:m0:b         
+                  232:m0:b         233:mnmos1:s     233:mnmos1:b     233:mnmos0:s     
+                  233:mnmos0:b     234:m0:s         234:m0:b         235:m0:s         
+                  235:m0:b         236:m0:b         237:m0:b         238:mnmos1:s     
+                  238:mnmos1:b     238:mnmos0:b     239:m0:s         239:m0:b         
+                  240:m0:s         240:m0:b         241:m0:b         242:m0:b         
+                  243:mnmos1:s     243:mnmos1:b     243:mnmos0:s     243:mnmos0:b     
+                  244:m0:s         244:m0:b         245:m0:s         245:m0:b         
+                  246:m0:b         247:m0:b         248:mnmos1:s     248:mnmos1:b     
+                  248:mnmos0:b     249:m0:s         249:m0:b         250:m0:s         
+                  250:m0:b         251:m0:b         252:m0:b         253:mnmos1:s     
+                  253:mnmos1:b     253:mnmos0:s     253:mnmos0:b     254:m0:s         
+                  254:m0:b         255:m0:s         255:m0:b         256:m0:b         
+                  257:m0:b         258:mnmos1:s     258:mnmos1:b     258:mnmos0:b     
+                  259:m0:s         259:m0:b         260:m0:s         260:m0:b         
+                  261:m0:b         262:m0:b         263:mnmos1:s     263:mnmos1:b     
+                  263:mnmos0:s     263:mnmos0:b     264:m0:s         264:m0:b         
+                  265:m0:s         265:m0:b         266:m0:b         267:m0:b         
+                  268:mnmos1:s     268:mnmos1:b     268:mnmos0:b     269:mnmos1:s     
+                  269:mnmos1:b     269:mnmos0:b     270:mnmos1:s     270:mnmos1:b     
+                  270:mnmos0:b     271:mnmos1:s     271:mnmos1:b     271:mnmos0:b     
+                  272:mnmos1:s     272:mnmos1:b     272:mnmos0:b     273:mnmos1:s     
+                  273:mnmos1:b     273:mnmos0:b     274:mnmos1:s     274:mnmos1:b     
+                  274:mnmos0:b     275:mnmos1:s     275:mnmos1:b     275:mnmos0:b     
+                  276:mnmos1:s     276:mnmos1:b     276:mnmos0:b     277:mnmos1:s     
+                  277:mnmos1:b     277:mnmos0:b     278:mnmos1:s     278:mnmos1:b     
+                  278:mnmos0:b     279:mnmos1:s     279:mnmos1:b     279:mnmos0:b     
+                  280:mnmos1:s     280:mnmos1:b     280:mnmos0:b                      
+ xlfsr0.net35     108:m0:d         108:m1:d         115:m0:g         115:m1:g         
+ xlfsr0.net37     107:mnmos0:g     107:mpmos0:g     269:mnmos0:d     269:mpmos1:d     
+                  269:mpmos0:d                                                        
+ 6:clki           25:m0:d          25:m1:d          111:m0:g         112:m1:g         
+                  116:m0:g         117:m1:g                                           
+ 6:clki_bar       25:m0:g          25:m1:g          26:m0:d          26:m1:d          
+                  111:m1:g         112:m0:g         116:m1:g         117:m0:g         
+ 6:n              111:m0:d         111:m1:d         114:m0:d         114:m1:d         
+                  118:mnmos1:g     118:mpmos1:g                                       
+ 6:rst_bar        24:m0:d          24:m1:d          118:mnmos0:g     118:mpmos0:g     
+ 7:clki           30:m0:d          30:m1:d          121:m0:g         122:m1:g         
+                  126:m0:g         127:m1:g                                           
+ 7:clki_bar       30:m0:g          30:m1:g          31:m0:d          31:m1:d          
+                  121:m1:g         122:m0:g         126:m1:g         127:m0:g         
+ 7:n              121:m0:d         121:m1:d         124:m0:d         124:m1:d         
+                  128:mnmos1:g     128:mpmos1:g                                       
+ 7:rst_bar        29:m0:d          29:m1:d          128:mnmos0:g     128:mpmos0:g     
+ 8:clki           35:m0:d          35:m1:d          131:m0:g         132:m1:g         
+                  136:m0:g         137:m1:g                                           
+ 8:clki_bar       35:m0:g          35:m1:g          36:m0:d          36:m1:d          
+                  131:m1:g         132:m0:g         136:m1:g         137:m0:g         
+ 8:n              131:m0:d         131:m1:d         134:m0:d         134:m1:d         
+                  138:mnmos1:g     138:mpmos1:g                                       
+ 8:rst_bar        34:m0:d          34:m1:d          138:mnmos0:g     138:mpmos0:g     
+ 9:clki           40:m0:d          40:m1:d          141:m0:g         142:m1:g         
+                  146:m0:g         147:m1:g                                           
+ 9:clki_bar       40:m0:g          40:m1:g          41:m0:d          41:m1:d          
+                  141:m1:g         142:m0:g         146:m1:g         147:m0:g         
+ 9:n              141:m0:d         141:m1:d         144:m0:d         144:m1:d         
+                  148:mnmos1:g     148:mpmos1:g                                       
+ 9:rst_bar        39:m0:d          39:m1:d          148:mnmos0:g     148:mpmos0:g     
+ 10:clki          45:m0:d          45:m1:d          151:m0:g         152:m1:g         
+                  156:m0:g         157:m1:g                                           
+ 10:clki_bar      45:m0:g          45:m1:g          46:m0:d          46:m1:d          
+                  151:m1:g         152:m0:g         156:m1:g         157:m0:g         
+ 10:n             151:m0:d         151:m1:d         154:m0:d         154:m1:d         
+                  158:mnmos1:g     158:mpmos1:g                                       
+ 10:rst_bar       44:m0:d          44:m1:d          158:mnmos0:g     158:mpmos0:g     
+ 11:clki          50:m0:d          50:m1:d          161:m0:g         162:m1:g         
+                  166:m0:g         167:m1:g                                           
+ 11:clki_bar      50:m0:g          50:m1:g          51:m0:d          51:m1:d          
+                  161:m1:g         162:m0:g         166:m1:g         167:m0:g         
+ 11:n             161:m0:d         161:m1:d         164:m0:d         164:m1:d         
+                  168:mnmos1:g     168:mpmos1:g                                       
+ 11:rst_bar       49:m0:d          49:m1:d          168:mnmos0:g     168:mpmos0:g     
+ 12:clki          55:m0:d          55:m1:d          171:m0:g         172:m1:g         
+                  176:m0:g         177:m1:g                                           
+ 12:clki_bar      55:m0:g          55:m1:g          56:m0:d          56:m1:d          
+                  171:m1:g         172:m0:g         176:m1:g         177:m0:g         
+ xlfsr0.xdfsr9.n  171:m0:d         171:m1:d         174:m0:d         174:m1:d         
+                  178:mnmos1:g     178:mpmos1:g                                       
+ 12:rst_bar       54:m0:d          54:m1:d          178:mnmos0:g     178:mpmos0:g     
+ 13:clki          60:m0:d          60:m1:d          181:m0:g         182:m1:g         
+                  186:m0:g         187:m1:g                                           
+ 13:clki_bar      60:m0:g          60:m1:g          61:m0:d          61:m1:d          
+                  181:m1:g         182:m0:g         186:m1:g         187:m0:g         
+ xlfsr0.xdfsr8.n  181:m0:d         181:m1:d         184:m0:d         184:m1:d         
+                  188:mnmos1:g     188:mpmos1:g                                       
+ 13:rst_bar       59:m0:d          59:m1:d          188:mnmos0:g     188:mpmos0:g     
+ 14:clki          65:m0:d          65:m1:d          191:m0:g         192:m1:g         
+                  196:m0:g         197:m1:g                                           
+ 14:clki_bar      65:m0:g          65:m1:g          66:m0:d          66:m1:d          
+                  191:m1:g         192:m0:g         196:m1:g         197:m0:g         
+ xlfsr0.xdfsr7.n  191:m0:d         191:m1:d         194:m0:d         194:m1:d         
+                  198:mnmos1:g     198:mpmos1:g                                       
+ 14:rst_bar       64:m0:d          64:m1:d          198:mnmos0:g     198:mpmos0:g     
+ 15:clki          70:m0:d          70:m1:d          201:m0:g         202:m1:g         
+                  206:m0:g         207:m1:g                                           
+ 15:clki_bar      70:m0:g          70:m1:g          71:m0:d          71:m1:d          
+                  201:m1:g         202:m0:g         206:m1:g         207:m0:g         
+ xlfsr0.xdfsr6.n  201:m0:d         201:m1:d         204:m0:d         204:m1:d         
+                  208:mnmos1:g     208:mpmos1:g                                       
+ 15:rst_bar       69:m0:d          69:m1:d          208:mnmos0:g     208:mpmos0:g     
+ 16:clki          75:m0:d          75:m1:d          211:m0:g         212:m1:g         
+                  216:m0:g         217:m1:g                                           
+ 16:clki_bar      75:m0:g          75:m1:g          76:m0:d          76:m1:d          
+                  211:m1:g         212:m0:g         216:m1:g         217:m0:g         
+ xlfsr0.xdfsr5.n  211:m0:d         211:m1:d         214:m0:d         214:m1:d         
+                  218:mnmos1:g     218:mpmos1:g                                       
+ 16:rst_bar       74:m0:d          74:m1:d          218:mnmos0:g     218:mpmos0:g     
+ 17:clki          80:m0:d          80:m1:d          221:m0:g         222:m1:g         
+                  226:m0:g         227:m1:g                                           
+ 17:clki_bar      80:m0:g          80:m1:g          81:m0:d          81:m1:d          
+                  221:m1:g         222:m0:g         226:m1:g         227:m0:g         
+ xlfsr0.xdfsr4.n  221:m0:d         221:m1:d         224:m0:d         224:m1:d         
+                  228:mnmos1:g     228:mpmos1:g                                       
+ 17:rst_bar       79:m0:d          79:m1:d          228:mnmos0:g     228:mpmos0:g     
+ 18:clki          85:m0:d          85:m1:d          231:m0:g         232:m1:g         
+                  236:m0:g         237:m1:g                                           
+ 18:clki_bar      85:m0:g          85:m1:g          86:m0:d          86:m1:d          
+                  231:m1:g         232:m0:g         236:m1:g         237:m0:g         
+ xlfsr0.xdfsr3.n  231:m0:d         231:m1:d         234:m0:d         234:m1:d         
+                  238:mnmos1:g     238:mpmos1:g                                       
+ 18:rst_bar       84:m0:d          84:m1:d          238:mnmos0:g     238:mpmos0:g     
+ 19:clki          90:m0:d          90:m1:d          241:m0:g         242:m1:g         
+                  246:m0:g         247:m1:g                                           
+ 19:clki_bar      90:m0:g          90:m1:g          91:m0:d          91:m1:d          
+                  241:m1:g         242:m0:g         246:m1:g         247:m0:g         
+ xlfsr0.xdfsr2.n  241:m0:d         241:m1:d         244:m0:d         244:m1:d         
+                  248:mnmos1:g     248:mpmos1:g                                       
+ 19:rst_bar       89:m0:d          89:m1:d          248:mnmos0:g     248:mpmos0:g     
+ 20:clki          95:m0:d          95:m1:d          251:m0:g         252:m1:g         
+                  256:m0:g         257:m1:g                                           
+ 20:clki_bar      95:m0:g          95:m1:g          96:m0:d          96:m1:d          
+                  251:m1:g         252:m0:g         256:m1:g         257:m0:g         
+ xlfsr0.xdfsr1.n  251:m0:d         251:m1:d         254:m0:d         254:m1:d         
+                  258:mnmos1:g     258:mpmos1:g                                       
+ 20:rst_bar       94:m0:d          94:m1:d          258:mnmos0:g     258:mpmos0:g     
+ 21:clki          100:m0:d         100:m1:d         261:m0:g         262:m1:g         
+                  266:m0:g         267:m1:g                                           
+ 21:clki_bar      100:m0:g         100:m1:g         101:m0:d         101:m1:d         
+                  261:m1:g         262:m0:g         266:m1:g         267:m0:g         
+ xlfsr0.xdfsr0.n  261:m0:d         261:m1:d         264:m0:d         264:m1:d         
+                  268:mnmos1:g     268:mpmos1:g                                       
+ 21:rst_bar       99:m0:d          99:m1:d          268:mnmos0:g     268:mpmos0:g     
+ 22:net1          275:mnmos0:g     275:mpmos0:g     276:mnmos0:g     276:mpmos0:g     
+                  277:mnmos0:d     277:mpmos1:d     277:mpmos0:d                      
+ 22:net2          271:mnmos0:g     271:mpmos0:g     272:mnmos0:g     272:mpmos0:g     
+                  273:mnmos0:d     273:mpmos1:d     273:mpmos0:d                      
+ 23:net1          107:mnmos1:d     107:mnmos0:d     107:mpmos1:d     108:m0:g         
+                  108:m1:g                                                            
+ 27:n1            109:m0:g         109:m1:g         111:m0:s         111:m1:s         
+                  112:m0:s         112:m1:s                                           
+ 27:n2            109:m0:d         109:m1:d         110:m0:g         110:m1:g         
+                  113:mnmos1:g     113:mpmos1:g                                       
+ 27:n3            112:m0:d         112:m1:d         113:mnmos1:d     113:mnmos0:d     
+                  113:mpmos1:d                                                        
+ 28:n1            115:m0:d         115:m1:d         117:m0:d         117:m1:d         
+ 28:n2            114:m0:g         114:m1:g         116:m0:s         116:m1:s         
+                  117:m0:s         117:m1:s                                           
+ 28:n4            116:m0:d         116:m1:d         118:mnmos0:d     118:mpmos1:d     
+                  118:mpmos0:d                                                        
+ 32:n1            119:m0:g         119:m1:g         121:m0:s         121:m1:s         
+                  122:m0:s         122:m1:s                                           
+ 32:n2            119:m0:d         119:m1:d         120:m0:g         120:m1:g         
+                  123:mnmos1:g     123:mpmos1:g                                       
+ 32:n3            122:m0:d         122:m1:d         123:mnmos1:d     123:mnmos0:d     
+                  123:mpmos1:d                                                        
+ 33:n1            125:m0:d         125:m1:d         127:m0:d         127:m1:d         
+ 33:n2            124:m0:g         124:m1:g         126:m0:s         126:m1:s         
+                  127:m0:s         127:m1:s                                           
+ 33:n4            126:m0:d         126:m1:d         128:mnmos0:d     128:mpmos1:d     
+                  128:mpmos0:d                                                        
+ 37:n1            129:m0:g         129:m1:g         131:m0:s         131:m1:s         
+                  132:m0:s         132:m1:s                                           
+ 37:n2            129:m0:d         129:m1:d         130:m0:g         130:m1:g         
+                  133:mnmos1:g     133:mpmos1:g                                       
+ 37:n3            132:m0:d         132:m1:d         133:mnmos1:d     133:mnmos0:d     
+                  133:mpmos1:d                                                        
+ 38:n1            135:m0:d         135:m1:d         137:m0:d         137:m1:d         
+ 38:n2            134:m0:g         134:m1:g         136:m0:s         136:m1:s         
+                  137:m0:s         137:m1:s                                           
+ 38:n4            136:m0:d         136:m1:d         138:mnmos0:d     138:mpmos1:d     
+                  138:mpmos0:d                                                        
+ 42:n1            139:m0:g         139:m1:g         141:m0:s         141:m1:s         
+                  142:m0:s         142:m1:s                                           
+ 42:n2            139:m0:d         139:m1:d         140:m0:g         140:m1:g         
+                  143:mnmos1:g     143:mpmos1:g                                       
+ 42:n3            142:m0:d         142:m1:d         143:mnmos1:d     143:mnmos0:d     
+                  143:mpmos1:d                                                        
+ 43:n1            145:m0:d         145:m1:d         147:m0:d         147:m1:d         
+ 43:n2            144:m0:g         144:m1:g         146:m0:s         146:m1:s         
+                  147:m0:s         147:m1:s                                           
+ 43:n4            146:m0:d         146:m1:d         148:mnmos0:d     148:mpmos1:d     
+                  148:mpmos0:d                                                        
+ 47:n1            149:m0:g         149:m1:g         151:m0:s         151:m1:s         
+                  152:m0:s         152:m1:s                                           
+ 47:n2            149:m0:d         149:m1:d         150:m0:g         150:m1:g         
+                  153:mnmos1:g     153:mpmos1:g                                       
+ 47:n3            152:m0:d         152:m1:d         153:mnmos1:d     153:mnmos0:d     
+                  153:mpmos1:d                                                        
+ 48:n1            155:m0:d         155:m1:d         157:m0:d         157:m1:d         
+ 48:n2            154:m0:g         154:m1:g         156:m0:s         156:m1:s         
+                  157:m0:s         157:m1:s                                           
+ 48:n4            156:m0:d         156:m1:d         158:mnmos0:d     158:mpmos1:d     
+                  158:mpmos0:d                                                        
+ 52:n1            159:m0:g         159:m1:g         161:m0:s         161:m1:s         
+                  162:m0:s         162:m1:s                                           
+ 52:n2            159:m0:d         159:m1:d         160:m0:g         160:m1:g         
+                  163:mnmos1:g     163:mpmos1:g                                       
+ 52:n3            162:m0:d         162:m1:d         163:mnmos1:d     163:mnmos0:d     
+                  163:mpmos1:d                                                        
+ 53:n1            165:m0:d         165:m1:d         167:m0:d         167:m1:d         
+ 53:n2            164:m0:g         164:m1:g         166:m0:s         166:m1:s         
+                  167:m0:s         167:m1:s                                           
+ 53:n4            166:m0:d         166:m1:d         168:mnmos0:d     168:mpmos1:d     
+                  168:mpmos0:d                                                        
+ 57:n1            169:m0:g         169:m1:g         171:m0:s         171:m1:s         
+                  172:m0:s         172:m1:s                                           
+ 57:n2            169:m0:d         169:m1:d         170:m0:g         170:m1:g         
+                  173:mnmos1:g     173:mpmos1:g                                       
+ 57:n3            172:m0:d         172:m1:d         173:mnmos1:d     173:mnmos0:d     
+                  173:mpmos1:d                                                        
+ 58:n1            175:m0:d         175:m1:d         177:m0:d         177:m1:d         
+ 58:n2            174:m0:g         174:m1:g         176:m0:s         176:m1:s         
+                  177:m0:s         177:m1:s                                           
+ 58:n4            176:m0:d         176:m1:d         178:mnmos0:d     178:mpmos1:d     
+                  178:mpmos0:d                                                        
+ 62:n1            179:m0:g         179:m1:g         181:m0:s         181:m1:s         
+                  182:m0:s         182:m1:s                                           
+ 62:n2            179:m0:d         179:m1:d         180:m0:g         180:m1:g         
+                  183:mnmos1:g     183:mpmos1:g                                       
+ 62:n3            182:m0:d         182:m1:d         183:mnmos1:d     183:mnmos0:d     
+                  183:mpmos1:d                                                        
+ 63:n1            185:m0:d         185:m1:d         187:m0:d         187:m1:d         
+ 63:n2            184:m0:g         184:m1:g         186:m0:s         186:m1:s         
+                  187:m0:s         187:m1:s                                           
+ 63:n4            186:m0:d         186:m1:d         188:mnmos0:d     188:mpmos1:d     
+                  188:mpmos0:d                                                        
+ 67:n1            189:m0:g         189:m1:g         191:m0:s         191:m1:s         
+                  192:m0:s         192:m1:s                                           
+ 67:n2            189:m0:d         189:m1:d         190:m0:g         190:m1:g         
+                  193:mnmos1:g     193:mpmos1:g                                       
+ 67:n3            192:m0:d         192:m1:d         193:mnmos1:d     193:mnmos0:d     
+                  193:mpmos1:d                                                        
+ 68:n1            195:m0:d         195:m1:d         197:m0:d         197:m1:d         
+ 68:n2            194:m0:g         194:m1:g         196:m0:s         196:m1:s         
+                  197:m0:s         197:m1:s                                           
+ 68:n4            196:m0:d         196:m1:d         198:mnmos0:d     198:mpmos1:d     
+                  198:mpmos0:d                                                        
+ 72:n1            199:m0:g         199:m1:g         201:m0:s         201:m1:s         
+                  202:m0:s         202:m1:s                                           
+ 72:n2            199:m0:d         199:m1:d         200:m0:g         200:m1:g         
+                  203:mnmos1:g     203:mpmos1:g                                       
+ 72:n3            202:m0:d         202:m1:d         203:mnmos1:d     203:mnmos0:d     
+                  203:mpmos1:d                                                        
+ 73:n1            205:m0:d         205:m1:d         207:m0:d         207:m1:d         
+ 73:n2            204:m0:g         204:m1:g         206:m0:s         206:m1:s         
+                  207:m0:s         207:m1:s                                           
+ 73:n4            206:m0:d         206:m1:d         208:mnmos0:d     208:mpmos1:d     
+                  208:mpmos0:d                                                        
+ 77:n1            209:m0:g         209:m1:g         211:m0:s         211:m1:s         
+                  212:m0:s         212:m1:s                                           
+ 77:n2            209:m0:d         209:m1:d         210:m0:g         210:m1:g         
+                  213:mnmos1:g     213:mpmos1:g                                       
+ 77:n3            212:m0:d         212:m1:d         213:mnmos1:d     213:mnmos0:d     
+                  213:mpmos1:d                                                        
+ 78:n1            215:m0:d         215:m1:d         217:m0:d         217:m1:d         
+ 78:n2            214:m0:g         214:m1:g         216:m0:s         216:m1:s         
+                  217:m0:s         217:m1:s                                           
+ 78:n4            216:m0:d         216:m1:d         218:mnmos0:d     218:mpmos1:d     
+                  218:mpmos0:d                                                        
+ 82:n1            219:m0:g         219:m1:g         221:m0:s         221:m1:s         
+                  222:m0:s         222:m1:s                                           
+ 82:n2            219:m0:d         219:m1:d         220:m0:g         220:m1:g         
+                  223:mnmos1:g     223:mpmos1:g                                       
+ 82:n3            222:m0:d         222:m1:d         223:mnmos1:d     223:mnmos0:d     
+                  223:mpmos1:d                                                        
+ 83:n1            225:m0:d         225:m1:d         227:m0:d         227:m1:d         
+ 83:n2            224:m0:g         224:m1:g         226:m0:s         226:m1:s         
+                  227:m0:s         227:m1:s                                           
+ 83:n4            226:m0:d         226:m1:d         228:mnmos0:d     228:mpmos1:d     
+                  228:mpmos0:d                                                        
+ 87:n1            229:m0:g         229:m1:g         231:m0:s         231:m1:s         
+                  232:m0:s         232:m1:s                                           
+ 87:n2            229:m0:d         229:m1:d         230:m0:g         230:m1:g         
+                  233:mnmos1:g     233:mpmos1:g                                       
+ 87:n3            232:m0:d         232:m1:d         233:mnmos1:d     233:mnmos0:d     
+                  233:mpmos1:d                                                        
+ 88:n1            235:m0:d         235:m1:d         237:m0:d         237:m1:d         
+ 88:n2            234:m0:g         234:m1:g         236:m0:s         236:m1:s         
+                  237:m0:s         237:m1:s                                           
+ 88:n4            236:m0:d         236:m1:d         238:mnmos0:d     238:mpmos1:d     
+                  238:mpmos0:d                                                        
+ 92:n1            239:m0:g         239:m1:g         241:m0:s         241:m1:s         
+                  242:m0:s         242:m1:s                                           
+ 92:n2            239:m0:d         239:m1:d         240:m0:g         240:m1:g         
+                  243:mnmos1:g     243:mpmos1:g                                       
+ 92:n3            242:m0:d         242:m1:d         243:mnmos1:d     243:mnmos0:d     
+                  243:mpmos1:d                                                        
+ 93:n1            245:m0:d         245:m1:d         247:m0:d         247:m1:d         
+ 93:n2            244:m0:g         244:m1:g         246:m0:s         246:m1:s         
+                  247:m0:s         247:m1:s                                           
+ 93:n4            246:m0:d         246:m1:d         248:mnmos0:d     248:mpmos1:d     
+                  248:mpmos0:d                                                        
+ 97:n1            249:m0:g         249:m1:g         251:m0:s         251:m1:s         
+                  252:m0:s         252:m1:s                                           
+ 97:n2            249:m0:d         249:m1:d         250:m0:g         250:m1:g         
+                  253:mnmos1:g     253:mpmos1:g                                       
+ 97:n3            252:m0:d         252:m1:d         253:mnmos1:d     253:mnmos0:d     
+                  253:mpmos1:d                                                        
+ 98:n1            255:m0:d         255:m1:d         257:m0:d         257:m1:d         
+ 98:n2            254:m0:g         254:m1:g         256:m0:s         256:m1:s         
+                  257:m0:s         257:m1:s                                           
+ 98:n4            256:m0:d         256:m1:d         258:mnmos0:d     258:mpmos1:d     
+                  258:mpmos0:d                                                        
+ 102:n1           259:m0:g         259:m1:g         261:m0:s         261:m1:s         
+                  262:m0:s         262:m1:s                                           
+ 102:n2           259:m0:d         259:m1:d         260:m0:g         260:m1:g         
+                  263:mnmos1:g     263:mpmos1:g                                       
+ 102:n3           262:m0:d         262:m1:d         263:mnmos1:d     263:mnmos0:d     
+                  263:mpmos1:d                                                        
+ 103:n1           265:m0:d         265:m1:d         267:m0:d         267:m1:d         
+ 103:n2           264:m0:g         264:m1:g         266:m0:s         266:m1:s         
+                  267:m0:s         267:m1:s                                           
+ 103:n4           266:m0:d         266:m1:d         268:mnmos0:d     268:mpmos1:d     
+                  268:mpmos0:d                                                        
+ 104:net1         270:mnmos0:g     270:mpmos0:g     271:mnmos1:g     271:mpmos1:g     
+                  272:mnmos0:d     272:mpmos1:d     272:mpmos0:d                      
+ 104:net2         269:mnmos0:g     269:mpmos0:g     271:mnmos0:d     271:mpmos1:d     
+                  271:mpmos0:d                                                        
+ 104:net3         269:mnmos1:g     269:mpmos1:g     270:mnmos0:d     270:mpmos1:d     
+                  270:mpmos0:d                                                        
+ 105:net1         274:mnmos0:g     274:mpmos0:g     275:mnmos1:g     275:mpmos1:g     
+                  276:mnmos0:d     276:mpmos1:d     276:mpmos0:d                      
+ 105:net2         273:mnmos0:g     273:mpmos0:g     275:mnmos0:d     275:mpmos1:d     
+                  275:mpmos0:d                                                        
+ 105:net3         273:mnmos1:g     273:mpmos1:g     274:mnmos0:d     274:mpmos1:d     
+                  274:mpmos0:d                                                        
+ 106:net1         278:mnmos0:g     278:mpmos0:g     279:mnmos1:g     279:mpmos1:g     
+                  280:mnmos0:d     280:mpmos1:d     280:mpmos0:d                      
+ 106:net2         277:mnmos0:g     277:mpmos0:g     279:mnmos0:d     279:mpmos1:d     
+                  279:mpmos0:d                                                        
+ 106:net3         277:mnmos1:g     277:mpmos1:g     278:mnmos0:d     278:mpmos1:d     
+                  278:mpmos0:d                                                        
+ 107:net1         107:mpmos1:s     107:mpmos0:d                                       
+ 113:net1         113:mpmos1:s     113:mpmos0:d                                       
+ 118:net2         118:mnmos1:d     118:mnmos0:s                                       
+ 123:net1         123:mpmos1:s     123:mpmos0:d                                       
+ 128:net2         128:mnmos1:d     128:mnmos0:s                                       
+ 133:net1         133:mpmos1:s     133:mpmos0:d                                       
+ 138:net2         138:mnmos1:d     138:mnmos0:s                                       
+ 143:net1         143:mpmos1:s     143:mpmos0:d                                       
+ 148:net2         148:mnmos1:d     148:mnmos0:s                                       
+ 153:net1         153:mpmos1:s     153:mpmos0:d                                       
+ 158:net2         158:mnmos1:d     158:mnmos0:s                                       
+ 163:net1         163:mpmos1:s     163:mpmos0:d                                       
+ 168:net2         168:mnmos1:d     168:mnmos0:s                                       
+ 173:net1         173:mpmos1:s     173:mpmos0:d                                       
+ 178:net2         178:mnmos1:d     178:mnmos0:s                                       
+ 183:net1         183:mpmos1:s     183:mpmos0:d                                       
+ 188:net2         188:mnmos1:d     188:mnmos0:s                                       
+ 193:net1         193:mpmos1:s     193:mpmos0:d                                       
+ 198:net2         198:mnmos1:d     198:mnmos0:s                                       
+ 203:net1         203:mpmos1:s     203:mpmos0:d                                       
+ 208:net2         208:mnmos1:d     208:mnmos0:s                                       
+ 213:net1         213:mpmos1:s     213:mpmos0:d                                       
+ 218:net2         218:mnmos1:d     218:mnmos0:s                                       
+ 223:net1         223:mpmos1:s     223:mpmos0:d                                       
+ 228:net2         228:mnmos1:d     228:mnmos0:s                                       
+ 233:net1         233:mpmos1:s     233:mpmos0:d                                       
+ 238:net2         238:mnmos1:d     238:mnmos0:s                                       
+ 243:net1         243:mpmos1:s     243:mpmos0:d                                       
+ 248:net2         248:mnmos1:d     248:mnmos0:s                                       
+ 253:net1         253:mpmos1:s     253:mpmos0:d                                       
+ 258:net2         258:mnmos1:d     258:mnmos0:s                                       
+ 263:net1         263:mpmos1:s     263:mpmos0:d                                       
+ 268:net2         268:mnmos1:d     268:mnmos0:s                                       
+ 269:net2         269:mnmos1:d     269:mnmos0:s                                       
+ 270:net2         270:mnmos1:d     270:mnmos0:s                                       
+ 271:net2         271:mnmos1:d     271:mnmos0:s                                       
+ 272:net2         272:mnmos1:d     272:mnmos0:s                                       
+ 273:net2         273:mnmos1:d     273:mnmos0:s                                       
+ 274:net2         274:mnmos1:d     274:mnmos0:s                                       
+ 275:net2         275:mnmos1:d     275:mnmos0:s                                       
+ 276:net2         276:mnmos1:d     276:mnmos0:s                                       
+ 277:net2         277:mnmos1:d     277:mnmos0:s                                       
+ 278:net2         278:mnmos1:d     278:mnmos0:s                                       
+ 279:net2         279:mnmos1:d     279:mnmos0:s                                       
+ 280:net2         280:mnmos1:d     280:mnmos0:s                                       
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+  
+  Opening plot unit= 15
+ file=outputs/LFSR.pa0
+
+ **info** dc convergence successful at GMINDC ramping method 
+ ******  
+ lfsr
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ ******
+ lfsr
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ t_clk_rise_i= 2.9975e-09  targ= 2.9975e-09   trig= 0.0000e+00
+ t_clk_rise_f= 3.2997e-08  targ= 3.2997e-08   trig= 0.0000e+00
+ en_total= 2.9997e-12  from= 2.9975e-09     to= 3.2997e-08
+ en_per_clock= 1.9998e-13
+
+          ***** job concluded
+ ******  
+ lfsr
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 800.214
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 0.16 1.04 4.48 4/1570 39694
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     4
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =    2414 # elements   =     548
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       6
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =     542 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.06           1          93
+  transient          1.66       35001        4394        1528 rev=        25
+  readin             0.02
+  errchk             0.02
+  setup              0.06
+  output             0.00
+
+
+           peak memory used        555.64 megabytes
+           total cpu time            1.83 seconds
+           total elapsed time        3.15 seconds
+           job started at     17:49:19 11/08/2021
+           job ended   at     17:49:22 11/08/2021
+           job total runtime         3.15 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.31(s)

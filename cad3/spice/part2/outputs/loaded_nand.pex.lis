@@ -1,0 +1,187 @@
+ ****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2021 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: loaded_nand.pex.ctl                                               
+  Command line options: /gscratch/ece/tools/vlsiapps/hspice/current/hspice/linux64/hspice -mt 4 -i loaded_nand.pex.ctl -o outputs/
+  Start time: Sun Oct 31 15:01:39 2021
+ lic:  
+ lic: FLEXlm: SDK_12.9.6 
+ lic: USER:   jpark25              HOSTNAME: n3240.hyak.local 
+ lic: HOSTID: 400af041             PID:      77961 
+ lic: Using FLEXlm license file: 
+ lic: 27008@synopsysls.s.uw.edu 
+ lic: Checkout 2 hspice 
+ lic: License/Maintenance for hspice will expire on 24-jan-2023/2020.12 
+ lic: 9(in_use)/100(total) FLOATING license(s) on SERVER 27008@synopsysls.s.uw.edu 
+ lic:   
+  **warning** multiple output options specified, using psf
+1****** PrimeSim HSPICE -- S-2021.09 linux64 (Aug 25 2021 7230000) ******
+ ******  
+ loaded_nand_pex
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             loaded_nand        1.00 
+  **info** (loaded_nand.pex.ctl:37) DC voltage reset to initial transient source value in source 0:va. new dc=0.0000D+00
+  **warning** (nmos_vtg:x1.mxdut.mnmos0 (./loaded_nand.pex.netlist:13)) Warning:  Acde = 0.276941 may be too small in BSIM4 model with w=3.5e-07 l=6e-08.
+  **warning** (loaded_nand.pex.ctl:120) Could not find branch element x1.mxdut ;branch output ignored
+  
+  
+ ******  
+ loaded_nand_pex
+
+ ****** element node table
+                                                                                      
+ 0                x1.c_9           x1.c_18          x1.c_23          x1.c_28          
+                  x1.c_37          x1.c_42          x1.c_47          x1.c_52          
+                  x1.c_57          va               vb               vvdd             
+                  vvss                                                                
+ a                x1.c_23          x1.cc_2          x1.cc_9          x1.cc_16         
+                  x1.cc_17         va               1:mxdut.mnm:g    1:mxdut.mpm:g    
+ b                x1.c_28          x1.cc_3          x1.cc_10         x1.cc_16         
+                  x1.cc_18         vb               1:mxdut.mnm:g    1:mxdut.mpm:g    
+ vdd!             x1.c_18          x1.cc_1          x1.cc_9          x1.cc_10         
+                  x1.cc_11         x1.cc_12         x1.cc_13         x1.cc_14         
+                  x1.cc_15         vvdd             1:mxdut.mpm:s    1:mxdut.mpm:b    
+                  1:mxdut.mpm:s    1:mxdut.mpm:b    1:mxi3.mnmo:g    1:mxi3.mpmo:g    
+                  1:mxi3.mpmo:s    1:mxi3.mpmo:b    1:mxi3.mpmo:s    1:mxi3.mpmo:b    
+                  1:mxi2.mnmo:g    1:mxi2.mpmo:g    1:mxi2.mpmo:s    1:mxi2.mpmo:b    
+                  1:mxi2.mpmo:s    1:mxi2.mpmo:b    1:mxi0.mnmo:g    1:mxi0.mpmo:g    
+                  1:mxi0.mpmo:s    1:mxi0.mpmo:b    1:mxi0.mpmo:s    1:mxi0.mpmo:b    
+                  1:mxi1.mnmo:g    1:mxi1.mpmo:g    1:mxi1.mpmo:s    1:mxi1.mpmo:b    
+                  1:mxi1.mpmo:s    1:mxi1.mpmo:b                                      
+ vss!             x1.c_37          x1.cc_4          x1.cc_11         x1.cc_17         
+                  x1.cc_18         x1.cc_19         x1.cc_20         x1.cc_21         
+                  x1.cc_22         vvss             1:mxdut.mnm:s    1:mxdut.mnm:b    
+                  1:mxdut.mnm:b    1:mxi3.mnmo:s    1:mxi3.mnmo:b    1:mxi3.mnmo:b    
+                  1:mxi2.mnmo:s    1:mxi2.mnmo:b    1:mxi2.mnmo:b    1:mxi0.mnmo:s    
+                  1:mxi0.mnmo:b    1:mxi0.mnmo:b    1:mxi1.mnmo:s    1:mxi1.mnmo:b    
+                  1:mxi1.mnmo:b                                                       
+ z                x1.c_9           x1.cc_1          x1.cc_2          x1.cc_3          
+                  x1.cc_4          x1.cc_5          x1.cc_6          x1.cc_7          
+                  x1.cc_8          1:mxdut.mnm:d    1:mxdut.mpm:d    1:mxdut.mpm:d    
+                  1:mxi3.mnmo:g    1:mxi3.mpmo:g    1:mxi2.mnmo:g    1:mxi2.mpmo:g    
+                  1:mxi0.mnmo:g    1:mxi0.mpmo:g    1:mxi1.mnmo:g    1:mxi1.mpmo:g    
+ x1.net1          x1.c_57          x1.cc_8          x1.cc_15         x1.cc_22         
+                  x1.cc_24         1:mxi1.mnmo:d    1:mxi1.mpmo:d    1:mxi1.mpmo:d    
+ x1.net2          x1.c_52          x1.cc_7          x1.cc_14         x1.cc_21         
+                  x1.cc_23         1:mxi0.mnmo:d    1:mxi0.mpmo:d    1:mxi0.mpmo:d    
+ x1.net3          x1.c_47          x1.cc_6          x1.cc_13         x1.cc_20         
+                  x1.cc_24         1:mxi2.mnmo:d    1:mxi2.mpmo:d    1:mxi2.mpmo:d    
+ x1.net4          x1.c_42          x1.cc_5          x1.cc_12         x1.cc_19         
+                  x1.cc_23         1:mxi3.mnmo:d    1:mxi3.mpmo:d    1:mxi3.mpmo:d    
+ x1.xdut.net2     1:mxdut.mnm:d    1:mxdut.mnm:s                                      
+ x1.xi0.net2      1:mxi0.mnmo:d    1:mxi0.mnmo:s                                      
+ x1.xi1.net2      1:mxi1.mnmo:d    1:mxi1.mnmo:s                                      
+ x1.xi2.net2      1:mxi2.mnmo:d    1:mxi2.mnmo:s                                      
+ x1.xi3.net2      1:mxi3.mnmo:d    1:mxi3.mnmo:s                                      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ lic: Checkin 1 hspice token(s) 
+  
+  Opening plot unit= 15
+ file=outputs/loaded_nand.pex.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ loaded_nand_pex
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ ******
+ loaded_nand_pex
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ fall_delay_1= 2.4727e-11  targ= 1.0297e-09   trig= 1.0050e-09
+ fall_delay_2= 2.2477e-11  targ= 3.0475e-09   trig= 3.0250e-09
+ fall_delay= 2.4727e-11
+ rise_delay_1= 2.1568e-11  targ= 2.0366e-09   trig= 2.0150e-09
+ rise_delay_2= 1.2104e-11  targ= 4.0471e-09   trig= 4.0350e-09
+ rise_delay= 2.1568e-11
+ rise_time_1= 3.0709e-11  targ= 2.0560e-09   trig= 2.0253e-09
+ rise_time_2= 1.3319e-11  targ= 4.0549e-09   trig= 4.0416e-09
+ rise_time= 3.0709e-11
+ fall_time_1= 3.6051e-11  targ= 1.0531e-09   trig= 1.0170e-09
+ fall_time_2= 3.5977e-11  targ= 3.0710e-09   trig= 3.0351e-09
+ fall_time= 3.6051e-11
+ t_z_f_i= 1.0104e-09  targ= 1.0104e-09   trig= 0.0000e+00
+ t_z_f_e= 1.0948e-09  targ= 1.0948e-09   trig= 0.0000e+00
+ t_z_r_i= 2.0179e-09  targ= 2.0179e-09   trig= 0.0000e+00
+ t_z_r_e= 2.0916e-09  targ= 2.0916e-09   trig= 0.0000e+00
+ fall_en_dissip= 5.0483e-15  from= 1.0104e-09     to= 1.0948e-09
+ rise_en_dissip= 5.4010e-15  from= 2.0179e-09     to= 2.0916e-09
+ fall_en_dissip_1= 3.7012e-15  from= 1.0104e-09     to= 1.0948e-09
+ rise_en_dissip_1= 5.6028e-15  from= 2.0179e-09     to= 2.0916e-09
+ input_cap_r= 9.5992e-16  from= 1.0000e-09     to= 1.0100e-09
+ input_cap_f= 1.0967e-15  from= 2.0100e-09     to= 2.0200e-09
+ input_cap= 1.0283e-15
+ output_cap_f= 7.6568e-15  from= 1.0104e-09     to= 1.0948e-09
+ output_cap_r= 7.7318e-15  from= 2.0179e-09     to= 2.0916e-09
+ output_cap= 7.6943e-15
+
+          ***** job concluded
+ ******  
+ loaded_nand_pex
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
+ cpu MHz	: 800.392
+ CPU(s)		: 40
+  
+ OS:
+ Linux version 4.18.0-240.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.3.1 20191121 (Red Hat 8.3.1-5) (GCC)) #1 SMP Fri Sep 25 19:48:47 UTC 2020
+
+ System loadavg : 0.04 1.44 13.40 1/1320 77972
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     4
+  Available CPU Count        :    40
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      95 # elements   =      57
+  # resistors   =       0 # capacitors =      33 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      20 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1           9
+  transient          0.03        5041         359         142 rev=        18
+  readin             0.03
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        540.53 megabytes
+           total cpu time            0.08 seconds
+           total elapsed time        3.97 seconds
+           job started at     15:01:39 10/31/2021
+           job ended   at     15:01:43 10/31/2021
+           job total runtime         3.97 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        3.87(s)

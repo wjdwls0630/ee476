@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      jarenas
+HostName                       n3213.hyak.local
+ProcessIdentifier              6996
+ProcessCreationTime_UTC        1637344978
+ProcessCreationTime_Readable   Fri Nov 19 10:02:58 2021 PST
+AppIdentifier                  /gscratch/ece/tools/vlsiapps/virtuoso/current/tools/dfII/bin/64bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       
+FilePathUsedToEditLock         /gscratch/ece/courses/476/jarenas/jarenas_git/cad5/TBUF_X2/physConfig/physExpand.cfg
+TimeEditLocked                 Fri Nov 19 10:33:41 2021 PST

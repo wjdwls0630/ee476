@@ -1,0 +1,24 @@
+* Subcircuits
+*---------------------------------------------------------------------------------------------------
+.INCLUDE 'NOR2_DFSR.ckt'
+*---------------------------------------------------------------------------------------------------
+
+
+*  1   2   3     4     5
+* n3   Q  CLK CLK_Bar RST
+.subckt SLAVE_DFSR 1 2 3 4 5
++ xi_Wp=0.4e-6 xi_Wn=0.3e-6
++ xtg_Wp=0.2e-6 xtg_Wn=0.2e-6
++ xnor_Wp=0.35e-6 xnor_Wn=0.35e-6
+
+* latch
+xi0 n1 n2 INV1_DFSR Wp='xi_Wp' Wn='xi_Wn'
+xi1 n2 2 INV1_DFSR Wp='xi_Wp' Wn='xi_Wn'
+
+xtg0 1 n1 3 4 TG_DFSR Wp='xtg_Wp' Wn='xtg_Wn'
+xtg1 n3 n1 4 3 TG_DFSR Wp='xtg_Wp' Wn='xtg_Wn'
+
+xnor0 n2 5 n3 NOR2_DFSR Wp='xnor_Wp' Wn='xnor_Wn' 
+.ends SLAVE_DFSR
+
+

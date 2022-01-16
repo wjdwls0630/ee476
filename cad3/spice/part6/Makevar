@@ -1,0 +1,21 @@
+# General variable
+# DIR 
+COMMON_DIR = /gscratch/ece/common_files/pdks_cadence_config/freepdk45
+EE476_DIR = /gscratch/ece/courses/476
+DESIGN_DIR = $(EE476_DIR)/$(USR)/cadence
+NETLIST_DIR = $(EE476_DIR)/$(USR)/$(DESIGN_LIB)/spice/netlists
+
+# Python files 
+XNETLIST = ${COMMON_DIR}/scripts/xnetlist.py
+SPICESETUP = ${COMMON_DIR}/scripts/spiceSetup.py
+GENERATEMEASTABLE = ${COMMON_DIR}/scripts/generateMeasTable.py
+STDLIBSETUP = ${COMMON_DIR}/scripts/stdsetup.py
+
+# User-Specific Variable
+#PROJECT_DIR = <Default cadence
+DESIGN_LIB = cad3
+USR = jpark25
+DESIGN =ring_osc_2x
+
+GENTABFILE = outputs/$(DESIGN).mt0
+#GENTABFILE = outputs/$(DESIGN).ms0

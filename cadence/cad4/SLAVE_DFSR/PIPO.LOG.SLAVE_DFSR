@@ -1,0 +1,63 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 08/17/2021 19:22 (cpgsrv12) $
+          : sub-version  IC6.1.8-64b.500.20 
+Started at: 07-Nov-2021  20:02:31
+User Name : jpark25
+Host Name : n3001.hyak.local
+Directory : /gscratch/ece/courses/476/jpark25/cadence
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+INFO (XSTRM-288): Performing automatic layer mapping because either the layer mapping information is not provided or the XST_AUTO_LM  value is used with the -layerMap option. Additionally, the  'xStrmOut_layerMap.txt' file has been generated and the mapping information has been added to it.
+INFO (XSTRM-162): You have not used the viaMap option. If the OpenAccess design has native oaVia instances, use the -viaMap option for preserving oaVia instances in a Stream Out - Stream In round trip. Using the -viaMap option improves performance and VM usage of applications using the Streamed-In design.  For details on the viaMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+
+Summary of Options :
+library                                 cad4
+strmFile                                /gscratch/ece/courses/476/jpark25/cadence/cad4/SLAVE_DFSR/SLAVE_DFSR.calibre.db
+topCell                                 SLAVE_DFSR
+view                                    layout
+runDir                                  /gscratch/ece/courses/476/jpark25/cadence/cad4/SLAVE_DFSR/
+logFile                                 PIPO.LOG.SLAVE_DFSR
+summaryFile                             PIPO.SUM.SLAVE_DFSR
+case                                    Preserve
+convertDot                              node
+convertPcellPin                         geometry
+
+INFO (XSTRM-223): 1. Translating customVia NangateOpenCellLibrary/via1_5/via as STRUCTURE via1_5.
+INFO (XSTRM-223): 2. Translating customVia NangateOpenCellLibrary/via2_7/via as STRUCTURE via2_7.
+INFO (XSTRM-223): 3. Translating cellView cad4/INV1_DFSR/layout as STRUCTURE INV1_DFSR.
+INFO (XSTRM-180): You have not used the objectMap option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the objectMap option to translate/preserve these objects using XStream. For details on the objectMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+INFO (XSTRM-223): 4. Translating cellView cad4/TG_DFSR/layout as STRUCTURE TG_DFSR.
+INFO (XSTRM-223): 5. Translating cellView NangateOpenCellLibrary/WELLTAP_X1/layout as STRUCTURE WELLTAP_X1.
+INFO (XSTRM-223): 6. Translating cellView cad4/NOR2_DFSR/layout as STRUCTURE NOR2_DFSR.
+INFO (XSTRM-223): 7. Translating cellView cad4/SLAVE_DFSR/layout as STRUCTURE SLAVE_DFSR.
+
+Summary of Objects Translated:
+	Scalar Instances:                       6
+	Array Instances:                        0
+	Polygons:                               4
+	Paths:                                  0
+	Rectangles:                             95
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            15
+	CdsGen Vias:                            0
+	Pathsegs:                               11
+	Text:                                   28
+	TextDisplay:                            2
+	Cells:                                  7
+
+Elapsed Time: 0.6s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 2776KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '0' warning(s) found.

@@ -1,0 +1,5 @@
+
+** Library name: cad5
+** Cell name: TBUF_X1
+** View name: schematic
+.subckt TBUF_X1 a en z

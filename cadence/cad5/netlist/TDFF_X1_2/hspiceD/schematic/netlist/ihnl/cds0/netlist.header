@@ -1,0 +1,5 @@
+
+** Library name: cad5
+** Cell name: DFF_X1
+** View name: schematic
+.subckt DFF_X1 ck d q qn
